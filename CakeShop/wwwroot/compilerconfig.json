@@ -1,0 +1,6 @@
+﻿namespace CakeShop.wwwroot
+{
+    public class compilerconfig
+    {
+    }
+}
