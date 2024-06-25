@@ -11,7 +11,6 @@ using CakeShop.ModelsView.Admin;
 
 namespace CakeShop.Controllers
 {
-    /*    [Authorize(Roles = SD.Role_Admin)]*/
     public class AdminController : Controller
     {
         // Login user:phamtuyenad
@@ -24,9 +23,17 @@ namespace CakeShop.Controllers
             _mapper = mapper;
         }
 
-        [Authorize(Roles = SD.Role_Admin, AuthenticationSchemes =  "AdminCookie")]
+        [Authorize(AuthenticationSchemes = "AdminCookie", Roles = SD.Role_Admin)]
         public IActionResult Index()
         {
+            var adminId = User.FindFirst("AdminID")?.Value;
+
+            var nhanVien = db.NhanViens.SingleOrDefault(nv => nv.MaNv == adminId);
+
+            if (nhanVien == null)
+            {
+                return NotFound();
+            }
             return View();
         }
 
@@ -65,14 +72,10 @@ namespace CakeShop.Controllers
                             ModelState.AddModelError("loi", "Tài khoản đã hết hiệu lực!");
                         }
                         else
-                        {  // Sign out from customer authentication scheme if logged in
-                            if (User.Identity.IsAuthenticated && User.Identity.AuthenticationType != "AdminCookie")
-                            {
-                                await HttpContext.SignOutAsync("CustomerCookie");
-                            }
+                        {   // Sign out from customer authentication scheme if logged in
                             var claims = new List<Claim> {
                             new Claim(ClaimTypes.Name, nhanVien.HoTen),
-                            new Claim(ClaimTypes.NameIdentifier, nhanVien.MaNv),
+                            new Claim(MySetting.CLAIM_ADMINID, nhanVien.MaNv),
                             new Claim(ClaimTypes.Role, SD.Role_Admin),
                             };
                             /*
@@ -83,8 +86,8 @@ namespace CakeShop.Controllers
 
                             var claimsIdentity = new ClaimsIdentity(claims, "AdminCookie");
                             var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-
-                            await HttpContext.SignInAsync("AdminCookie", claimsPrincipal);
+                            await HttpContext.SignOutAsync("CustomerCookie");
+                            await HttpContext.SignInAsync("AdminCookie",claimsPrincipal);
 
 
                             return RedirectToAction("Index", "Admin");
@@ -93,19 +96,16 @@ namespace CakeShop.Controllers
                     }
                 }
             }
-
-            /*TempData["Message"] = "Không thể đăng nhập. Vui lòng liên hệ Admin!";
-            return Redirect("/404");*/
             return View();
         }
         #endregion
 
         #region Logout
-        [Authorize(Roles = SD.Role_Admin, AuthenticationSchemes = "AdminCookie")]
+        [Authorize(AuthenticationSchemes = "AdminCookie", Roles = SD.Role_Admin)]
         public async Task<IActionResult> Logout()
         {
-            await HttpContext.SignOutAsync();
-            TempData["Message"] = "Đăng xuất thành công!";
+            await HttpContext.SignOutAsync("AdminCookie");
+            TempData["Message"] = "Đã đăng xuất quyền quản trị viên!";
             return Redirect("/ThongBao");
         }
         #endregion

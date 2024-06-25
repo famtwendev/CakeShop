@@ -105,7 +105,6 @@ namespace CakeShop.Controllers
 								//claim - role động
 								new Claim(ClaimTypes.Role, "Customer")
                             };
-
                             /*                            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                                                         var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
@@ -113,7 +112,7 @@ namespace CakeShop.Controllers
 
                             var claimsIdentity = new ClaimsIdentity(claims, "CustomerCookie");
                             var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-
+                            await HttpContext.SignOutAsync("AdminCookie");
                             await HttpContext.SignInAsync("CustomerCookie", claimsPrincipal);
 
                             if (Url.IsLocalUrl(ReturnUrl))
@@ -132,7 +131,7 @@ namespace CakeShop.Controllers
         }
         #endregion
 
-        [Authorize(AuthenticationSchemes = "CustomerCookie")]
+        [Authorize]
         public IActionResult Profile()
         {
             var customerId = User.FindFirst("CustomerID")?.Value;
@@ -159,7 +158,7 @@ namespace CakeShop.Controllers
             return View(viewModel);
         }
 
-        [Authorize(AuthenticationSchemes = "CustomerCookie")]
+        [Authorize]
         public async Task<IActionResult> DangXuat()
         {
             await HttpContext.SignOutAsync();
@@ -169,7 +168,7 @@ namespace CakeShop.Controllers
 
         #region ThayDoiThongin
         [HttpPost]
-        [Authorize(AuthenticationSchemes = "CustomerCookie")]
+        [Authorize]
         public IActionResult ThayDoiThongTin(ThayDoiThongTinVM model, IFormFile Hinh)
         {
             if (!ModelState.IsValid)

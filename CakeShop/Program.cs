@@ -54,11 +54,6 @@ builder.Services.AddAuthentication(options =>
     options.AccessDeniedPath = "/AccessDenied";
 });
 
-// Apply [Authorize(AuthenticationSchemes = "AdminCookie")] attribute in the AdminController
-
-
-
-
 builder.Services.AddSingleton<IVnPayService, VnPayService>();
 
 var app = builder.Build();
