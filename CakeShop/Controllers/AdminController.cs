@@ -65,35 +65,46 @@ namespace CakeShop.Controllers
                             ModelState.AddModelError("loi", "Tài khoản đã hết hiệu lực!");
                         }
                         else
-                        {
+                        {  // Sign out from customer authentication scheme if logged in
+                            if (User.Identity.IsAuthenticated && User.Identity.AuthenticationType != "AdminCookie")
+                            {
+                                await HttpContext.SignOutAsync("CustomerCookie");
+                            }
                             var claims = new List<Claim> {
                             new Claim(ClaimTypes.Name, nhanVien.HoTen),
                             new Claim(ClaimTypes.NameIdentifier, nhanVien.MaNv),
                             new Claim(ClaimTypes.Role, SD.Role_Admin),
-
                             };
                             // Thêm claim động dựa trên phòng ban  //claim - role động
-                            if (phancong.MaPb == SD.RolePB_BGD)
+                            if(phancong.MaPb != null)
                             {
-                                claims.Add(new Claim(SD.RolePB_BGD, phancong.MaPb));
+                                if (phancong.MaPb == SD.RolePB_BGD)
+                                {
+                                    claims.Add(new Claim(SD.RolePB_BGD, phancong.MaPb));
+                                }
+                                else if (phancong.MaPb == SD.RolePB_PKT)
+                                {
+                                    claims.Add(new Claim(SD.RolePB_PKT, phancong.MaPb));
+                                }
+                                else if (phancong.MaPb == SD.RolePB_PKTo)
+                                {
+                                    claims.Add(new Claim(SD.RolePB_PKTo, phancong.MaPb));
+                                }
+                                else if (phancong.MaPb == SD.RolePB_PNS)
+                                {
+                                    claims.Add(new Claim(SD.RolePB_PNS, phancong.MaPb));
+                                }
                             }
-                            else if (phancong.MaPb == SD.RolePB_PKT)
-                            {
-                                claims.Add(new Claim(SD.RolePB_PKT, phancong.MaPb));
-                            }
-                            else if (phancong.MaPb == SD.RolePB_PKTo)
-                            {
-                                claims.Add(new Claim(SD.RolePB_PKTo, phancong.MaPb));
-                            }
-                            else if (phancong.MaPb == SD.RolePB_PNS)
-                            {
-                                claims.Add(new Claim(SD.RolePB_PNS, phancong.MaPb));
-                            }
-
-                            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                            /*var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                             var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
-                            await HttpContext.SignInAsync(claimsPrincipal);
+                            await HttpContext.SignInAsync(claimsPrincipal);*/
+
+                            var claimsIdentity = new ClaimsIdentity(claims, "AdminCookie");
+                            var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+
+                            await HttpContext.SignInAsync("AdminCookie", claimsPrincipal);
+
 
                             return RedirectToAction("Index", "Admin");
 
@@ -103,7 +114,7 @@ namespace CakeShop.Controllers
             }
 
             /*TempData["Message"] = "Không thể đăng nhập. Vui lòng liên hệ Admin!";
-            return Redirect("/404");model*/
+            return Redirect("/404");*/
             return View();
         }
         #endregion

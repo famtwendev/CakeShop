@@ -1,4 +1,4 @@
-using CakeShop.Data;
+﻿using CakeShop.Data;
 using CakeShop.Helpers;
 using CakeShop.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -37,6 +37,7 @@ builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 });*/
 
 // In Startup.cs or Program.cs (depending on the ASP.NET Core version)
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultScheme = "CustomerCookie";

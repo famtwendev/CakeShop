@@ -97,6 +97,11 @@ namespace CakeShop.Controllers
                         }
                         else
                         {
+                            // Sign out from admin authentication scheme if logged in
+                            if (User.Identity.IsAuthenticated && User.Identity.AuthenticationType != "CustomerCookie")
+                            {
+                                await HttpContext.SignOutAsync("AdminCookie");
+                            }
                             var claims = new List<Claim> {
                                 new Claim(ClaimTypes.Email, khachHang.Email),
                                 new Claim(ClaimTypes.Name, khachHang.HoTen),
@@ -106,10 +111,15 @@ namespace CakeShop.Controllers
 								new Claim(ClaimTypes.Role, "Customer")
                             };
 
-                            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                            /*                            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                                                        var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+
+                                                        await HttpContext.SignInAsync(claimsPrincipal);*/
+
+                            var claimsIdentity = new ClaimsIdentity(claims, "CustomerCookie");
                             var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
-                            await HttpContext.SignInAsync(claimsPrincipal);
+                            await HttpContext.SignInAsync("CustomerCookie", claimsPrincipal);
 
                             if (Url.IsLocalUrl(ReturnUrl))
                             {
