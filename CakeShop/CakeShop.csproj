@@ -76,7 +76,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="Data\" />
     <Folder Include="wwwroot\Hinh\KhachHang\" />
     <Folder Include="wwwroot\images\" />

@@ -7,11 +7,11 @@ using AutoMapper;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
-using CakeShop.ModelsView;
 using CakeShop.ModelsView.Admin;
 
 namespace CakeShop.Controllers
 {
+/*    [Authorize(Roles = SD.Role_Admin)]*/
     public class AdminController : Controller
     {
         // Login user:phamtuyenad
@@ -24,7 +24,7 @@ namespace CakeShop.Controllers
             _mapper = mapper;
         }
 
-        /*[Authorize]    */    
+        [Authorize(Roles = SD.Role_Admin, AuthenticationSchemes = "AdminCookie")]
         public IActionResult Index()
         {
             return View();
@@ -68,11 +68,27 @@ namespace CakeShop.Controllers
                         {
                             var claims = new List<Claim> {
                             new Claim(ClaimTypes.Name, nhanVien.HoTen),
-                            new Claim(MySetting.CLAIM_ADMIN, nhanVien.MaNv),
+                            new Claim(ClaimTypes.NameIdentifier, nhanVien.MaNv),
+                            new Claim(ClaimTypes.Role, SD.Role_Admin),
 
-							//claim - role động
-							new Claim(ClaimTypes.Role, phancong.MaPb)
                             };
+                            // Thêm claim động dựa trên phòng ban  //claim - role động
+                            if (phancong.MaPb == SD.RolePB_BGD)
+                            {
+                                claims.Add(new Claim(SD.RolePB_BGD, phancong.MaPb));
+                            }
+                            else if (phancong.MaPb == SD.RolePB_PKT)
+                            {
+                                claims.Add(new Claim(SD.RolePB_PKT, phancong.MaPb));
+                            }
+                            else if (phancong.MaPb == SD.RolePB_PKTo)
+                            {
+                                claims.Add(new Claim(SD.RolePB_PKTo, phancong.MaPb));
+                            }
+                            else if (phancong.MaPb == SD.RolePB_PNS)
+                            {
+                                claims.Add(new Claim(SD.RolePB_PNS, phancong.MaPb));
+                            }
 
                             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                             var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
@@ -93,6 +109,7 @@ namespace CakeShop.Controllers
         #endregion
 
         #region Logout
+        [Authorize(Roles = SD.Role_Admin, AuthenticationSchemes = "AdminCookie")]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();

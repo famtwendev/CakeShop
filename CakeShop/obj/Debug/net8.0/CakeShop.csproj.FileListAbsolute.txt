@@ -256,3 +256,4 @@ D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\C
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\CakeShop.genruntimeconfig.cache
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\ref\CakeShop.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\bundleconfig.json
+D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\CakeShop.sourcelink.json

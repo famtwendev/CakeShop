@@ -28,16 +28,36 @@ builder.Services.AddSession(options =>
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 // Configure authentication https://learn.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-8.0
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options => {
+/*builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options => {
     options.LoginPath = "/KhachHang/DangNhap";
     options.AccessDeniedPath = "/AccessDenied";
-});
 
-/*builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options => {
+    options.LoginPath = "/Admin/Login";
+    options.AccessDeniedPath = "/AccessDenied";
+});*/
+
+// In Startup.cs or Program.cs (depending on the ASP.NET Core version)
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultScheme = "CustomerCookie";
+    options.DefaultChallengeScheme = "CustomerCookie";
+})
+.AddCookie("CustomerCookie", options =>
+{
+    options.LoginPath = "/KhachHang/DangNhap";
+    options.AccessDeniedPath = "/AccessDenied";
+})
+.AddCookie("AdminCookie", options =>
+{
     options.LoginPath = "/Admin/Login";
     options.AccessDeniedPath = "/AccessDenied";
 });
-*/
+
+// Apply [Authorize(AuthenticationSchemes = "AdminCookie")] attribute in the AdminController
+
+
+
+
 builder.Services.AddSingleton<IVnPayService, VnPayService>();
 
 var app = builder.Build();

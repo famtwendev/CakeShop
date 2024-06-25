@@ -127,7 +127,7 @@ namespace CakeShop.Controllers
         }
         #endregion
 
-        [Authorize]
+        [Authorize(AuthenticationSchemes = "CustomerCookie")]
         public IActionResult Profile()
         {
             var customerId = User.FindFirst("CustomerID")?.Value;
@@ -154,7 +154,7 @@ namespace CakeShop.Controllers
             return View(viewModel);
         }
 
-        [Authorize]
+        [Authorize(AuthenticationSchemes = "CustomerCookie")]
         public async Task<IActionResult> DangXuat()
         {
             await HttpContext.SignOutAsync();
@@ -164,7 +164,7 @@ namespace CakeShop.Controllers
 
         #region ThayDoiThongin
         [HttpPost]
-        [Authorize]
+        [Authorize(AuthenticationSchemes = "CustomerCookie")]
         public IActionResult ThayDoiThongTin(ThayDoiThongTinVM model, IFormFile Hinh)
         {
             if (!ModelState.IsValid)
