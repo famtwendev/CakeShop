@@ -1,5 +1,6 @@
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\appsettings.Development.json
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\appsettings.json
+D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\bundleconfig.json
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\CakeShop.staticwebassets.runtime.json
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\CakeShop.exe
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\CakeShop.deps.json
@@ -239,6 +240,7 @@ D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\C
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\CakeShop.MvcApplicationPartsAssemblyInfo.cache
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\CakeShop.RazorAssemblyInfo.cache
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\CakeShop.RazorAssemblyInfo.cs
+D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\CakeShop.sourcelink.json
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\staticwebassets.build.json
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\staticwebassets.development.json
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\staticwebassets\msbuild.CakeShop.Microsoft.AspNetCore.StaticWebAssets.props
@@ -255,5 +257,3 @@ D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\r
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\CakeShop.pdb
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\CakeShop.genruntimeconfig.cache
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\ref\CakeShop.dll
-D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\bundleconfig.json
-D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Debug\net8.0\CakeShop.sourcelink.json

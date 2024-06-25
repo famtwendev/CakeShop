@@ -97,11 +97,6 @@ namespace CakeShop.Controllers
                         }
                         else
                         {
-                            // Sign out from admin authentication scheme if logged in
-                            if (User.Identity.IsAuthenticated && User.Identity.AuthenticationType != "CustomerCookie")
-                            {
-                                await HttpContext.SignOutAsync("AdminCookie");
-                            }
                             var claims = new List<Claim> {
                                 new Claim(ClaimTypes.Email, khachHang.Email),
                                 new Claim(ClaimTypes.Name, khachHang.HoTen),

@@ -156,9 +156,10 @@ namespace CakeShop.Controllers
                     db.SaveChanges();
 
                     var cthds = new List<ChiTietHd>();
-                    foreach(var item in Cart)
+                    foreach (var item in Cart)
                     {
-                        cthds.Add(new ChiTietHd{
+                        cthds.Add(new ChiTietHd
+                        {
                             MaHd = hoadon.MaHd,
                             SoLuong = item.SoLuong,
                             DonGia = item.DonGia,

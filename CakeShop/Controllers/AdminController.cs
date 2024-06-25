@@ -11,7 +11,7 @@ using CakeShop.ModelsView.Admin;
 
 namespace CakeShop.Controllers
 {
-/*    [Authorize(Roles = SD.Role_Admin)]*/
+    /*    [Authorize(Roles = SD.Role_Admin)]*/
     public class AdminController : Controller
     {
         // Login user:phamtuyenad
@@ -24,7 +24,7 @@ namespace CakeShop.Controllers
             _mapper = mapper;
         }
 
-        [Authorize(Roles = SD.Role_Admin, AuthenticationSchemes = "AdminCookie")]
+        [Authorize(Roles = SD.Role_Admin, AuthenticationSchemes =  "AdminCookie")]
         public IActionResult Index()
         {
             return View();
@@ -75,30 +75,11 @@ namespace CakeShop.Controllers
                             new Claim(ClaimTypes.NameIdentifier, nhanVien.MaNv),
                             new Claim(ClaimTypes.Role, SD.Role_Admin),
                             };
-                            // Thêm claim động dựa trên phòng ban  //claim - role động
-                            if(phancong.MaPb != null)
-                            {
-                                if (phancong.MaPb == SD.RolePB_BGD)
-                                {
-                                    claims.Add(new Claim(SD.RolePB_BGD, phancong.MaPb));
-                                }
-                                else if (phancong.MaPb == SD.RolePB_PKT)
-                                {
-                                    claims.Add(new Claim(SD.RolePB_PKT, phancong.MaPb));
-                                }
-                                else if (phancong.MaPb == SD.RolePB_PKTo)
-                                {
-                                    claims.Add(new Claim(SD.RolePB_PKTo, phancong.MaPb));
-                                }
-                                else if (phancong.MaPb == SD.RolePB_PNS)
-                                {
-                                    claims.Add(new Claim(SD.RolePB_PNS, phancong.MaPb));
-                                }
-                            }
-                            /*var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                            var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+                            /*
+                                                        var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                                                        var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
 
-                            await HttpContext.SignInAsync(claimsPrincipal);*/
+                                                        await HttpContext.SignInAsync(claimsPrincipal);*/
 
                             var claimsIdentity = new ClaimsIdentity(claims, "AdminCookie");
                             var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);

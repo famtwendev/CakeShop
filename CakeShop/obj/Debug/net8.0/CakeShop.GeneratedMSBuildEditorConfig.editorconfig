@@ -26,10 +26,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Views/Admin/DanhMuc.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFuaE11Yy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
