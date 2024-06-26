@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
+using CakeShop.Areas.Admin.Data;
 using CakeShop.Data;
 using CakeShop.ModelsView;
-using CakeShop.ModelsView.Admin;
+
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 
 namespace CakeShop.Helpers
@@ -20,4 +21,4 @@ namespace CakeShop.Helpers
                .ReverseMap();
         }
     }
-}
+}  

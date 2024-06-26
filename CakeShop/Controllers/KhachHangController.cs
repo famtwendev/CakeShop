@@ -64,10 +64,10 @@ namespace CakeShop.Controllers
         [HttpGet]
         public IActionResult DangNhap(string? ReturnUrl)
         {
-            /*if (User.Identity.IsAuthenticated) //Coi dang nhap chua
+            if (User.Identity.IsAuthenticated)
             {
-                return RedirectToAction("Profile", "Customer");
-            }*/
+                return Redirect("/");
+            }
             ViewBag.ReturnUrl = ReturnUrl;
             return View();
         }

@@ -27,16 +27,9 @@ builder.Services.AddSession(options =>
 // Configure AutoMapper https://docs.automapper.org/en/stable/Dependency-injection.html
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
+
+
 // Configure authentication https://learn.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-8.0
-/*builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options => {
-    options.LoginPath = "/KhachHang/DangNhap";
-    options.AccessDeniedPath = "/AccessDenied";
-
-    options.LoginPath = "/Admin/Login";
-    options.AccessDeniedPath = "/AccessDenied";
-});*/
-
-// In Startup.cs or Program.cs (depending on the ASP.NET Core version)
 
 builder.Services.AddAuthentication(options =>
 {
@@ -50,9 +43,11 @@ builder.Services.AddAuthentication(options =>
 })
 .AddCookie("AdminCookie", options =>
 {
-    options.LoginPath = "/Admin/Login";
-    options.AccessDeniedPath = "/AccessDenied";
+    options.LoginPath = "/Admin/Account/Login";
+    options.AccessDeniedPath = "/Admin/Account/AccessDenied";
 });
+
+
 
 builder.Services.AddSingleton<IVnPayService, VnPayService>();
 
@@ -78,8 +73,32 @@ app.UseAuthentication();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
+/*app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+*/
+#pragma warning disable ASP0014 // Suggest using top level route registrations
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+
+    endpoints.MapAreaControllerRoute(
+        name: "areas",
+        areaName: "Admin",
+        pattern: "{area:exists}/{controller=Account}/{action=Index}/{id?}");
+});
+
+/*name: "admin",
+        areaName: "Admin",
+        pattern: "Admin/{controller=Account}/{action=Index}/{id?}");
+endpoints.MapControllerRoute(
+name: "areas",
+pattern: "{area:exists}/{controller=Product}/{action=Index}/{id?}");
+endpoints.MapControllerRoute(
+name: "default",
+pattern: "{controller=Product}/{action=Index}/{id?}");*/
+#pragma warning restore ASP0014 // Suggest using top level route registrations
 app.Run();
