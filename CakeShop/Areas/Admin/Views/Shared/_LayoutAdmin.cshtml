@@ -30,7 +30,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-action="Index" asp-controller="Account" asp-area="Admin">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -42,7 +42,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" asp-action="Index" asp-controller="Account" asp-area="Admin">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span>
                 </a>
@@ -66,10 +66,9 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Chức năng:</h6>
-                        <a class="collapse-item" href="buttons.html">Thông tin</a>
-                        <a class="collapse-item" href="cards.html">Tạo tài khoản</a>
-                        <a class="collapse-item" href="cards.html">Đổi mật khẩu</a>
-                        <a class="collapse-item" href="cards.html">Phân công</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="NhanViens" asp-area="Admin">Thông tin</a>
+                        <a class="collapse-item" asp-action="Create" asp-controller="NhanViens" asp-area="Admin">Tạo tài khoản</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="PhanCongs" asp-area="Admin">Phân công</a>
                     </div>
                 </div>
             </li>
@@ -85,9 +84,8 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Chức năng:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Thông tin</a>
-                        <a class="collapse-item" href="utilities-border.html">Cập nhật thông tin</a>
-                        <a class="collapse-item" href="utilities-animation.html">Yêu thích</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="KhachHangs" asp-area="Admin">Thông tin</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="YeuThiches" asp-area="Admin">Yêu thích</a>
                     </div>
                 </div>
             </li>
@@ -110,21 +108,22 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Hàng Hóa:</h6>
-                        <a class="collapse-item" href="login.html">Thể Loại</a>
-                        <a class="collapse-item" href="login.html">Hàng Hóa</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="Loais" asp-area="Admin">Thể Loại</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="HangHoas" asp-area="Admin">Hàng Hóa</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="HinhanhSps" asp-area="Admin">Hình ảnh hàng hóa</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Đặt hàng:</h6>
-                        <a class="collapse-item" href="404.html">Hóa đơn</a>
-                        <a class="collapse-item" href="blank.html">Chi Tiết Hóa Đơn</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="HoaDons" asp-area="Admin">Hóa đơn</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="ChiTietHds" asp-area="Admin">Chi Tiết Hóa Đơn</a>
                         <h6 class="collapse-header">Nguồn hàng:</h6>
-                        <a class="collapse-item" href="404.html">Nhà cung cấp</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="NhaCungCaps" asp-area="Admin">Nhà cung cấp</a>
                     </div>
                 </div>
             </li>
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" asp-action="PhanTichNguonSales" asp-area="Admin" asp-controller="Acccount">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Phân tích nguồn Sales</span>
                 </a>

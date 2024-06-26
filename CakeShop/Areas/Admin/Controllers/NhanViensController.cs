@@ -6,11 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CakeShop.Data;
+using CakeShop.Helpers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CakeShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/[controller]/[action]")]
+    [Authorize(AuthenticationSchemes = "AdminCookie", Roles = SD.Role_Admin)]
     public class NhanViensController : Controller
     {
         private readonly CakeshopContext _context;
@@ -59,6 +62,7 @@ namespace CakeShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                nhanVien.MatKhau = nhanVien.MatKhau.ToMd5Hash("4dm!n");
                 _context.Add(nhanVien);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -98,6 +102,7 @@ namespace CakeShop.Areas.Admin.Controllers
             {
                 try
                 {
+                    /*nhanVien.MatKhau = nhanVien.MatKhau.ToMd5Hash("4dm!n");*/
                     _context.Update(nhanVien);
                     await _context.SaveChangesAsync();
                 }

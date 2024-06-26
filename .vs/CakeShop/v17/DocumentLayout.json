@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|d:\\filesave\\laptrinhweb_asp.net-mvc-core\\th\\cakeshop\\cakeshop\\areas\\admin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|solutionrelative:cakeshop\\areas\\admin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|d:\\filesave\\laptrinhweb_asp.net-mvc-core\\th\\cakeshop\\cakeshop\\areas\\admin\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|solutionrelative:cakeshop\\areas\\admin\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|d:\\filesave\\laptrinhweb_asp.net-mvc-core\\th\\cakeshop\\cakeshop\\areas\\admin\\controllers\\nhanvienscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|solutionrelative:cakeshop\\areas\\admin\\controllers\\nhanvienscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|d:\\filesave\\laptrinhweb_asp.net-mvc-core\\th\\cakeshop\\cakeshop\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|solutionrelative:cakeshop\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|d:\\filesave\\laptrinhweb_asp.net-mvc-core\\th\\cakeshop\\cakeshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|solutionrelative:cakeshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|d:\\filesave\\laptrinhweb_asp.net-mvc-core\\th\\cakeshop\\cakeshop\\areas\\admin\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|solutionrelative:cakeshop\\areas\\admin\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|d:\\filesave\\laptrinhweb_asp.net-mvc-core\\th\\cakeshop\\cakeshop\\areas\\admin\\controllers\\loaiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|solutionrelative:cakeshop\\areas\\admin\\controllers\\loaiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|d:\\filesave\\laptrinhweb_asp.net-mvc-core\\th\\cakeshop\\cakeshop\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|solutionrelative:cakeshop\\areas\\admin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 111,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,54 +46,54 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Areas\\Admin\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "CakeShop\\Areas\\Admin\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Areas\\Admin\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "CakeShop\\Areas\\Admin\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-26T23:22:10.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Program.cs",
-              "RelativeDocumentMoniker": "CakeShop\\Program.cs",
-              "ToolTip": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Program.cs",
-              "RelativeToolTip": "CakeShop\\Program.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAAAFcAAAAUAAAA",
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Areas\\Admin\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "CakeShop\\Areas\\Admin\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Areas\\Admin\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "CakeShop\\Areas\\Admin\\Models\\ErrorViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T19:41:23.976Z",
+              "WhenOpened": "2024-06-26T23:20:36.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "LoaisController.cs",
-              "DocumentMoniker": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Areas\\Admin\\Controllers\\LoaisController.cs",
-              "RelativeDocumentMoniker": "CakeShop\\Areas\\Admin\\Controllers\\LoaisController.cs",
-              "ToolTip": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Areas\\Admin\\Controllers\\LoaisController.cs",
-              "RelativeToolTip": "CakeShop\\Areas\\Admin\\Controllers\\LoaisController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T19:32:03.665Z",
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "CakeShop\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "CakeShop\\Areas\\Admin\\Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-26T23:19:47.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "NhanViensController.cs",
-              "DocumentMoniker": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Areas\\Admin\\Controllers\\NhanViensController.cs",
-              "RelativeDocumentMoniker": "CakeShop\\Areas\\Admin\\Controllers\\NhanViensController.cs",
-              "ToolTip": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Areas\\Admin\\Controllers\\NhanViensController.cs",
-              "RelativeToolTip": "CakeShop\\Areas\\Admin\\Controllers\\NhanViensController.cs",
-              "ViewState": "AQIAAIYAAAAAAAAAAAAAwDgAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T19:31:49.237Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "CakeShop\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "CakeShop\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAowHYAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T19:07:34.016Z",
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "CakeShop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "CakeShop\\Areas\\Admin\\Views\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-26T23:18:05.48Z",
               "EditorCaption": ""
             }
           ]

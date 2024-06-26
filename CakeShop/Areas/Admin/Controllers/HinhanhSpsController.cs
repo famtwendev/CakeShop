@@ -6,26 +6,31 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CakeShop.Data;
+using CakeShop.Helpers;
+using Microsoft.AspNetCore.Authorization;
 
-namespace CakeShop.Controllers
+namespace CakeShop.Areas.Admin.Controllers
 {
-    public class HangHoasController : Controller
+    [Area("Admin")]
+    [Route("Admin/HangHoas/[controller]/[action]")]
+    [Authorize(AuthenticationSchemes = "AdminCookie", Roles = SD.Role_Admin)]
+    public class HinhanhSpsController : Controller
     {
         private readonly CakeshopContext _context;
 
-        public HangHoasController(CakeshopContext context)
+        public HinhanhSpsController(CakeshopContext context)
         {
             _context = context;
         }
 
-        // GET: HangHoas
+        // GET: Admin/HinhanhSps
         public async Task<IActionResult> Index()
         {
-            var cakeshopContext = _context.HangHoas.Include(h => h.MaLoaiNavigation).Include(h => h.MaNccNavigation);
+            var cakeshopContext = _context.HinhanhSps.Include(h => h.MaHhNavigation);
             return View(await cakeshopContext.ToListAsync());
         }
 
-        // GET: HangHoas/Details/5
+        // GET: Admin/HinhanhSps/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,45 +38,42 @@ namespace CakeShop.Controllers
                 return NotFound();
             }
 
-            var hangHoa = await _context.HangHoas
-                .Include(h => h.MaLoaiNavigation)
-                .Include(h => h.MaNccNavigation)
-                .FirstOrDefaultAsync(m => m.MaHh == id);
-            if (hangHoa == null)
+            var hinhanhSp = await _context.HinhanhSps
+                .Include(h => h.MaHhNavigation)
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (hinhanhSp == null)
             {
                 return NotFound();
             }
 
-            return View(hangHoa);
+            return View(hinhanhSp);
         }
 
-        // GET: HangHoas/Create
+        // GET: Admin/HinhanhSps/Create
         public IActionResult Create()
         {
-            ViewData["MaLoai"] = new SelectList(_context.Loais, "MaLoai", "MaLoai");
-            ViewData["MaNcc"] = new SelectList(_context.NhaCungCaps, "MaNcc", "MaNcc");
+            ViewData["MaHh"] = new SelectList(_context.HangHoas, "MaHh", "MaHh");
             return View();
         }
 
-        // POST: HangHoas/Create
+        // POST: Admin/HinhanhSps/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaHh,TenHh,TenAlias,MaLoai,MoTaDonVi,DonGia,Hinh,NgaySx,GiamGia,SoLanXem,MoTa,MaNcc")] HangHoa hangHoa)
+        public async Task<IActionResult> Create([Bind("Id,MaHh,HinhAnhPhu")] HinhanhSp hinhanhSp)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(hangHoa);
+                _context.Add(hinhanhSp);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaLoai"] = new SelectList(_context.Loais, "MaLoai", "MaLoai", hangHoa.MaLoai);
-            ViewData["MaNcc"] = new SelectList(_context.NhaCungCaps, "MaNcc", "MaNcc", hangHoa.MaNcc);
-            return View(hangHoa);
+            ViewData["MaHh"] = new SelectList(_context.HangHoas, "MaHh", "MaHh", hinhanhSp.MaHh);
+            return View(hinhanhSp);
         }
 
-        // GET: HangHoas/Edit/5
+        // GET: Admin/HinhanhSps/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -79,24 +81,23 @@ namespace CakeShop.Controllers
                 return NotFound();
             }
 
-            var hangHoa = await _context.HangHoas.FindAsync(id);
-            if (hangHoa == null)
+            var hinhanhSp = await _context.HinhanhSps.FindAsync(id);
+            if (hinhanhSp == null)
             {
                 return NotFound();
             }
-            ViewData["MaLoai"] = new SelectList(_context.Loais, "MaLoai", "MaLoai", hangHoa.MaLoai);
-            ViewData["MaNcc"] = new SelectList(_context.NhaCungCaps, "MaNcc", "MaNcc", hangHoa.MaNcc);
-            return View(hangHoa);
+            ViewData["MaHh"] = new SelectList(_context.HangHoas, "MaHh", "MaHh", hinhanhSp.MaHh);
+            return View(hinhanhSp);
         }
 
-        // POST: HangHoas/Edit/5
+        // POST: Admin/HinhanhSps/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MaHh,TenHh,TenAlias,MaLoai,MoTaDonVi,DonGia,Hinh,NgaySx,GiamGia,SoLanXem,MoTa,MaNcc")] HangHoa hangHoa)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,MaHh,HinhAnhPhu")] HinhanhSp hinhanhSp)
         {
-            if (id != hangHoa.MaHh)
+            if (id != hinhanhSp.Id)
             {
                 return NotFound();
             }
@@ -105,12 +106,12 @@ namespace CakeShop.Controllers
             {
                 try
                 {
-                    _context.Update(hangHoa);
+                    _context.Update(hinhanhSp);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!HangHoaExists(hangHoa.MaHh))
+                    if (!HinhanhSpExists(hinhanhSp.Id))
                     {
                         return NotFound();
                     }
@@ -121,12 +122,11 @@ namespace CakeShop.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaLoai"] = new SelectList(_context.Loais, "MaLoai", "MaLoai", hangHoa.MaLoai);
-            ViewData["MaNcc"] = new SelectList(_context.NhaCungCaps, "MaNcc", "MaNcc", hangHoa.MaNcc);
-            return View(hangHoa);
+            ViewData["MaHh"] = new SelectList(_context.HangHoas, "MaHh", "MaHh", hinhanhSp.MaHh);
+            return View(hinhanhSp);
         }
 
-        // GET: HangHoas/Delete/5
+        // GET: Admin/HinhanhSps/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -134,36 +134,35 @@ namespace CakeShop.Controllers
                 return NotFound();
             }
 
-            var hangHoa = await _context.HangHoas
-                .Include(h => h.MaLoaiNavigation)
-                .Include(h => h.MaNccNavigation)
-                .FirstOrDefaultAsync(m => m.MaHh == id);
-            if (hangHoa == null)
+            var hinhanhSp = await _context.HinhanhSps
+                .Include(h => h.MaHhNavigation)
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (hinhanhSp == null)
             {
                 return NotFound();
             }
 
-            return View(hangHoa);
+            return View(hinhanhSp);
         }
 
-        // POST: HangHoas/Delete/5
+        // POST: Admin/HinhanhSps/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var hangHoa = await _context.HangHoas.FindAsync(id);
-            if (hangHoa != null)
+            var hinhanhSp = await _context.HinhanhSps.FindAsync(id);
+            if (hinhanhSp != null)
             {
-                _context.HangHoas.Remove(hangHoa);
+                _context.HinhanhSps.Remove(hinhanhSp);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool HangHoaExists(int id)
+        private bool HinhanhSpExists(int id)
         {
-            return _context.HangHoas.Any(e => e.MaHh == id);
+            return _context.HinhanhSps.Any(e => e.Id == id);
         }
     }
 }

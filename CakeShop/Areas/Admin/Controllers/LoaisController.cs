@@ -6,11 +6,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using CakeShop.Data;
+using CakeShop.Helpers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CakeShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Route("Admin/[controller]/[action]")]
+    [Authorize(AuthenticationSchemes = "AdminCookie", Roles = SD.Role_Admin)]
     public class LoaisController : Controller
     {
         private readonly CakeshopContext _context;

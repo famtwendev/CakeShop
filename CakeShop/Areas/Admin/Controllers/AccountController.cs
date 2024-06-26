@@ -40,6 +40,11 @@ namespace CakeShop.Areas.Admin.Controllers
                 return View();
         }
 
+        public IActionResult PhanTichNguonSale()
+        {
+            return View();
+        }
+
         #region LoginSubmit
         [HttpPost]
         public async Task<IActionResult> Login(AdminLoginVM model)
@@ -53,7 +58,7 @@ namespace CakeShop.Areas.Admin.Controllers
                 }
                 else
                 {
-                    if (nhanVien.MatKhau != model.Password)//"4dm!n" là saltkey.ToMd5Hash("4dm!n")
+                    if (nhanVien.MatKhau != model.Password.ToMd5Hash("4dm!n"))//"4dm!n" là saltkey.ToMd5Hash("4dm!n")
                     {
                         ModelState.AddModelError("loi", "Sai thông tin đăng nhập");
                     }

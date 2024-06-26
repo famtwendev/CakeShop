@@ -84,21 +84,15 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}");
+    /*
+        endpoints.MapAreaControllerRoute(
+            name: "areas",
+            areaName: "Admin",
+            pattern: "{area:exists}/{controller=Account}/{action=Index}/{id?}");*/
+    endpoints.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=Account}/{action=Index}/{id?}");
 
-    endpoints.MapAreaControllerRoute(
-        name: "areas",
-        areaName: "Admin",
-        pattern: "{area:exists}/{controller=Account}/{action=Index}/{id?}");
 });
-
-/*name: "admin",
-        areaName: "Admin",
-        pattern: "Admin/{controller=Account}/{action=Index}/{id?}");
-endpoints.MapControllerRoute(
-name: "areas",
-pattern: "{area:exists}/{controller=Product}/{action=Index}/{id?}");
-endpoints.MapControllerRoute(
-name: "default",
-pattern: "{controller=Product}/{action=Index}/{id?}");*/
 #pragma warning restore ASP0014 // Suggest using top level route registrations
 app.Run();
