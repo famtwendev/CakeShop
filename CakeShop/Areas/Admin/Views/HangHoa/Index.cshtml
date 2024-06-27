@@ -1,96 +1,125 @@
-﻿@model IEnumerable<CakeShop.Data.HangHoa>
-
+﻿@using X.PagedList
+@model IPagedList<CakeShop.Data.HangHoa>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Danh sách hàng hóa</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
+<p class="text-right">
+    <a asp-action="Create" class="btn btn-primary">Thêm mặt hàng mới</a>
 </p>
 <table class="table">
-    <thead>
+    <thead class="table-warning">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.TenHh)
+                Tên sản phẩm
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.TenAlias)
+                Tên loại Alias
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MoTaDonVi)
+                kích thước
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DonGia)
+                Đơn giá
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Hinh)
+                Hình ảnh chính
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NgaySx)
+                Ngày sản xuất
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GiamGia)
+                Giảm giá
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SoLanXem)
+                Số lượt xem
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.MoTa)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaLoaiNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaNccNavigation)
+                Mô tả sản phẩm
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenHh)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenAlias)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MoTaDonVi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DonGia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Hinh)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NgaySx)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GiamGia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SoLanXem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MoTa)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaLoaiNavigation.MaLoai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaNccNavigation.MaNcc)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.MaHh">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaHh">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaHh">Delete</a>
-            </td>
-        </tr>
-}
+        @{
+            int i = 0;
+            string @cls = "table-success";
+        }
+        @foreach (var item in Model)
+        {
+            i = i + 1;
+            cls = "table-success";
+            if (i % 2 == 0)
+            {
+                cls = "table-info";
+            }
+            <tr class="@cls">
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenHh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenAlias)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MoTaDonVi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DonGia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Hinh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgaySx)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GiamGia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoLanXem)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MoTa)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MaHh">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.MaHh">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MaHh">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+<div class="container d-flex justify-content-center align-content-center">
+    <div class="row">
+        <nav aria-label="navigation">
+            <ul class="pagination mt-50 mb-70">
+                @if (Model.HasPreviousPage)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber - 1 })">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    </li>
+                }
+                @for (int a = 1; a <= Model.PageCount; a++)
+                {
+                    <li class="page-item @(Model.PageNumber == a ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("Index", new { page = a })">@a</a>
+                    </li>
+                }
+                @if (Model.HasNextPage)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber + 1 })">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+</div>

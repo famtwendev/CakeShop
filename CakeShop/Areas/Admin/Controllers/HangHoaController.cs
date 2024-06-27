@@ -8,11 +8,15 @@ using Microsoft.EntityFrameworkCore;
 using CakeShop.Data;
 using CakeShop.Helpers;
 using Microsoft.AspNetCore.Authorization;
+using System.Drawing.Printing;
+using X.PagedList;
+using CakeShop.Areas.Admin.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CakeShop.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Route("Admin/HangHoa/[controller]/[action]")]
+    [Route("Admin/[controller]/[action]")]
     [Authorize(AuthenticationSchemes = "AdminCookie", Roles = SD.Role_Admin)]
     public class HangHoaController : Controller
     {
@@ -24,56 +28,91 @@ namespace CakeShop.Areas.Admin.Controllers
         }
 
         // GET: Admin/HangHoa
-        public async Task<IActionResult> Index()
+        public IActionResult Index(int? page)
         {
-            var cakeshopContext = _context.HangHoas.Include(h => h.MaLoaiNavigation).Include(h => h.MaNccNavigation);
-            return View(await cakeshopContext.ToListAsync());
+            int pageSize = 4;
+            int pageNumber = page ?? 1;
+            var cakeshopContext = _context.HangHoas.Include(h => h.MaLoaiNavigation).Include(h => h.MaNccNavigation).ToPagedList(pageNumber, pageSize);
+            return View(cakeshopContext);
         }
 
         // GET: Admin/HangHoa/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public IActionResult Details(int? id)
         {
-            if (id == null)
+            var data = _context.HangHoas
+               .Include(p => p.MaLoaiNavigation)
+               .Include(p => p.HinhanhSps) // Include the related HinhanhSps
+               .SingleOrDefault(p => p.MaHh == id);
+            if (data == null)
             {
+                TempData["Message"] = $"Không thấy sản phẩm có mã {id}";
                 return NotFound();
             }
 
-            var hangHoa = await _context.HangHoas
-                .Include(h => h.MaLoaiNavigation)
-                .Include(h => h.MaNccNavigation)
-                .FirstOrDefaultAsync(m => m.MaHh == id);
-            if (hangHoa == null)
+            var result = new ChiTietHangHoa
             {
-                return NotFound();
-            }
-
-            return View(hangHoa);
+                MaHh = data.MaHh,
+                TenHh = data.TenHh,
+                TenAlias = data.MaLoaiNavigation.TenLoai,
+                DonGia = data.DonGia,
+                MaLoai = data.MaLoai,
+                MoTaDonVi = data.MoTaDonVi ?? string.Empty,
+                Hinh = data.Hinh ?? string.Empty,
+                NgaySx = data.NgaySx,
+                GiamGia = data.GiamGia,
+                SoLanXem = data.SoLanXem,
+                MoTa = data.MoTa ?? string.Empty,
+                MaNcc = data.MaNcc,
+                HinhanhSps = data.HinhanhSps?.Select(h => new HinhanhSp
+                {
+                    Id = h.Id,
+                    MaHh = h.MaHh,
+                    HinhAnhPhu = h.HinhAnhPhu
+                }).ToList() ?? new List<HinhanhSp>()
+            };
+            return View(result);
         }
 
         // GET: Admin/HangHoa/Create
         public IActionResult Create()
         {
-            ViewData["MaLoai"] = new SelectList(_context.Loais, "MaLoai", "MaLoai");
+            ViewData["MaLoai"] = new SelectList(_context.Loais, "MaLoai", "DisplayText");
             ViewData["MaNcc"] = new SelectList(_context.NhaCungCaps, "MaNcc", "MaNcc");
+            ViewData["MaHh"] = new SelectList(_context.HangHoas, "MaHh", "MaHh");
             return View();
         }
 
-        // POST: Admin/HangHoa/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MaHh,TenHh,TenAlias,MaLoai,MoTaDonVi,DonGia,Hinh,NgaySx,GiamGia,SoLanXem,MoTa,MaNcc")] HangHoa hangHoa)
+        public IActionResult Create(ChiTietHangHoa model, IFormFile Hinh)
         {
+            var cthangHoa = new ChiTietHangHoa();
             if (ModelState.IsValid)
             {
-                _context.Add(hangHoa);
-                await _context.SaveChangesAsync();
+                var hangHoa = new HangHoa();
+                hangHoa.TenHh = model.TenHh;
+                hangHoa.TenAlias = model.TenAlias;
+                hangHoa.MaLoai = model.MaLoai;
+                hangHoa.MoTaDonVi = model.MoTaDonVi;
+                hangHoa.DonGia = model.DonGia;
+                hangHoa.GiamGia = model.GiamGia;
+                hangHoa.SoLanXem = model.SoLanXem;
+                hangHoa.MoTa = model.MoTa;
+                hangHoa.MaNcc = model.MaNcc;
+                if (Hinh != null && Hinh.Length > 0)
+                {
+                    string temp = MyUtil.UploadHinh(Hinh, "HangHoa");
+                    hangHoa.Hinh = temp;
+                }
+                hangHoa.NgaySx = model.NgaySx;
+                _context.HangHoas.Add((hangHoa));
+                // Save changes to the database
+                _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaLoai"] = new SelectList(_context.Loais, "MaLoai", "MaLoai", hangHoa.MaLoai);
-            ViewData["MaNcc"] = new SelectList(_context.NhaCungCaps, "MaNcc", "MaNcc", hangHoa.MaNcc);
-            return View(hangHoa);
+            ViewData["MaLoai"] = new SelectList(_context.Loais, "MaLoai", "MaLoai", cthangHoa.MaLoai);
+            ViewData["MaNcc"] = new SelectList(_context.NhaCungCaps, "MaNcc", "MaNcc", cthangHoa.MaNcc);
+            ViewData["MaHh"] = new SelectList(_context.HangHoas, "MaHh", "MaHh", cthangHoa.MaHh);
+            return View(cthangHoa);
         }
 
         // GET: Admin/HangHoa/Edit/5
@@ -81,6 +120,7 @@ namespace CakeShop.Areas.Admin.Controllers
         {
             if (id == null)
             {
+                TempData["Message"] = "Không tìm thấy mã hàng hóa!";
                 return NotFound();
             }
 
@@ -99,24 +139,20 @@ namespace CakeShop.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MaHh,TenHh,TenAlias,MaLoai,MoTaDonVi,DonGia,Hinh,NgaySx,GiamGia,SoLanXem,MoTa,MaNcc")] HangHoa hangHoa)
+        public IActionResult Edit([Bind("MaHh,TenHh,TenAlias,MaLoai,MoTaDonVi,DonGia,Hinh,NgaySx,GiamGia,SoLanXem,MoTa,MaNcc")] HangHoa hangHoa)
         {
-            if (id != hangHoa.MaHh)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(hangHoa);
-                    await _context.SaveChangesAsync();
+                    _context.Entry(hangHoa).State = EntityState.Modified;
+                    _context.SaveChanges();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!HangHoaExists(hangHoa.MaHh))
                     {
+                        TempData["Message"] = "Mặt hàng này không có trong hệ thống!";
                         return NotFound();
                     }
                     else
@@ -126,49 +162,53 @@ namespace CakeShop.Areas.Admin.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["MaLoai"] = new SelectList(_context.Loais, "MaLoai", "MaLoai", hangHoa.MaLoai);
-            ViewData["MaNcc"] = new SelectList(_context.NhaCungCaps, "MaNcc", "MaNcc", hangHoa.MaNcc);
-            return View(hangHoa);
-        }
-
-        // GET: Admin/HangHoa/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var hangHoa = await _context.HangHoas
-                .Include(h => h.MaLoaiNavigation)
-                .Include(h => h.MaNccNavigation)
-                .FirstOrDefaultAsync(m => m.MaHh == id);
-            if (hangHoa == null)
-            {
-                return NotFound();
-            }
-
             return View(hangHoa);
         }
 
         // POST: Admin/HangHoa/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var hangHoa = await _context.HangHoas.FindAsync(id);
-            if (hangHoa != null)
+            if (id == null)
             {
-                _context.HangHoas.Remove(hangHoa);
+                TempData["Message"] = "Không thể xóa sản phẩm này!";
             }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            var sanPham = _context.HangHoas.FirstOrDefaultAsync(m => m.MaHh == id);
+            if (sanPham == null)
+            {
+                TempData["Message"] = "Không tồn tại sản phẩm này!";
+            }
+            else
+            {
+                var hinhanhPhu = _context.HinhanhSps.Where(x => x.MaHh.Equals(id)).ToList();
+                if (hinhanhPhu.Any())
+                {
+                    foreach (var ha in hinhanhPhu)
+                    {
+                        if (!string.IsNullOrEmpty(ha.HinhAnhPhu))
+                        {
+                            MyUtil.DeleteHinh(ha.HinhAnhPhu, "HinhAnhSp");
+                            _context.HinhanhSps.Remove(ha);
+                        }
+                    }
+                    _context.SaveChanges();
+                }
+                MyUtil.DeleteHinh(_context.HangHoas.Find(id).Hinh.ToString(), "HangHoa");
+                _context.Remove(_context.HangHoas.Find(id));
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            return NotFound();
         }
 
         private bool HangHoaExists(int id)
         {
             return _context.HangHoas.Any(e => e.MaHh == id);
+        }
+
+        [Route("/404")]
+        public IActionResult NotFound()
+        {
+            return View();
         }
     }
 }

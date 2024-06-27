@@ -41,6 +41,30 @@ namespace CakeShop.Helpers
             }
         }
 
+        public static bool DeleteHinh(string fileName, string folder)
+        {
+            try
+            {
+                var fullPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Hinh", folder, fileName);
+
+                if (File.Exists(fullPath))
+                {
+                    File.Delete(fullPath);
+                    return true; // Trả về true nếu xóa thành công
+                }
+                else
+                {
+                    return false; // Trả về false nếu file không tồn tại
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi và trả về false nếu có lỗi
+                Console.WriteLine(ex.Message);
+                return false;
+            }
+        }
+
         public static string GenerateRamdomKey(int length = 5)
         {
             var pattern = @"qazwsxedcrfvtgbyhnujmiklopQAZWSXEDCRFVTGBYHNUJMIKLOP!";

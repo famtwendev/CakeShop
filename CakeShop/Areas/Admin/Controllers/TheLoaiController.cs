@@ -46,7 +46,7 @@ namespace CakeShop.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             TempData["Message"] = "Không thể xóa sản phẩm này!";
-            return Redirect("/Admin/Account/NotFound");
+            return Redirect("/Admin/HangHoa/NotFound");
         }
 
         // GET: Admin/TheLoai/Create
