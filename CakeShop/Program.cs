@@ -73,22 +73,12 @@ app.UseAuthentication();
 
 app.UseAuthorization();
 
-/*app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
-
-*/
 #pragma warning disable ASP0014 // Suggest using top level route registrations
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}");
-    /*
-        endpoints.MapAreaControllerRoute(
-            name: "areas",
-            areaName: "Admin",
-            pattern: "{area:exists}/{controller=Account}/{action=Index}/{id?}");*/
     endpoints.MapControllerRoute(
     name: "areas",
     pattern: "{area:exists}/{controller=Account}/{action=Index}/{id?}");

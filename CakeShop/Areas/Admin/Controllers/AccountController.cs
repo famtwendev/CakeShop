@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
 using CakeShop.Areas.Admin.Data;
+using CakeShop.Controllers;
 using CakeShop.Data;
 using CakeShop.Helpers;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 using System.Security.Claims;
 
 namespace CakeShop.Areas.Admin.Controllers
@@ -112,7 +114,7 @@ namespace CakeShop.Areas.Admin.Controllers
         #endregion
 
         #region Alert
-        public IActionResult PageNotFound()
+        public IActionResult NotFound()
         {
             return View();
         }
