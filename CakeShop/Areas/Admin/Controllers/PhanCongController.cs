@@ -52,24 +52,31 @@ namespace CakeShop.Areas.Admin.Controllers
         }
 
         // GET: Admin/PhanCong/Create
-        public IActionResult Create()
+        public IActionResult Create(int? id)
         {
             ViewData["MaNv"] = new SelectList(_context.NhanViens, "MaNv", "MaNv");
             ViewData["MaPb"] = new SelectList(_context.PhongBans, "MaPb", "MaPb");
             return View();
         }
 
-        // POST: Admin/PhanCong/Create
+        // POST: Admin/PhanCong/CreateModelState.IsValid
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        public async Task<IActionResult> Create([Bind("MaPc,MaNv,MaPb,NgayPc,HieuLuc")] PhanCong phanCong)
+        public IActionResult Create(PhanCong phanCong)
         {
-            if (ModelState.IsValid)
+            if (phanCong.MaPc != null)
             {
-                _context.Add(phanCong);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    _context.PhanCongs.Add(phanCong);
+                    _context.SaveChanges();
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError("", "Unable to save changes. " + ex.Message);
+                }
             }
             ViewData["MaNv"] = new SelectList(_context.NhanViens, "MaNv", "MaNv", phanCong.MaNv);
             ViewData["MaPb"] = new SelectList(_context.PhongBans, "MaPb", "MaPb", phanCong.MaPb);
@@ -83,7 +90,6 @@ namespace CakeShop.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-
             var phanCong = await _context.PhanCongs.FindAsync(id);
             if (phanCong == null)
             {
@@ -99,10 +105,11 @@ namespace CakeShop.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit([Bind("MaPc,MaNv,MaPb,NgayPc,HieuLuc")] PhanCong phanCong )
+        public IActionResult Edit([Bind("MaPc,MaNv,MaPb,NgayPc,HieuLuc")] PhanCong phanCong)
         {
-            if (ModelState.IsValid)
+            if (phanCong.MaPc != null)
             {
+
                 try
                 {
                     _context.Entry(phanCong).State = EntityState.Modified;

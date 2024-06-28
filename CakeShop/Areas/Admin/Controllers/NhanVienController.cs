@@ -69,6 +69,7 @@ namespace CakeShop.Areas.Admin.Controllers
                     ModelState.AddModelError("loi", "Đã có nhân viên này");
                     return View(nhanVien);
                 }
+                nhanVien.MatKhau = nhanVien.MatKhau.ToMd5Hash("4dm!n");
                 _context.Add(nhanVien);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -103,6 +104,7 @@ namespace CakeShop.Areas.Admin.Controllers
             {
                 try
                 {
+                    nhanVien.MatKhau = nhanVien.MatKhau.ToMd5Hash("4dm!n");
                     _context.Entry(nhanVien).State = EntityState.Modified;
                     _context.SaveChanges();
                 }
@@ -110,7 +112,7 @@ namespace CakeShop.Areas.Admin.Controllers
                 {
                     if (!NhanVienExists(nhanVien.MaNv))
                     {
-                        TempData["Message"] = "Mặt hàng này không có trong hệ thống!";
+                        TempData["Message"] = "Nhân viên này không có trong hệ thống!";
                         return RedirectToAction("NotFound", "Admin/HangHoa");
                     }
                     else

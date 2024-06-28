@@ -5,7 +5,9 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Thêm sự phân công</h1>
+<h1>Create</h1>
+
+<h4>PhanCong</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -21,13 +23,13 @@
             </div>
             <div class="form-group">
                 <label asp-for="NgayPc" class="control-label"></label>
-                <input asp-for="NgayPc" class="form-control" />
+                <input type="datetime-local" asp-for="NgayPc" class="form-control" />
                 <span asp-validation-for="NgayPc" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="HieuLuc" class="control-label"></label>
-                <input asp-for="HieuLuc" class="form-control" />
-                <span asp-validation-for="HieuLuc" class="text-danger"></span>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="HieuLuc" /> @Html.DisplayNameFor(model => model.HieuLuc)
+                </label>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -37,6 +39,6 @@
 </div>
 
 <div>
-    <a asp-action="Index" class="btn btn-warning">Back to List</a>
+    <a asp-action="Index">Back to List</a>
 </div>
 

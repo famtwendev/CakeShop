@@ -206,6 +206,13 @@ namespace CakeShop.Areas.Admin.Controllers
             return NotFound();
         }
 
+        public IActionResult PhanTicHSale()
+        {
+           return View();
+        }
+
+
+
         private bool HangHoaExists(int id)
         {
             return _context.HangHoas.Any(e => e.MaHh == id);

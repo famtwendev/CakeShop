@@ -14,16 +14,16 @@
     <thead class="table-warning">
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.MaNv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaPb)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.NgayPc)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.HieuLuc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaNvNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MaPbNavigation)
             </th>
             <th></th>
         </tr>
@@ -43,24 +43,24 @@
                 cls = "table-info";
             }
             <tr class="@cls">
-            <td>
-                @Html.DisplayFor(modelItem => item.NgayPc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HieuLuc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaNvNavigation.MaNv)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaPbNavigation.MaPb)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.MaPc">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaPc">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaPc">Delete</a>
-            </td>
-        </tr>
-}
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaNv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaPb)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayPc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HieuLuc)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MaPc">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.MaPc">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MaPc">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

@@ -41,12 +41,6 @@ namespace CakeShop.Areas.Admin.Controllers
             else
                 return View();
         }
-
-        public IActionResult PhanTichNguonSale()
-        {
-            return View();
-        }
-
         #region LoginSubmit
         [HttpPost]
         public async Task<IActionResult> Login(AdminLoginVM model)
@@ -66,8 +60,8 @@ namespace CakeShop.Areas.Admin.Controllers
                     }
                     else
                     {
-                        var phancong = db.PhanCongs.SingleOrDefault(pc => pc.MaNv == nhanVien.MaNv);
-                        if (phancong == null)
+                        var phancong = db.PhanCongs.FirstOrDefault(x => x.MaNv == nhanVien.MaNv);
+                        if (phancong==null)
                         {
                             ModelState.AddModelError("loi", "Không tìm thấy thông tin phân công cho tài khoản này.");
                         }
