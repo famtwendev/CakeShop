@@ -88,6 +88,12 @@ namespace CakeShop.Areas.Admin.Controllers
             var cthangHoa = new ChiTietHangHoa();
             if (ModelState.IsValid)
             {
+                var tim = _context.HangHoas.Where(x => x.MaHh.Equals(model.MaHh)).ToList();
+                if (tim.Any())
+                {
+                    ModelState.AddModelError("loi", "Đã có nhà cung cấp này");
+                    return View(model);
+                }
                 var hangHoa = new HangHoa();
                 hangHoa.TenHh = model.TenHh;
                 hangHoa.TenAlias = model.TenAlias;

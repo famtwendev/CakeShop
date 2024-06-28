@@ -37,8 +37,7 @@ namespace CakeShop.Areas.Admin.Controllers
                 TempData["Message"] = "Không thể xóa sản phẩm này!";
             }
 
-            var loai = await _context.Loais
-                .FirstOrDefaultAsync(m => m.MaLoai == id);
+            var loai = await _context.Loais.FirstOrDefaultAsync(m => m.MaLoai == id);
             if (loai != null)
             {
                 _context.Loais.Remove(loai);
@@ -64,6 +63,11 @@ namespace CakeShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                var tim = _context.Loais.Where(x => x.MaLoai.Equals(loai.MaLoai)).ToList();
+                if (tim.Any())
+                {
+                    return View(loai);
+                }
                 _context.Add(loai);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -106,7 +110,8 @@ namespace CakeShop.Areas.Admin.Controllers
                 {
                     if (!LoaiExists(loai.MaLoai))
                     {
-                        return NotFound();
+                        TempData["Message"] = "Không có thể loại này!";
+                        return Redirect("/Admin/HangHoa/NotFound");
                     }
                     else
                     {
