@@ -1,0 +1,65 @@
+﻿@model CakeShop.Areas.Admin.Data.AdminLoginVM
+@using Microsoft.AspNetCore.Mvc;
+@{
+    ViewData["Title"] = "Đăng Nhập";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAccount.cshtml";
+}
+<div class="row justify-content-center align-items-center">
+    <div class="col-md-6 text-center mb-md-5">
+        <h2 class="heading-section">ĐĂNG NHẬP QUẢN TRỊ HỆ THỐNG</h2>
+    </div>
+</div>
+<div class="row justify-content-center mb-md-5">
+    <div class="col-md-6 col-lg-4">
+        <div class="login-wrap p-0">
+            <h6 class="mb-4 text-center" style="font-family: Arial">Vui lòng nhập username và password</h6>
+            <form id="admin" method="post" class="signin-form">
+                @* asp-area="Admin" asp-action="Login" asp-action="Login" asp-controller="Account" *@
+                <div class="text-danger" asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <input type="text"
+                           class="form-control"
+                           asp-for="@Model.UserName"
+                           placeholder="UserName"
+                           required />
+                    <span asp-validation-for="@Model.UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="@Model.Password"
+                           type="password"
+                           id="password-field"
+                           class="form-control"
+                           placeholder="Password"
+                           required />
+                    <span toggle="#password-field"
+                          class="fa fa-fw fa-eye field-icon toggle-password"></span>
+
+                    <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit"
+                            class="form-control btn btn-primary submit px-3">
+                        Đăng nhập
+                    </button>
+                </div>
+                <div class="form-group d-md-flex">
+                    <div class="w-50">
+                        <label class="checkbox-wrap checkbox-primary">
+                            Ghi nhớ
+                            <input type="checkbox" checked />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="w-50 text-md-right">
+                        <a href="#" style="color: #fff">Quên mật khẩu?</a>
+                    </div>
+                </div>
+            </form>
+            <!--                    <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
+            <div class="social d-flex text-center">
+            <a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
+            <a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
+            </div> -->
+        </div>
+    </div>
+</div>

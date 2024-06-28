@@ -43,8 +43,8 @@ builder.Services.AddAuthentication(options =>
 })
 .AddCookie("AdminCookie", options =>
 {
-    options.LoginPath = "/Admin/Account/Login";
-    options.AccessDeniedPath = "/Admin/Account/AccessDenied";
+    options.LoginPath = "/Admin/Login";
+    options.AccessDeniedPath = "/Admin/AccessDenied";
 });
 
 
@@ -80,9 +80,15 @@ app.UseEndpoints(endpoints =>
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}");
     endpoints.MapControllerRoute(
-    name: "areas",
-    pattern: "{area:exists}/{controller=Account}/{action=Index}/{id?}");
-
+        name: "areas",
+        pattern: "{area:exists}/{controller=Admin}/{action=Index}/{id?}");
+    // Đặt route này phía dưới để nó không ảnh hưởng đến các route khác
+/*    endpoints.MapControllerRoute(
+        name: "admin_default",
+        pattern: "Admin",
+        defaults: new { area = "Admin", controller = "Admin", action = "Index" }
+    );
+*/
 });
 #pragma warning restore ASP0014 // Suggest using top level route registrations
 app.Run();

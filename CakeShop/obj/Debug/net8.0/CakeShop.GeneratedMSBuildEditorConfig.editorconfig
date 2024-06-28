@@ -26,20 +26,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/Account/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
+[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/Account/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/Admin/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/Account/NotFound.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxOb3RGb3VuZC5jc2h0bWw=
+[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/Admin/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cTm90Rm91bmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/Account/ThongBao.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxUaG9uZ0Jhby5jc2h0bWw=
+[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/Admin/ThongBao.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cVGhvbmdCYW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/HangHoa/Create.cshtml]
@@ -128,6 +128,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/PhanCong/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGhhbkNvbmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/PhongBan/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGhvbmdCYW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/PhongBan/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGhvbmdCYW5cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/PhongBan/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGhvbmdCYW5cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/PhongBan/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGhvbmdCYW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/PhongBan/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGhvbmdCYW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Areas/Admin/Views/Shared/_LayoutAccount.cshtml]
