@@ -5,15 +5,18 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Edit</h1>
-
-<h4>PhongBan</h4>
+<h1>Chỉnh sauwr phòng ban</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="MaPb" />
+            <div class="form-group">
+                <label asp-for="MaPb" class="control-label"></label>
+                <input asp-for="MaPb" class="form-control" />
+                <span asp-validation-for="MaPb" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="TenPb" class="control-label"></label>
                 <input asp-for="TenPb" class="form-control" />

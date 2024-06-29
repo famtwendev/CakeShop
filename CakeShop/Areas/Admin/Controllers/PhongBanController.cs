@@ -90,13 +90,8 @@ namespace CakeShop.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("MaPb,TenPb,ThongTin")] PhongBan phongBan)
+        public async Task<IActionResult> Edit([Bind("MaPb,TenPb,ThongTin")] PhongBan phongBan)
         {
-            if (id != phongBan.MaPb)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try
@@ -120,37 +115,24 @@ namespace CakeShop.Areas.Admin.Controllers
             return View(phongBan);
         }
 
-        // GET: Admin/PhongBan/Delete/5
+
+        // POST: Admin/PhongBan/Delete/5
+        [HttpPost]
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
             {
-                return NotFound();
+                TempData["Message"] = "Không thể xóa phòng ban này!";
             }
-
-            var phongBan = await _context.PhongBans
-                .FirstOrDefaultAsync(m => m.MaPb == id);
-            if (phongBan == null)
-            {
-                return NotFound();
-            }
-
-            return View(phongBan);
-        }
-
-        // POST: Admin/PhongBan/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(string id)
-        {
             var phongBan = await _context.PhongBans.FindAsync(id);
             if (phongBan != null)
             {
                 _context.PhongBans.Remove(phongBan);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            TempData["Message"] = "Không thể xóa phòng ban này!";
+            return Redirect("/Admin/HangHoa/NotFound");
         }
 
         private bool PhongBanExists(string id)

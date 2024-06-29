@@ -53,33 +53,33 @@
             }
 
             <tr class="@cls">
-            <td>
-                @Html.DisplayFor(modelItem => item.TenCongTy)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Logo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NguoiLienLac)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DienThoai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DiaChi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MoTa)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.MaNcc">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaNcc">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaNcc">Delete</a>
-            </td>
-        </tr>
-}
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenCongTy)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Logo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NguoiLienLac)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DienThoai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MoTa)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MaNcc" class="btn btn-warning">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.MaNcc" class="btn btn-info">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MaNcc" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

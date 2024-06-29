@@ -78,7 +78,6 @@
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="wwwroot\Hinh\KhachHang\" />
-    <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\lib\bootstrap\" />
     <Folder Include="wwwroot\lib\bootstrap\dist\css\" />
     <Folder Include="wwwroot\lib\bootstrap\dist\js\" />

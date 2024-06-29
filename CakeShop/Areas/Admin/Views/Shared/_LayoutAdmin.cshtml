@@ -15,7 +15,7 @@
     <link href="~/Admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
           rel="stylesheet">
-
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon">
     <!-- Custom styles for this template-->
     <link href="~/Admin/css/sb-admin-2.min.css" rel="stylesheet">
     @RenderSection("Styles", required: false)
@@ -30,7 +30,7 @@
         <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-action="Index" asp-controller="Account" asp-area="Admin">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-action="Index" asp-controller="Admin" asp-area="Admin">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -69,6 +69,7 @@
                         <a class="collapse-item" asp-action="Index" asp-controller="NhanVien" asp-area="Admin">Thông tin</a>
                         <a class="collapse-item" asp-action="Create" asp-controller="NhanVien" asp-area="Admin">Tạo tài khoản</a>
                         <a class="collapse-item" asp-action="Index" asp-controller="PhanCong" asp-area="Admin">Phân công</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="PhongBan" asp-area="Admin">Phòng ban</a>
                     </div>
                 </div>
             </li>
@@ -84,8 +85,8 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Chức năng:</h6>
-                        <a class="collapse-item" asp-action="Index" asp-controller="KhachHangs" asp-area="Admin">Thông tin</a>
-                        <a class="collapse-item" asp-action="Index" asp-controller="YeuThiches" asp-area="Admin">Yêu thích</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="KhachHang" asp-area="Admin">Thông tin</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="YeuThich" asp-area="Admin">Yêu thích</a>
                     </div>
                 </div>
             </li>
@@ -113,8 +114,8 @@
                         <a class="collapse-item" asp-action="Index" asp-controller="Hinhanh" asp-area="Admin">Hình ảnh hàng hóa</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Đặt hàng:</h6>
-                        <a class="collapse-item" asp-action="Index" asp-controller="HoaDons" asp-area="Admin">Hóa đơn</a>
-                        <a class="collapse-item" asp-action="Index" asp-controller="ChiTietHds" asp-area="Admin">Chi Tiết Hóa Đơn</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="HoaDon" asp-area="Admin">Hóa đơn</a>
+                        <a class="collapse-item" asp-action="Index" asp-controller="ChiTietHoaDon" asp-area="Admin">Chi Tiết Hóa Đơn</a>
                         <h6 class="collapse-header">Nguồn hàng:</h6>
                         <a class="collapse-item" asp-action="Index" asp-controller="NhaCungCap" asp-area="Admin">Nhà cung cấp</a>
                     </div>
@@ -346,7 +347,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                  aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" asp-action="Profile" asp-controller="Admin" asp-area="Admin">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>

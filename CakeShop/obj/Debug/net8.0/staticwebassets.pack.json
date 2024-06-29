@@ -69,6 +69,14 @@
       "PackagePath": "staticwebassets\\Admin\\gulpfile.js"
     },
     {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\img\\arrow-left-long-solid.svg",
+      "PackagePath": "staticwebassets\\Admin\\img\\arrow-left-long-solid.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\img\\chevron-left-solid.svg",
+      "PackagePath": "staticwebassets\\Admin\\img\\chevron-left-solid.svg"
+    },
+    {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\img\\undraw_posting_photo.svg",
       "PackagePath": "staticwebassets\\Admin\\img\\undraw_posting_photo.svg"
     },
@@ -7833,32 +7841,8 @@
       "PackagePath": "staticwebassets\\Hinh\\KhachHang\\user.jpg"
     },
     {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\backup\\shopbegin.html",
-      "PackagePath": "staticwebassets\\backup\\shopbegin.html"
-    },
-    {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\backup\\single-product-details.html",
-      "PackagePath": "staticwebassets\\backup\\single-product-details.html"
-    },
-    {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\blog.html",
-      "PackagePath": "staticwebassets\\blog.html"
-    },
-    {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\cart.html",
-      "PackagePath": "staticwebassets\\cart.html"
-    },
-    {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\checkout.html",
-      "PackagePath": "staticwebassets\\checkout.html"
-    },
-    {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\compilerconfig.json",
       "PackagePath": "staticwebassets\\compilerconfig.json"
-    },
-    {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\contact.html",
-      "PackagePath": "staticwebassets\\contact.html"
     },
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\_mixin.css",
@@ -7991,10 +7975,6 @@
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\stylelogin.css",
       "PackagePath": "staticwebassets\\css\\stylelogin.css"
-    },
-    {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\essence-master.zip",
-      "PackagePath": "staticwebassets\\essence-master.zip"
     },
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\favicon.ico",
@@ -8297,10 +8277,6 @@
       "PackagePath": "staticwebassets\\img\\product-img\\product-big-3.jpg"
     },
     {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\index.html",
-      "PackagePath": "staticwebassets\\index.html"
-    },
-    {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\js\\active.js",
       "PackagePath": "staticwebassets\\js\\active.js"
     },
@@ -8559,22 +8535,6 @@
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
-    },
-    {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\regular-page.html",
-      "PackagePath": "staticwebassets\\regular-page.html"
-    },
-    {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\shop-details.html",
-      "PackagePath": "staticwebassets\\shop-details.html"
-    },
-    {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\shop.html",
-      "PackagePath": "staticwebassets\\shop.html"
-    },
-    {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\single-blog.html",
-      "PackagePath": "staticwebassets\\single-blog.html"
     },
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\style.css",

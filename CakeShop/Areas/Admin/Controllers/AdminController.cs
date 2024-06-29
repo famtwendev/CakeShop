@@ -6,6 +6,7 @@ using CakeShop.Helpers;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using System.Security.Claims;
 
@@ -65,7 +66,7 @@ namespace CakeShop.Areas.Admin.Controllers
                     else
                     {
                         var phancong = db.PhanCongs.FirstOrDefault(x => x.MaNv == nhanVien.MaNv);
-                        if (phancong==null)
+                        if (phancong == null)
                         {
                             ModelState.AddModelError("loi", "Không tìm thấy thông tin phân công cho tài khoản này.");
                         }
@@ -101,7 +102,41 @@ namespace CakeShop.Areas.Admin.Controllers
         }
         #endregion
 
-        #region Logout
+
+        // GET: Admin/NhanVien/Edit/5
+        [HttpGet]
+        [Route("Profile")]
+        [Authorize(AuthenticationSchemes = "AdminCookie", Roles = SD.Role_Admin)]
+        public async Task<IActionResult> Profile()
+        {
+            var adminId = User.FindFirst("AdminID")?.Value;
+            var nhanvien = db.NhanViens.SingleOrDefault(nv => nv.MaNv == adminId);
+            if (nhanvien == null)
+            {
+                return NotFound();
+            }
+            return View(nhanvien);
+        }
+
+        // POST: Admin/NhanVien/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [Route("Profile")]
+        [Authorize(AuthenticationSchemes = "AdminCookie", Roles = SD.Role_Admin)]
+        public async Task<IActionResult> Profile(NhanVien nhanVien)
+        {
+            if (ModelState.IsValid)
+            {
+                nhanVien.MatKhau = nhanVien.MatKhau.ToMd5Hash("4dm!n");
+                db.Entry(nhanVien).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(nhanVien);
+        }
+
+     #region Logout
         [Route("Logout")]
         [Authorize(AuthenticationSchemes = "AdminCookie", Roles = SD.Role_Admin)]
         public async Task<IActionResult> Logout()
