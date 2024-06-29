@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using CakeShop.Data;
 using CakeShop.Helpers;
 using Microsoft.AspNetCore.Authorization;
+using X.PagedList;
 
 namespace CakeShop.Areas.Admin.Controllers
 {
@@ -24,9 +25,12 @@ namespace CakeShop.Areas.Admin.Controllers
         }
 
         // GET: Admin/KhachHang
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? page)
         {
-            return View(await _context.KhachHangs.ToListAsync());
+            int pageSize = 4;
+            int pageNumber = page ?? 1;
+            var cakeshopContext = _context.KhachHangs.ToPagedList(pageNumber, pageSize);
+            return View(cakeshopContext);
         }
 
         // GET: Admin/KhachHang/Details/5

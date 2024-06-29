@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -340,7 +341,19 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    var customerName = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
+                                    if (!string.IsNullOrEmpty(customerName))
+                                    {
+                                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">@customerName</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Welcome Admin</span>
+                                    }
+                                }
+                                @* <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span> *@
                                 <img class="img-profile rounded-circle"
                                      src="~/Admin/img/undraw_profile.svg">
                             </a>

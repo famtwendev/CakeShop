@@ -4,6 +4,8 @@ using CakeShop.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using CakeShop.Services;
+using Microsoft.EntityFrameworkCore;
+using X.PagedList;
 
 namespace CakeShop.Controllers
 {
@@ -213,6 +215,17 @@ namespace CakeShop.Controllers
 
             TempData["Message"] = $"Thanh toán VNPay thành công";
             return RedirectToAction("PaymentSuccess");
+        }
+
+        [Authorize]
+        public IActionResult HistoryBill(int? page)
+        {
+            var customerId = User.FindFirst("CustomerID")?.Value;
+            var khachHang = db.KhachHangs.SingleOrDefault(kh => kh.MaKh == customerId);
+            int pageSize = 4;
+            int pageNumber = page ?? 1;
+            var cakeshopContext = db.HoaDons.Where(x => x.MaKh == khachHang.MaKh).ToPagedList(pageNumber, pageSize);
+            return View(cakeshopContext);
         }
     }
 }

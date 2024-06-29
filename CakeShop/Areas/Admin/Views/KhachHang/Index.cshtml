@@ -1,61 +1,63 @@
-﻿@model IEnumerable<CakeShop.Data.KhachHang>
+﻿@using X.PagedList
+@model IPagedList<CakeShop.Data.KhachHang>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
+<h1>Danh sách khách hàng</h1>
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
+<p class="text-right">
+    <a asp-action="Create" class="btn btn-info">Thêm khách hàng mới</a>
 </p>
 <table class="table">
-    <thead>
+    <thead class="table-warning">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.MatKhau)
+                Họ tên
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.HoTen)
+                Giới tính
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.GioiTinh)
+                Ngày sinh
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NgaySinh)
+                Mật khẩu
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DiaChi)
+                Địa chỉ
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DienThoai)
+                Điện thoại
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
+                Email
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Hinh)
+                Hiệu lực
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.HieuLuc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.VaiTro)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RandomKey)
+                Vai trò
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MatKhau)
-            </td>
-            <td>
+        @{
+            int i = 0;
+            string @cls = "table-success";
+        }
+        @foreach (var item in Model)
+        {
+            i = i + 1;
+            cls = "table-success";
+            if (i % 2 == 0)
+            {
+                cls = "table-info";
+            }
+            <tr class="@cls">
+                <td>
                 @Html.DisplayFor(modelItem => item.HoTen)
             </td>
             <td>
@@ -63,6 +65,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.NgaySinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatKhau)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DiaChi)
@@ -74,23 +79,47 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Hinh)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.HieuLuc)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.VaiTro)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RandomKey)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.MaKh">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.MaKh">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaKh">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.MaKh" class="btn btn-warning">Chỉnh sử</a> |
+                    <a asp-action="Details" asp-route-id="@item.MaKh" class="btn btn-info">Chi Tiết</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MaKh" class="btn btn-danger">Xóa</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+<div class="container d-flex justify-content-center align-content-center">
+    <div class="row">
+        <nav aria-label="navigation">
+            <ul class="pagination mt-50 mb-70">
+                @if (Model.HasPreviousPage)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber - 1 })">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    </li>
+                }
+                @for (int a = 1; a <= Model.PageCount; a++)
+                {
+                    <li class="page-item @(Model.PageNumber == a ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("Index", new { page = a })">@a</a>
+                    </li>
+                }
+                @if (Model.HasNextPage)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber + 1 })">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+</div>

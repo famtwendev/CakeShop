@@ -4,7 +4,6 @@
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
-
 <h1>Danh sách hàng hóa</h1>
 
 <p class="text-right">
@@ -85,9 +84,9 @@
                     @Html.DisplayFor(modelItem => item.MoTa)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.MaHh" class="btn btn-warning">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.MaHh" class="btn btn-info">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.MaHh" class="btn btn-danger">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.MaHh" class="btn btn-warning">Chỉnh sửa</a> |
+                    <a asp-action="Details" asp-route-id="@item.MaHh" class="btn btn-info">Chi Tiết</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MaHh" class="btn btn-danger">Xóa</a>
                 </td>
             </tr>
         }
