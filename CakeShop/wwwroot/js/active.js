@@ -7,7 +7,7 @@
     if ($.fn.classyNav) {
         $('#essenceNav').classyNav();
     }
-
+ 
     // :: Sliders Active Code
     if ($.fn.owlCarousel) {
         $('.popular-products-slides').owlCarousel({
@@ -34,12 +34,13 @@
                 }
             }
         });
+
         $('.product_thumbnail_slides').owlCarousel({
             items: 1,
             margin: 0,
             loop: true,
             nav: true,
-            navText: ["<img src='img/core-img/long-arrow-left.svg' alt=''>", "<img src='img/core-img/long-arrow-right.svg' alt=''>"],
+            navText: ["<img src='~/img/core-img/long-arrow-left.svg' alt=''>", "<img src='~/img/core-img/long-arrow-right.svg' alt=''>"],
             dots: false,
             autoplay: true,
             autoplayTimeout: 5000,
@@ -112,6 +113,10 @@
             }
         });
     });
+
+    
+
+
 
     // :: Favorite Button Active Code
     var favme = $(".favme");
