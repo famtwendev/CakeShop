@@ -17,7 +17,7 @@ namespace EcommerceWeb.Controllers
         }
 
 
-        public IActionResult Index(int? loai, int? page, string? sort, int? min, int? max)
+        public IActionResult Index(int? loai, int? page)
         {
 
             var hangHoas = db.HangHoas.AsQueryable();
@@ -25,28 +25,10 @@ namespace EcommerceWeb.Controllers
             int pageNumber = page ?? 1;
             if (loai.HasValue)
             {
-                hangHoas = hangHoas.Where(p => p.MaLoai == loai.Value);
+                hangHoas = hangHoas.Where(p => p.MaLoai == loai.Value); 
+                ViewBag.Loai = loai; // Truyền giá trị loai sang ViewBag
             }
-            if (min.HasValue && max.HasValue)
-            {
-                hangHoas = hangHoas.Where(p => p.DonGia >= min && p.DonGia <= max);
-            }
-
-            switch (sort)
-            {
-                case "increase":
-                    hangHoas = hangHoas.OrderBy(p => p.DonGia);
-                    break;
-                case "decrease":
-                    hangHoas = hangHoas.OrderByDescending(p => p.DonGia);
-                    break;
-                default:
-                    hangHoas = hangHoas.OrderByDescending(p => p.DonGia); // Mặc định sắp xếp theo giảm dần
-                    break;
-            }
-          /*  int pageSize = 6;
-            int pageNumber = page ?? 1;*/
-
+            
             var result = hangHoas.Select(p => new HangHoaVM
             {
                 MaHh = p.MaHh,

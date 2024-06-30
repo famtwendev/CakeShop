@@ -127,18 +127,19 @@
     <!-- ##### Footer Area End ##### -->
     <!-- jQuery (Necessary for All JavaScript Plugins) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Carousel js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Popper js -->
     <script src="~/js/popper.min.js"></script>
     <!-- Bootstrap js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
     <!-- Plugins js -->
+@*     <script src="~/js/plugin1.js"></script>
+    <script src="~/js/plugin2.js"></script> *@
     <script src="~/js/plugins.js"></script>
     <!-- Classy Nav js -->
     <script src="~/js/classy-nav.min.js"></script>
-    <!-- Carousel js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-
     <!-- Active js -->
     <script src="~/js/active.js"></script>
 
@@ -188,46 +189,7 @@
             });
         });
 
-        // Chức năng
-        $(document).ready(function () {
-            // Thiết lập thanh trượt cho khoảng giá
-            $(".slider-range-price").slider({
-                range: true,
-                min: 1000,
-                max: 3000000,
-                values: [1000, 3000000],
-                slide: function (event, ui) {
-                    $(".range-price").text("Range: $" + ui.values[0] + " - $" + ui.values[1]); // Cập nhật văn bản hiển thị
-                },
-                stop: function (event, ui) {
-                    applyFilters(); // Áp dụng bộ lọc khi ngừng kéo thả
-                }
-            });
-
-            // Lắng nghe sự kiện thay đổi trong dropdown menu
-            $("#sortByselect").change(function () {
-                applyFilters(); // Áp dụng bộ lọc khi thay đổi lựa chọn
-            });
-            // Hàm áp dụng bộ lọc
-            function applyFilters() {
-                var minPrice = $(".slider-range-price").slider("values", 0); // Lấy giá trị min của thanh trượt
-                var maxPrice = $(".slider-range-price").slider("values", 1); // Lấy giá trị max của thanh trượt
-                var sort = $("#sortByselect").val(); // Lấy giá trị của dropdown menu
-
-                var url = "/HangHoa/Index?"; // Đường dẫn đến action YeuCau
-
-                // Thêm tham số min và max nếu có
-                if (minPrice !== 1000 || maxPrice !== 3000000) {
-                    url += "min=" + minPrice + "&max=" + maxPrice + "&";
-                }
-                // Thêm tham số sort nếu có
-                if (sort) {
-                    url += "sort=" + sort + "&";
-                }
-                url = url.slice(0, -1); // Loại bỏ dấu & cuối cùng nếu có
-                window.location.href = url; // Chuyển hướng đến URL đã xây dựng
-            }
-        });
+ 
     </script>
 
 </body>

@@ -26,7 +26,7 @@
                         <!-- Widget Title 2 -->
                         <p class="widget-title2 mb-30">Price</p>
 
-                        <div class="widget-desc">
+                        @* <div class="widget-desc">
                             <div class="slider-range">
                                 <div data-min="1000"
                                      data-max="3000000"
@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="range-price">Range: 1,000 VNĐ - 3,000,000 VNĐ</div>
                             </div>
-                        </div>
+                        </div> *@
                     </div>
 
                     <!-- ##### Single Widget ##### -->
@@ -93,15 +93,13 @@
                                     <p>Có <span>@Model.Count()</span>  sản phẩm.</p>
                                 </div>
                                 <!-- Sorting -->
-                                <div class="product-sorting d-flex">
+                              @*   <div class="product-sorting d-flex">
                                     <p>Sort by:</p>
                                     <select name="select" id="sortByselect" ">
                                         <option value="increase">Highest Rated</option>
                                         <option value="decrease">Newest</option>
-                                    @*                                      <option value="value">Price: $$ - $</option>
-                                        <option value="value">Price: $ - $$</option> *@
                                     </select>
-                                </div>
+                                </div> *@
                             </div>
                         </div>
                     </div>
@@ -129,12 +127,11 @@
                         </li>
                     }
                     @for (int i = 1; i <= Model.PageCount; i++)
-                     {
+                    {
                         <li class="page-item @(Model.PageNumber == i ? "active" : "")">
                             <a class="page-link" href="@Url.Action("Index", new { loai = ViewBag.Loai, page = i })">@i</a>
                         </li>
                     }
-
                     @if (Model.HasNextPage)
                     {
                         <li class="page-item">
@@ -143,7 +140,6 @@
                             </a>
                         </li>
                     }
-                   
                 </ul>
             </nav>
         </div>

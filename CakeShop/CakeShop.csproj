@@ -70,7 +70,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
-    <PackageReference Include="Node.js" Version="5.3.0" />
     <PackageReference Include="X.PagedList" Version="9.1.2" />
     <PackageReference Include="X.PagedList.Mvc.Core" Version="9.1.2" />
   </ItemGroup>
@@ -84,22 +83,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\.sass-cache\23fb10bb6531a16595cc9a8cbcaeb8f40f41ec84\style.scssc" />
-    <None Include="wwwroot\.sass-cache\23fb10bb6531a16595cc9a8cbcaeb8f40f41ec84\_mixin.scssc" />
-    <None Include="wwwroot\.sass-cache\23fb10bb6531a16595cc9a8cbcaeb8f40f41ec84\_responsive.scssc" />
-    <None Include="wwwroot\.sass-cache\23fb10bb6531a16595cc9a8cbcaeb8f40f41ec84\_theme_color.scssc" />
-    <None Include="wwwroot\.sass-cache\23fb10bb6531a16595cc9a8cbcaeb8f40f41ec84\_variables.scssc" />
-    <None Include="wwwroot\Admin\.browserslistrc" />
-    <None Include="wwwroot\Admin\.gitignore" />
-    <None Include="wwwroot\Admin\.travis.yml" />
-    <None Include="wwwroot\Admin\404.html" />
-    <None Include="wwwroot\Admin\blank.html" />
-    <None Include="wwwroot\Admin\buttons.html" />
-    <None Include="wwwroot\Admin\cards.html" />
-    <None Include="wwwroot\Admin\charts.html" />
     <None Include="wwwroot\Admin\css\sb-admin-2.css" />
     <None Include="wwwroot\Admin\css\sb-admin-2.min.css" />
-    <None Include="wwwroot\Admin\forgot-password.html" />
     <None Include="wwwroot\Admin\gulpfile.js" />
     <None Include="wwwroot\Admin\img\undraw_posting_photo.svg" />
     <None Include="wwwroot\Admin\img\undraw_profile.svg" />
@@ -107,7 +92,6 @@
     <None Include="wwwroot\Admin\img\undraw_profile_2.svg" />
     <None Include="wwwroot\Admin\img\undraw_profile_3.svg" />
     <None Include="wwwroot\Admin\img\undraw_rocket.svg" />
-    <None Include="wwwroot\Admin\index.html" />
     <None Include="wwwroot\Admin\js\demo\chart-area-demo.js" />
     <None Include="wwwroot\Admin\js\demo\chart-bar-demo.js" />
     <None Include="wwwroot\Admin\js\demo\chart-pie-demo.js" />
@@ -115,7 +99,6 @@
     <None Include="wwwroot\Admin\js\sb-admin-2.js" />
     <None Include="wwwroot\Admin\js\sb-admin-2.min.js" />
     <None Include="wwwroot\Admin\LICENSE" />
-    <None Include="wwwroot\Admin\login.html" />
     <None Include="wwwroot\Admin\PRO_UPGRADE.txt" />
     <None Include="wwwroot\Admin\README.md" />
     <None Include="wwwroot\Admin\register.html" />
