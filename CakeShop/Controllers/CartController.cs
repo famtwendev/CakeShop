@@ -150,11 +150,12 @@ namespace CakeShop.Controllers
                     NgayDat = DateTime.Now,
                     NgayCan = DateTime.Now.AddDays(1),
                     NgayGiao = DateTime.Now.AddDays(5),
-                    CachThanhToan = "COD",
+                    CachThanhToan = payment,
                     CachVanChuyen = "Viettel Post",
                     MaTrangThai = 0,
                     GhiChu = model.GhiChu,
                 };
+                
 
                 db.Database.BeginTransaction();
                 try
@@ -181,7 +182,7 @@ namespace CakeShop.Controllers
 
 
                     // Gui Mail cho khach Hang
-                    using (var client = new SmtpClient())
+                   using (var client = new SmtpClient())
                     {
                         client.Connect("Smtp.gmail.com");
                         client.Authenticate("nptuyen121314@gmail.com", "ohmyxuononqjtzcl");

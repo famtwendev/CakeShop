@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using CakeShop.Data;
 using CakeShop.Helpers;
 using Microsoft.AspNetCore.Authorization;
+using X.PagedList;
+using CakeShop.ModelsView;
 
 namespace CakeShop.Areas.Admin.Controllers
 {
@@ -24,10 +26,12 @@ namespace CakeShop.Areas.Admin.Controllers
         }
 
         // GET: Admin/HoaDon
-        public async Task<IActionResult> Index()
+        public IActionResult Index(int? page)
         {
-            var cakeshopContext = _context.HoaDons.Include(h => h.MaKhNavigation).Include(h => h.MaNvNavigation).Include(h => h.MaTrangThaiNavigation);
-            return View(await cakeshopContext.ToListAsync());
+            int pageSize = 9;
+            int pageNumber = page ?? 1;
+            var cakeshopContext = _context.HoaDons.Include(h => h.MaKhNavigation).Include(h => h.MaNvNavigation).Include(h => h.MaTrangThaiNavigation).ToPagedList(pageNumber, pageSize); ;
+            return View(cakeshopContext);
         }
 
         // GET: Admin/HoaDon/Details/5
@@ -75,14 +79,16 @@ namespace CakeShop.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit([Bind("MaHd,MaKh,NgayDat,NgayCan,NgayGiao,HoTen,DiaChi,DienThoai,CachThanhToan,CachVanChuyen,PhiVanChuyen,MaTrangThai,MaNv,GhiChu")] HoaDon hoaDon)
+        public IActionResult Edit([Bind("MaHd,MaKh,NgayDat,NgayCan,NgayGiao,HoTen,DiaChi,DienThoai,CachThanhToan,CachVanChuyen,PhiVanChuyen,MaTrangThai,MaNv,GhiChu")] HoaDon hoaDon)
         {
+
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(hoaDon);
-                    await _context.SaveChangesAsync();
+                    hoaDon.MaKhNavigation = hoaDon.MaKhNavigation;
+                    _context.Entry(hoaDon).State = EntityState.Modified;
+                    _context.SaveChanges();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -104,7 +110,6 @@ namespace CakeShop.Areas.Admin.Controllers
         }
 
         // POST: Admin/HoaDon/Delete/5
-        [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
             if (id == null)

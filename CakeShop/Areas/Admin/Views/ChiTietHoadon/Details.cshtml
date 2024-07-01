@@ -6,40 +6,37 @@
 }
 
 <h1>Details</h1>
-
 <div>
-    <h4>ChiTietHd</h4>
-    <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DonGia)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DonGia)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SoLuong)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SoLuong)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.GiamGia)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.GiamGia)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MaHdNavigation)
+            Mã hóa đơn
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.MaHdNavigation.MaHd)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MaHhNavigation)
+            Mã sản phẩm
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.MaHhNavigation.MaHh)
+        </dd>
+        <dt class = "col-sm-2">
+            Đơn giá
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DonGia)
+        </dd>
+        <dt class = "col-sm-2">
+            Số lượng
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+        <dt class = "col-sm-2">
+            Giảm giá
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GiamGia)
         </dd>
     </dl>
 </div>

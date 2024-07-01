@@ -49,23 +49,9 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star text-secondary"></i>
                         </div>
-                        <b class="mb-2">Đơn vị: @Model.MoTaNgan</b>
-                        <!-- Select Box -->
-                        <div class="select-box d-flex align-items-center justify-content-start my-4">
-                            @if (Model.MaLoai == 1000 || Model.MaLoai == 1001)
-                            {
-                                <label for="productSize" class="mr-5"><b>Kích cỡ</b></label>
-                                <select name="select" id="productSize" class="form-select form-select-lg">
-                                    <option selected disabled>Chọn kích thước bánh</option>
-                                    <option value="value">16 cm</option>
-                                    <option value="value">20 cm</option>
-                                    <option value="value">24 cm</option>
-                                    <option value="value">28 cm</option>
-                                </select>
-                            }
-                        </div>
+                        <b class="mt-2">Kích thước: @Model.MoTaNgan</b>
                         <!-- Cart & Favourite Box -->
-                        <div class="cart-fav-box">
+                        <div class="cart-fav-box mt-2">
                             <form asp-action="AddToCart" asp-controller="Cart" asp-route-id="@Model.MaHh" class="cart-form clearfix">
                                 <div class="input-group-btn mb-3"><b>Số lượng</b></div>
                                 <div class="input-group quantity mb-5 d-flex  align-items-center" style="width: 100px">
@@ -259,163 +245,131 @@
                     </div>
                     <div class="col-lg-12">
                         <h4 class="mb-4">Featured products</h4>
-                        <div class="d-flex align-items-center justify-content-start">
+                        <div class="d-flex align-items-center justify-content-start mb-2">
                             <div class="rounded" style="width: 100px; height: 100px">
                                 <img src="~/img/bg-img/bg-1.jpg"
                                      class="img-fluid rounded"
                                      alt="Image" />
                             </div>
                             <div class="mx-2">
-                                <h6 class="mb-2">Big Banana</h6>
+                                <h6 class="mb-2">Bánh sinh nhật</h6>
                                 <div class="d-flex mb-2">
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
                                     <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="d-flex mb-2">
-                                    <h5 class="fw-bold me-2">2.99 $</h5>
-                                    <h5 class="text-danger text-decoration-line-through">
-                                        4.11 $
-                                    </h5>
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-start">
+                        <div class="d-flex align-items-center justify-content-start mb-2">
                             <div class="rounded" style="width: 100px; height: 100px">
                                 <img src="~/img/bg-img/bg-2.jpg"
                                      class="~/img-fluid rounded"
                                      alt="Image" />
                             </div>
                             <div class="mx-2">
-                                <h6 class="mb-2">Big Banana</h6>
+                                <h6 class="mb-2">Bánh ngọt</h6>
                                 <div class="d-flex mb-2">
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
                                     <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="d-flex mb-2">
-                                    <h5 class="fw-bold me-2">2.99 $</h5>
-                                    <h5 class="text-danger text-decoration-line-through">
-                                        4.11 $
-                                    </h5>
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-start">
+                        <div class="d-flex align-items-center justify-content-start mb-2">
                             <div class="rounded" style="width: 100px; height: 100px">
                                 <img src="~/img/bg-img/bg-3.jpg"
                                      class="img-fluid rounded"
                                      alt="Image" />
                             </div>
                             <div class="mx-2">
-                                <h6 class="mb-2">Big Banana</h6>
+                                <h6 class="mb-2">Bánh pháp</h6>
                                 <div class="d-flex mb-2">
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
                                     <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="d-flex mb-2">
-                                    <h5 class="fw-bold me-2">2.99 $</h5>
-                                    <h5 class="text-danger text-decoration-line-through">
-                                        4.11 $
-                                    </h5>
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-start">
+                        <div class="d-flex align-items-center justify-content-start mb-2">
                             <div class="rounded" style="width: 100px; height: 100px">
                                 <img src="~/img/bg-img/bg-4.jpg"
                                      class="img-fluid rounded"
                                      alt="Image" />
                             </div>
                             <div class="mx-2">
-                                <h6 class="mb-2">Big Banana</h6>
+                                <h6 class="mb-2">Bánh kem anime</h6>
                                 <div class="d-flex mb-2">
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
                                     <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="d-flex mb-2">
-                                    <h5 class="fw-bold me-2">2.99 $</h5>
-                                    <h5 class="text-danger text-decoration-line-through">
-                                        4.11 $
-                                    </h5>
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-start">
+                        <div class="d-flex align-items-center justify-content-start mb-2">
                             <div class="rounded" style="width: 100px; height: 100px">
                                 <img src="~/img/bg-img/bg-5.jpg"
                                      class="img-fluid rounded"
                                      alt="Image" />
                             </div>
                             <div class="mx-2">
-                                <h6 class="mb-2">Big Banana</h6>
+                                <h6 class="mb-2">Bánh mặn</h6>
                                 <div class="d-flex mb-2">
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
                                     <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="d-flex mb-2">
-                                    <h5 class="fw-bold me-2">2.99 $</h5>
-                                    <h5 class="text-danger text-decoration-line-through">
-                                        4.11 $
-                                    </h5>
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-start">
+                        <div class="d-flex align-items-center justify-content-start mb-2">
                             <div class="rounded" style="width: 100px; height: 100px">
                                 <img src="~/img/bg-img/bg-6.jpg"
                                      class="img-fluid rounded"
                                      alt="Image" />
                             </div>
                             <div class="mx-2">
-                                <h6 class="mb-2">Big Banana</h6>
+                                <h6 class="mb-2">Bánh kem kỷ niệm</h6>
                                 <div class="d-flex mb-2">
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
                                     <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star text-secondary"></i>
-                                    <i class="fa fa-star"></i>
                                 </div>
-                                <div class="d-flex mb-2">
-                                    <h5 class="fw-bold me-2">2.99 $</h5>
-                                    <h5 class="text-danger text-decoration-line-through">
-                                        4.11 $
-                                    </h5>
-                                </div>
+                               
                             </div>
                         </div>
                         <div class="d-flex justify-content-center my-4">
-                            <button class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100">
+                            <a asp-action="Index" asp-controller="HangHoa" class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100">
                                 Vew More
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-12">
                         <div class="position-relative">
-                            <img src="~/img/bg-img/bg-7.jpg"
+                            <img src="~/img/bg-img/blog3.jpg"
                                  class="img-fluid w-100 rounded"
                                  alt="" />
                             <div class="position-absolute" style="top: 50%; right: 10px">
-                                <h3 class="text-secondary fw-bold">
-                                    Fresh <br />
-                                    Fruits <br />
-                                    Banner
-                                </h3>
+@*                                 <h3 class="text-secondary fw-bold">
+                                    Cake <br />
+                                    Shop <br />
+                                    ASP.NET
+                                </h3> *@
                             </div>
                         </div>
+                        <h3 class="text-secondary fw-bold">
+                            CakeShop ASP.NET
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -425,3 +379,22 @@
     </div>
 </div>
 <!-- Single Product End -->
+@section Scripts {
+    <script>
+     // Product Quantity
+        $('.quantity button').on('click', function () {
+            var button = $(this);
+            var oldValue = button.parent().parent().find('input').val();
+            if (button.hasClass('btn-plus')) {
+                var newVal = parseFloat(oldValue) + 1;
+            } else {
+                if (oldValue > 0) {
+                    var newVal = parseFloat(oldValue) - 1;
+                } else {
+                    newVal = 0;
+                }
+            }
+            button.parent().parent().find('input').val(newVal);
+        });
+    </script>
+}

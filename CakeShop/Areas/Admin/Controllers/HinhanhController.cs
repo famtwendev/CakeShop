@@ -134,26 +134,6 @@ namespace CakeShop.Areas.Admin.Controllers
             ViewData["MaHh"] = new SelectList(_context.HangHoas, "MaHh", "MaHhTenHh", hinhanhSp.MaHh);
             return View(hinhanhSp);
         }
-
-        // GET: Admin/Hinhanh/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var hinhanhSp = await _context.HinhanhSps
-                .Include(h => h.MaHhNavigation)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (hinhanhSp == null)
-            {
-                return NotFound();
-            }
-
-            return View(hinhanhSp);
-        }
-
         // POST: Admin/Hinhanh/Delete/5
         public async Task<IActionResult> Delete(int id)
         {

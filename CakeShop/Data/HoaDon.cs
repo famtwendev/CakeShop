@@ -35,9 +35,9 @@ public partial class HoaDon
 
     public virtual ICollection<ChiTietHd> ChiTietHds { get; set; } = new List<ChiTietHd>();
 
-    public virtual KhachHang MaKhNavigation { get; set; } = null!;
+    public virtual KhachHang? MaKhNavigation { get; set; }
 
     public virtual NhanVien? MaNvNavigation { get; set; }
 
-    public virtual TrangThai MaTrangThaiNavigation { get; set; } = null!;
+    public virtual TrangThai? MaTrangThaiNavigation { get; set; }
 }
