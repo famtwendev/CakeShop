@@ -78,7 +78,8 @@ namespace CakeShop.Controllers
             ViewBag.ReturnUrl = ReturnUrl;
             if (ModelState.IsValid)
             {
-                var khachHang = db.KhachHangs.SingleOrDefault(kh => kh.MaKh == model.UserName);
+   /*             var khachHang = db.KhachHangs.SingleOrDefault(kh => kh.MaKh == model.UserName);*/
+                var khachHang = db.KhachHangs.SingleOrDefault(kh => kh.MaKh == model.UserName || kh.Email == model.UserName);
                 if (khachHang == null)
                 {
                     ModelState.AddModelError("loi", "Không có khách hàng này");

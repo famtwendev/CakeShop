@@ -36,6 +36,7 @@ namespace CakeShop.ModelsView
 
         [DataType(DataType.EmailAddress)]
         [EmailAddress(ErrorMessage = "Chưa đúng định dạng email!")]
+        [Required(ErrorMessage = "*")]
         public string Email { get; set; }
 
         [Display(Name = "Hình ảnh đại diện")]

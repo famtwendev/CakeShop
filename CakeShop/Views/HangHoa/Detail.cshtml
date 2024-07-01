@@ -26,8 +26,8 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <a asp-action="Index" asp-controller="HangHoa" asp-route-id="@Model.MaHh" style="color: black">
-                            <h4 class="fw-bold mb-3">@Model.TenHH</h4>
+                        <a asp-action="Index" asp-controller="HangHoa" asp-route-id="@Model.MaHh">
+                            <h4 class="fw-bold mb-3" style="color: black">@Model.TenHH</h4>
                         </a>
                         <p class="mb-3">Loại: @Model.TenLoai</p>
                         @if (Model.GiamGia != 0)
@@ -69,10 +69,9 @@
                             <form asp-action="AddToCart" asp-controller="Cart" asp-route-id="@Model.MaHh" class="cart-form clearfix">
                                 <div class="input-group-btn mb-3"><b>Số lượng</b></div>
                                 <div class="input-group quantity mb-5 d-flex  align-items-center" style="width: 100px">
-
                                     <div class="input-group-btn">
-                                        <button class="btn btn-sm btn-minus rounded-circle bg-light border" type="button" >
-                                            <i class="fa fa-minus"></i>
+                                        <button class="btn btn-sm btn-minus rounded-circle bg-light border" type="button">
+                                            <i class="fa fa-minus" ></i>
                                         </button>
                                     </div>
                                     <input type="text"

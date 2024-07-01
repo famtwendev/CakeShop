@@ -106,8 +106,8 @@ namespace CakeShop.Areas.Admin.Controllers
                 hangHoa.MaNcc = model.MaNcc;
                 if (Hinh != null && Hinh.Length > 0)
                 {
-                    string temp = MyUtil.UploadHinh(Hinh, "HangHoa");
-                    hangHoa.Hinh = temp;
+                    /*string temp = MyUtil.UploadHinh(Hinh, "HangHoa");*/
+                    hangHoa.Hinh = Path.GetFileName(Hinh.FileName);
                 }
                 hangHoa.NgaySx = model.NgaySx;
                 _context.HangHoas.Add((hangHoa));
@@ -192,13 +192,13 @@ namespace CakeShop.Areas.Admin.Controllers
                     {
                         if (!string.IsNullOrEmpty(ha.HinhAnhPhu))
                         {
-                            MyUtil.DeleteHinh(ha.HinhAnhPhu, "HinhAnhSp");
+/*                            MyUtil.DeleteHinh(ha.HinhAnhPhu, "HinhAnhSp");*/
                             _context.HinhanhSps.Remove(ha);
                         }
                     }
                     _context.SaveChanges();
                 }
-                MyUtil.DeleteHinh(_context.HangHoas.Find(id).Hinh.ToString(), "HangHoa");
+                /*MyUtil.DeleteHinh(_context.HangHoas.Find(id).Hinh.ToString(), "HangHoa");*/
                 _context.Remove(_context.HangHoas.Find(id));
                 _context.SaveChanges();
                 return RedirectToAction(nameof(Index));

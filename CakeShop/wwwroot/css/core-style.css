@@ -10,7 +10,7 @@
 /*@import "~/Customer/css/owl.carousel.css";*/
 /*@import url("~/Customer/css/jquery-ui.min.css");*/
 @import url("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css");
 /* :: 3.0 Common/Base CSS */
 * {
@@ -60,7 +60,7 @@ a {
     font-size: 12px;
 }
 
-    a:hover, a:focus {
+/*    a:hover, a:focus {
         -webkit-transition: all 500ms ease 0s;
         transition: all 500ms ease 0s;
         text-decoration: none;
@@ -68,7 +68,7 @@ a {
         color: #787878;
         font-weight: 600;
         font-size: 12px;
-    }
+    }*/
 
 ul,
 ol {
