@@ -417,6 +417,22 @@
       "PackagePath": "staticwebassets\\Hinh\\HangHoa\\BANANACOCOMOUSSEPG_03.jpg"
     },
     {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\BERRYCHEESEBUN_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\BERRYCHEESEBUN_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\BERRYCHEESEBUN_02.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\BERRYCHEESEBUN_02.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\BERRYCHEESEBUN_03.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\BERRYCHEESEBUN_03.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\CARAMEL_SAPODILLA_02.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\CARAMEL_SAPODILLA_02.jpg"
+    },
+    {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\CHARLOTTEBD_01.jpg",
       "PackagePath": "staticwebassets\\Hinh\\HangHoa\\CHARLOTTEBD_01.jpg"
     },
@@ -479,6 +495,30 @@
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\Cherry-focus-1-800x1200.png",
       "PackagePath": "staticwebassets\\Hinh\\HangHoa\\Cherry-focus-1-800x1200.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\EGGTART_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\EGGTART_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\EGGTART_02.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\EGGTART_02.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\EGG_TART_3.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\EGG_TART_3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\FRENCHMILKBUN_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\FRENCHMILKBUN_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\FRENCHMILKBUN_02.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\FRENCHMILKBUN_02.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\FRENCHMILKBUN_03.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\FRENCHMILKBUN_03.jpg"
     },
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\Flan-ghim-800x1132.jpg",
@@ -587,6 +627,14 @@
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\TIRAMISU2.jpg",
       "PackagePath": "staticwebassets\\Hinh\\HangHoa\\TIRAMISU2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\TONKA_VANILLA_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\TONKA_VANILLA_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\TONKA_VANILLA_03.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\TONKA_VANILLA_03.jpg"
     },
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\TRUFFLESALTEDDUCKEGG_01.jpg",

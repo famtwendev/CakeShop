@@ -68,7 +68,7 @@ namespace CakeShop.Controllers
         {
             var gioHang = Cart;
             var item = gioHang.SingleOrDefault(p => p.MaHh == id);
-            if (item != null)
+            if (item != null && item.SoLuong >= 0 && item.SoLuong < 99)
             {
                 item.SoLuong += 1;
             }
@@ -79,7 +79,7 @@ namespace CakeShop.Controllers
         {
             var gioHang = Cart;
             var item = gioHang.SingleOrDefault(p => p.MaHh == id);
-            if (item != null)
+            if (item != null && item.SoLuong >= 0 && item.SoLuong < 99)
             {
                 if (item.SoLuong > 1)
                     item.SoLuong -= 1;
