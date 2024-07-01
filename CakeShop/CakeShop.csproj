@@ -62,7 +62,6 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
-    <PackageReference Include="bootstrap" Version="5.3.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
@@ -1949,6 +1948,7 @@
     <None Include="wwwroot\Admin\vendor\jquery\jquery.slim.min.map" />
     <None Include="wwwroot\css\bootstrap\.DS_Store" />
     <None Include="wwwroot\css\bootstrap\mixins\.DS_Store" />
+    <None Include="wwwroot\Customer\jquery\jquery.min.js" />
     <None Include="wwwroot\js\site.js" />
   </ItemGroup>
 
