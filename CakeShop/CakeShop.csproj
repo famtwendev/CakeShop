@@ -8,9 +8,13 @@
 
   <ItemGroup>
     <Compile Remove="Pages\**" />
+    <Compile Remove="wwwroot\Customer\**" />
     <Content Remove="Pages\**" />
+    <Content Remove="wwwroot\Customer\**" />
     <EmbeddedResource Remove="Pages\**" />
+    <EmbeddedResource Remove="wwwroot\Customer\**" />
     <None Remove="Pages\**" />
+    <None Remove="wwwroot\Customer\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -1948,7 +1952,6 @@
     <None Include="wwwroot\Admin\vendor\jquery\jquery.slim.min.map" />
     <None Include="wwwroot\css\bootstrap\.DS_Store" />
     <None Include="wwwroot\css\bootstrap\mixins\.DS_Store" />
-    <None Include="wwwroot\Customer\jquery\jquery.min.js" />
     <None Include="wwwroot\js\site.js" />
   </ItemGroup>
 
