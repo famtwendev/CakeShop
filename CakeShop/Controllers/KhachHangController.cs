@@ -221,15 +221,6 @@ namespace CakeShop.Controllers
         }
         #endregion
 
-
-        [HttpGet]
-        public IActionResult QuenMatKhau()
-        {
-            return View();
-        }
-
-
-
     }
 
 }

@@ -39,11 +39,15 @@ builder.Services.AddAuthentication(options =>
 {
     options.LoginPath = "/KhachHang/DangNhap";
     options.AccessDeniedPath = "/AccessDenied";
+    options.ExpireTimeSpan = TimeSpan.FromDays(1);  // Thiết lập thời gian hết hạn là 10 ngày
+    options.SlidingExpiration = true;  // Thiết lập Sliding Expiration nếu cần;
 })
 .AddCookie("AdminCookie", options =>
 {
     options.LoginPath = "/Admin/Login";
     options.AccessDeniedPath = "/Admin/AccessDenied";
+    options.ExpireTimeSpan = TimeSpan.FromDays(1);  // Thiết lập thời gian hết hạn là 10 ngày
+    options.SlidingExpiration = true;  // Thiết lập Sliding Expiration nếu cần
 });
 
 

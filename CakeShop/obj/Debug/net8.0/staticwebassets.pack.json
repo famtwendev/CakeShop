@@ -801,6 +801,14 @@
       "PackagePath": "staticwebassets\\css\\core-style.css.map"
     },
     {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\css\\jquery-ui.min.css"
+    },
+    {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\magnific-popup.css",
       "PackagePath": "staticwebassets\\css\\magnific-popup.css"
     },
@@ -809,12 +817,8 @@
       "PackagePath": "staticwebassets\\css\\nice-select.css"
     },
     {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\responsive.css",
-      "PackagePath": "staticwebassets\\css\\responsive.css"
-    },
-    {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\responsive.css.map",
-      "PackagePath": "staticwebassets\\css\\responsive.css.map"
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\css\\owl.carousel.css"
     },
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\site.css",

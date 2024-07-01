@@ -192,17 +192,18 @@ namespace CakeShop.Controllers
                         bodyBuilder.HtmlBody += $"<p>Địa chỉ nhận hàng: {hoadon.DiaChi}</p></br>";
                         bodyBuilder.HtmlBody += $"<p>Thông tin liên lạc: {hoadon.DienThoai}</p></br>";
                         bodyBuilder.HtmlBody += $"<p>Ngày đặt hàng: {hoadon.NgayDat.ToString("dd/MM/yyyy hh:mm tt")}</p></br>";
-                        bodyBuilder.HtmlBody += $"<p>Ngày giao hàng: {hoadon.NgayGiao}</p></br>";
+                        bodyBuilder.HtmlBody += $"<p>Ngày giao hàng: {hoadon.NgayGiao?.ToString("dd/MM/yyyy hh:mm tt")}</p></br>";
                         // Xây dựng nội dung email với từng chi tiết hóa đơn dưới dạng bảng HTML
                         bodyBuilder.HtmlBody += "<h3>Chi tiết hóa đơn:</h3></br>";
                         bodyBuilder.HtmlBody += "<table border='1'>";
-                        bodyBuilder.HtmlBody += "<tr><th>Mã sản phẩm</th><th>Số lượng</th><th>Đơn giá</th></tr>";
-                        foreach (var item in cthds)
+                        bodyBuilder.HtmlBody += "<tr><th>Mã sản phẩm</th><th>Số lượng</th><th>Đơn giá</th><th>Giảm giá</th></tr>";
+                        foreach (var cthd in cthds)
                         {
                             bodyBuilder.HtmlBody += "<tr>";
-                            bodyBuilder.HtmlBody += $"<td>{item.MaHh}</td>";
-                            bodyBuilder.HtmlBody += $"<td>{item.SoLuong}</td>";
-                            bodyBuilder.HtmlBody += $"<td>{item.DonGia}</td>";
+                            bodyBuilder.HtmlBody += $"<td>{cthd.MaHh}</td>";
+                            bodyBuilder.HtmlBody += $"<td>{cthd.SoLuong}</td>";
+                            bodyBuilder.HtmlBody += $"<td>{cthd.DonGia}</td>";
+                            bodyBuilder.HtmlBody += $"<td>{cthd.GiamGia}</td>";
                             bodyBuilder.HtmlBody += "</tr>";
                         }
                         bodyBuilder.HtmlBody += "</table>";
@@ -210,7 +211,7 @@ namespace CakeShop.Controllers
                         {
                             Body = bodyBuilder.ToMessageBody()
                         };
-                        message.From.Add(new MailboxAddress("Noreply my site", "nptuyen121314@gmail.com"));
+                        message.From.Add(new MailboxAddress("Cake Shop", "nptuyen121314@gmail.com"));
                         message.To.Add(new MailboxAddress("Hoa Don Mua Hang", khachHang.Email));
                         message.Subject = "Hóa Đơn mua hàng";
                         client.Send(message);
@@ -271,28 +272,5 @@ namespace CakeShop.Controllers
             var cakeshopContext = db.HoaDons.Where(x => x.MaKh == khachHang.MaKh).ToPagedList(pageNumber, pageSize);
             return View(cakeshopContext);
         }
-
-        /*        public Action GuiMail(string emailCustomer)
-                {
-                    using (var client = new SmtpClient())
-                    {
-                        client.Connect("Smtp.gmail.com");
-                        client.Authenticate("nptuyen121314@gmail.com", "ohmyxuononqjtzcl");
-                        var bodyBuilder = new BodyBuilder {
-                       *//* HtmlBody = $"<p>{formData. </p>";*//*
-                        };
-
-                        var message = new MimeMessage
-                        {
-                            Body = bodyBuilder.ToMessageBody()
-                        };
-                        message.From.Add(new MailboxAddress("Noreply my site", "nptuyen121314@gmail.com"));
-                        message.To.Add(new MailboxAddress("Hoa Don Mua Hang", emailCustomer));
-                        message.Subject = "Hóa Đơn mua hàng";
-                        client.Send(message);
-
-                        client.Disconnect(true);
-                    }
-                }*/
     }
 }

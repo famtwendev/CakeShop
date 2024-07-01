@@ -1,17 +1,15 @@
 /* [Master Stylesheet v-1.0.0] */
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Ubuntu:300,400,500,700");
 /* :: 2.0 Import All CSS */
-@import "~/css/bootstrap.min.css";
 @import "~/css/classy-nav.min.css";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css");
 @import "~/css/animate.css";
 @import "~/css/magnific-popup.css";
-@import "~/css/nice-select.css";
-
-/*@import "~/Customer/css/owl.carousel.css";*/
-/*@import url("~/Customer/css/jquery-ui.min.css");*/
-@import url("https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/fontawesome.min.css");
+@import "~/css/nice-select.css";
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/*@import "~/css/site.css";*/
 /* :: 3.0 Common/Base CSS */
 * {
     margin: 0;
@@ -60,7 +58,7 @@ a {
     font-size: 12px;
 }
 
-/*    a:hover, a:focus {
+    a:hover, a:focus {
         -webkit-transition: all 500ms ease 0s;
         transition: all 500ms ease 0s;
         text-decoration: none;
@@ -68,7 +66,7 @@ a {
         color: #787878;
         font-weight: 600;
         font-size: 12px;
-    }*/
+    }
 
 ul,
 ol {
