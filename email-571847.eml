@@ -1,0 +1,37 @@
+To: famtwen72@imail.edu.vn
+From: "No reply" <no-reply@noreply.vnpay.vn>
+Subject: Thông tin tích hợp cho Merchant Cổng TT VNPAY
+Date: 01 Jul 2024 11:44 AM
+Content-Type: text/html
+
+Kính gửi anh/chị,<br/>
+VNPAY xin gửi anh/chị thông tin kết nối vào môi trường test của Cổng thanh toán VNPAY: <br/>
+<strong>Xin lưu ý:</strong> <br/>
+<li style="color: red;">Thông tin dưới đây là môi trường Sandbox của VNPAY, sử dụng để kết nối kiểm thử hệ thống. Merchant không sử dụng thông tin này để đưa ra cho khách hàng thanh toán thật.</li><br/>
+<li style="color: red;">Merchant cần tạo địa chỉ IPN (server call server) sử dụng cập nhật tình trạng thanh toán (trạng thái thanh toán) cho giao dịch. Merchant cần gửi cho VNPAY URL này.</li><br/>
+<strong>Thông tin cấu hình:</strong> <br/>
+<li>Terminal ID / Mã Website (<strong>vnp_TmnCode</strong>): <strong>LFKEZ2M5 </strong></li><br/>
+<li>Secret Key / Chuỗi bí mật tạo checksum (<strong>vnp_HashSecret</strong>): <strong>QPSWDL871L430C6Q5D9BQX7QSJAUD5XV </strong></li><br/>
+<li>Url thanh toán môi trường TEST (<strong>vnp_Url</strong>): <strong>https://sandbox.vnpayment.vn/paymentv2/vpcpay.html</strong></li><br/>
+<strong>Thông tin truy cập Merchant Admin để quản lý giao dịch: </strong><br/>
+<li>Địa chỉ: <a target="blank" href="https://sandbox.vnpayment.vn/merchantv2/">https://sandbox.vnpayment.vn/merchantv2/</a></li><br/>
+<li>Tên đăng nhập:  famtwen72@imail.edu.vn</li><br/>
+<li>Mật khẩu: <strong>(Là mật khẩu nhập tại giao diện đăng ký Merchant môi trường TEST)</strong> </li><br/>
+<strong>Kiểm tra (test case) – IPN URL: </strong><br/>
+<li>Kịch bản test (SIT): https://sandbox.vnpayment.vn/vnpaygw-sit-testing/user/login</li><br/>
+<li>Tên đăng nhập:  famtwen72@imail.edu.vn</li><br/>
+<li>Mật khẩu: <strong>(Là mật khẩu nhập tại giao diện đăng ký Merchant môi trường TEST)</strong> </li><br/>
+<strong>Tài liệu:  </strong><br/>
+<li>Tài liệu hướng dẫn tích hợp: <a target="blank" href="https://sandbox.vnpayment.vn/apis/docs/thanh-toan-pay/pay.html">https://sandbox.vnpayment.vn/apis/docs/thanh-toan-pay/pay.html</a></li><br/>
+<li>Code demo tích hợp: <a target="blank" href="https://sandbox.vnpayment.vn/apis/downloads/#">https://sandbox.vnpayment.vn/apis/vnpay-demo/code-demo-tích-hợp</a></li><br/>
+<strong>Thẻ test:  </strong><br/>
+<table align="center" border="1" cellpadding="0" cellspacing="0" width="600"><tr><td>Ngân hàng</td><td>NCB</td></tr> <tr><td>Số thẻ</td><td>9704198526191432198</td></tr> <tr><td>Tên chủ thẻ</td><td>NGUYEN VAN A</td></tr> <tr><td>Ngày phát hành</td><td>07/15</td></tr> <tr><td>Mật khẩu OTP</td><td>123456</td></tr> </table><br/>
+<p>Ngoài ra anh/chị có thể dùng thử demo Cổng thanh toán VNPAY tại: <a target="blank" href="https://sandbox.vnpayment.vn/apis/vnpay-demo/">https://sandbox.vnpayment.vn/apis/vnpay-demo/</a>để có những trải nghiệm 
+đầu tiên khi tích hợp với Cổng thanh toán VNPAYQR.<br/>
+Cần thêm thông tin, anh/chị có thể trao đổi trực tiếp với em qua thông tin ở phần chữ ký của email này.<br/>
+Cảm ơn anh/chị.<br/>
+Mọi thắc mắc và góp ý, xin vui lòng liên hệ với chúng tôi qua:<br/>
+Email: support.vnpayment@vnpay.vn<br/>
+Hotline: 1900 55 55 77<br/><br/>
+Trân trọng,<br/></p>
+*Quý khách vui lòng không trả lời email này*

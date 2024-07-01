@@ -80,7 +80,7 @@ namespace CakeShop.Areas.Admin.Controllers
                 try
                 {
                     _context.Entry(chiTietHd).State = EntityState.Modified;
-                    _context.SaveChanges();
+                    await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {

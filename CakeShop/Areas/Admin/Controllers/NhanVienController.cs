@@ -106,7 +106,7 @@ namespace CakeShop.Areas.Admin.Controllers
                 {
                     nhanVien.MatKhau = nhanVien.MatKhau.ToMd5Hash("4dm!n");
                     _context.Entry(nhanVien).State = EntityState.Modified;
-                    _context.SaveChanges();
+                    await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -149,7 +149,7 @@ namespace CakeShop.Areas.Admin.Controllers
                     _context.SaveChanges();
                 }
                 _context.Remove(_context.NhanViens.Find(id));
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return RedirectToAction("NotFound", "Admin/HangHoa");

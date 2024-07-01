@@ -83,7 +83,7 @@ namespace CakeShop.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(ChiTietHangHoa model, IFormFile Hinh)
+        public async Task<IActionResult> Create(ChiTietHangHoa model, IFormFile Hinh)
         {
             var cthangHoa = new ChiTietHangHoa();
             if (ModelState.IsValid)
@@ -112,7 +112,7 @@ namespace CakeShop.Areas.Admin.Controllers
                 hangHoa.NgaySx = model.NgaySx;
                 _context.HangHoas.Add((hangHoa));
                 // Save changes to the database
-                _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             ViewData["MaLoai"] = new SelectList(_context.Loais, "MaLoai", "MaLoai", cthangHoa.MaLoai);
@@ -145,14 +145,14 @@ namespace CakeShop.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit([Bind("MaHh,TenHh,TenAlias,MaLoai,MoTaDonVi,DonGia,Hinh,NgaySx,GiamGia,SoLanXem,MoTa,MaNcc")] HangHoa hangHoa)
+        public async Task<IActionResult> Edit([Bind("MaHh,TenHh,TenAlias,MaLoai,MoTaDonVi,DonGia,Hinh,NgaySx,GiamGia,SoLanXem,MoTa,MaNcc")] HangHoa hangHoa)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
                     _context.Entry(hangHoa).State = EntityState.Modified;
-                    _context.SaveChanges();
+                    await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -196,7 +196,7 @@ namespace CakeShop.Areas.Admin.Controllers
                             _context.HinhanhSps.Remove(ha);
                         }
                     }
-                    _context.SaveChanges();
+                    await _context.SaveChangesAsync();
                 }
                 /*MyUtil.DeleteHinh(_context.HangHoas.Find(id).Hinh.ToString(), "HangHoa");*/
                 _context.Remove(_context.HangHoas.Find(id));

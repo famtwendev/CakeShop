@@ -63,14 +63,14 @@ namespace CakeShop.Areas.Admin.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        public IActionResult Create(PhanCong phanCong)
+        public async Task<IActionResult> Create(PhanCong phanCong)
         {
             if (phanCong.MaPc != null)
             {
                 try
                 {
                     _context.PhanCongs.Add(phanCong);
-                    _context.SaveChanges();
+                    await _context.SaveChangesAsync();
                     return RedirectToAction(nameof(Index));
                 }
                 catch (Exception ex)
@@ -105,7 +105,7 @@ namespace CakeShop.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit([Bind("MaPc,MaNv,MaPb,NgayPc,HieuLuc")] PhanCong phanCong)
+        public async Task<IActionResult> Edit([Bind("MaPc,MaNv,MaPb,NgayPc,HieuLuc")] PhanCong phanCong)
         {
             if (phanCong.MaPc != null)
             {
@@ -113,8 +113,7 @@ namespace CakeShop.Areas.Admin.Controllers
                 try
                 {
                     _context.Entry(phanCong).State = EntityState.Modified;
-                    _context.SaveChanges();
-                    _context.SaveChangesAsync();
+                    await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -145,7 +144,7 @@ namespace CakeShop.Areas.Admin.Controllers
             if (phanCong != null)
             {
                 _context.PhanCongs.Remove(phanCong);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             TempData["Message"] = "Không thể xóa phân công này!";

@@ -118,11 +118,11 @@ namespace CakeShop.Controllers
         }
         [Authorize]
         [HttpPost]
-        public IActionResult Checkout(CheckoutVM model, string payment = "COD")
+        public IActionResult Checkout(CheckoutVM model, string payment)
         {
             if (ModelState.IsValid)
             {
-                if (payment == "Thanh toán VNPay")
+                if (payment == "Thanh toán trực tuyến VNPay")
                 {
                     var vnPayModel = new VnPaymentRequestModel
                     {
@@ -151,12 +151,11 @@ namespace CakeShop.Controllers
                     NgayCan = DateTime.Now.AddDays(1),
                     NgayGiao = DateTime.Now.AddDays(5),
                     CachThanhToan = payment,
-                    CachVanChuyen = "Viettel Post",
+                    CachVanChuyen = "J&T Express",
                     MaTrangThai = 0,
                     GhiChu = model.GhiChu,
                 };
                 
-
                 db.Database.BeginTransaction();
                 try
                 {
@@ -177,12 +176,12 @@ namespace CakeShop.Controllers
                     }
                     db.AddRange(cthds);
                     db.SaveChanges();
+
                     db.Database.CommitTransaction();
                     HttpContext.Session.Set<List<CartItem>>(MySetting.CART_KEY, new List<CartItem>());
 
-
                     // Gui Mail cho khach Hang
-                   using (var client = new SmtpClient())
+                    using (var client = new SmtpClient())
                     {
                         client.Connect("Smtp.gmail.com");
                         client.Authenticate("nptuyen121314@gmail.com", "ohmyxuononqjtzcl");
@@ -219,8 +218,6 @@ namespace CakeShop.Controllers
 
                         client.Disconnect(true);
                     }
-
-
                     TempData["Message"] = "Đặt hàng thành công";
                     return Redirect("/ThongBao");
                     /*return View("Success");*/

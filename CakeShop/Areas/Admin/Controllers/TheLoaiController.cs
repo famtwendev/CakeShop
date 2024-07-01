@@ -41,7 +41,7 @@ namespace CakeShop.Areas.Admin.Controllers
             if (loai != null)
             {
                 _context.Loais.Remove(loai);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             TempData["Message"] = "Không thể xóa sản phẩm này!";
@@ -96,15 +96,14 @@ namespace CakeShop.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit([Bind("MaLoai,TenLoai,TenLoaiAlias,MoTa,Hinh")] Loai loai)
+        public async Task<IActionResult> Edit([Bind("MaLoai,TenLoai,TenLoaiAlias,MoTa,Hinh")] Loai loai)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
                     _context.Entry(loai).State = EntityState.Modified;
-                    _context.SaveChanges();
-                    /*await _context.SaveChangesAsync();*/
+                    await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {

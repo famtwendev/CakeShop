@@ -10,6 +10,7 @@ using CakeShop.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using X.PagedList;
 using CakeShop.Areas.Admin.Models;
+using CakeShop.ModelsView;
 
 namespace CakeShop.Areas.Admin.Controllers
 {
@@ -54,7 +55,7 @@ namespace CakeShop.Areas.Admin.Controllers
         }
 
         // GET: Admin/Hinhanh/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             ViewData["MaHh"] = new SelectList(_context.HangHoas, "MaHh", "MaHhTenHh");
             return View();
@@ -64,17 +65,17 @@ namespace CakeShop.Areas.Admin.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.[Bind("Id,MaHh,HinhAnhPhu")] 
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        public IActionResult Create(HinhanhSp hinhanhSp, IFormFile HinhAnhPhu)
+        public async Task<IActionResult> Create(HinhanhSp hinhanhSp, IFormFile HinhAnhPhu)
         {
             if (hinhanhSp.Id != null)
             {
                 if (HinhAnhPhu != null && HinhAnhPhu.Length > 0)
                 {
-                    string temp = MyUtil.UploadHinh(HinhAnhPhu, "HangHoa");
-                    hinhanhSp.HinhAnhPhu = temp;
+                    /*                    string temp = MyUtil.UploadHinh(HinhAnhPhu, "HangHoa");*/
+                    hinhanhSp.HinhAnhPhu = Path.GetFileName(HinhAnhPhu.FileName);
                 }
                 _context.Add(hinhanhSp);
-                _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             ViewData["MaHh"] = new SelectList(_context.HangHoas, "MaHh", "MaHhTenHh", hinhanhSp.MaHh);
@@ -111,8 +112,8 @@ namespace CakeShop.Areas.Admin.Controllers
                 {
                     if (HinhAnhPhu != null && HinhAnhPhu.Length > 0)
                     {
-                        string temp = MyUtil.UploadHinh(HinhAnhPhu, "HangHoa");
-                        hinhanhSp.HinhAnhPhu = temp;
+                        /*                        string temp = MyUtil.UploadHinh(HinhAnhPhu, "HangHoa");*/
+                        hinhanhSp.HinhAnhPhu = Path.GetFileName(HinhAnhPhu.FileName);
                     }
                     _context.Entry(hinhanhSp).State = EntityState.Modified;
                     _context.SaveChanges();
