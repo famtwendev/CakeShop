@@ -11,7 +11,9 @@ D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\A
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\Azure.Core.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\Azure.Identity.dll
+D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\Humanizer.dll
+D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\MailKit.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\Microsoft.AspNetCore.Razor.Language.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\Microsoft.Build.dll
@@ -53,6 +55,7 @@ D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\M
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\MimeKit.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\Mono.TextTemplating.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Debug\net8.0\NuGet.Common.dll

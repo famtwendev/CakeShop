@@ -298,6 +298,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaG9uZ0Jhby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Views/KhachHang/AuthenOTP.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nXEF1dGhlbk9UUC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Views/KhachHang/DangKy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nXERhbmdLeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -308,6 +312,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Views/KhachHang/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nXFByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Views/KhachHang/QuenMatKhau.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nXFF1ZW5NYXRLaGF1LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Views/Shared/Components/Cart/CartPanel.cshtml]

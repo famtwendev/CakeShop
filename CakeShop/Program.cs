@@ -28,7 +28,6 @@ builder.Services.AddSession(options =>
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 
-
 // Configure authentication https://learn.microsoft.com/en-us/aspnet/core/security/authentication/?view=aspnetcore-8.0
 
 builder.Services.AddAuthentication(options =>

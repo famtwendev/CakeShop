@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|d:\\filesave\\laptrinhweb_asp.net-mvc-core\\th\\cakeshop\\cakeshop\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|solutionrelative:cakeshop\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|d:\\filesave\\laptrinhweb_asp.net-mvc-core\\th\\cakeshop\\cakeshop\\views\\khachhang\\authenotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|solutionrelative:cakeshop\\views\\khachhang\\authenotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|d:\\filesave\\laptrinhweb_asp.net-mvc-core\\th\\cakeshop\\cakeshop\\controllers\\khachhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|solutionrelative:cakeshop\\controllers\\khachhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|d:\\filesave\\laptrinhweb_asp.net-mvc-core\\th\\cakeshop\\cakeshop\\modelsview\\registervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|solutionrelative:cakeshop\\modelsview\\registervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|d:\\filesave\\laptrinhweb_asp.net-mvc-core\\th\\cakeshop\\cakeshop\\views\\khachhang\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C694DDF-501C-41C3-BFA3-AF77221ED556}|CakeShop\\CakeShop.csproj|solutionrelative:cakeshop\\views\\khachhang\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 86,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,28 +46,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegisterVM.cs",
-              "DocumentMoniker": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\ModelsView\\RegisterVM.cs",
-              "RelativeDocumentMoniker": "CakeShop\\ModelsView\\RegisterVM.cs",
-              "ToolTip": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\ModelsView\\RegisterVM.cs",
-              "RelativeToolTip": "CakeShop\\ModelsView\\RegisterVM.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAowCYAAAAmAAAA",
+              "DocumentIndex": 0,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "CakeShop\\Controllers\\CartController.cs",
+              "ToolTip": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Controllers\\CartController.cs",
+              "RelativeToolTip": "CakeShop\\Controllers\\CartController.cs",
+              "ViewState": "AQIAAK8AAAAAAAAAAAAcwJcAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:31:19.465Z",
+              "WhenOpened": "2024-07-01T06:03:28.517Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "AuthenOTP.cshtml",
+              "DocumentMoniker": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Views\\KhachHang\\AuthenOTP.cshtml",
+              "RelativeDocumentMoniker": "CakeShop\\Views\\KhachHang\\AuthenOTP.cshtml",
+              "ToolTip": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Views\\KhachHang\\AuthenOTP.cshtml",
+              "RelativeToolTip": "CakeShop\\Views\\KhachHang\\AuthenOTP.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-01T05:20:57.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "KhachHangController.cs",
               "DocumentMoniker": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Controllers\\KhachHangController.cs",
               "RelativeDocumentMoniker": "CakeShop\\Controllers\\KhachHangController.cs",
               "ToolTip": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Controllers\\KhachHangController.cs",
               "RelativeToolTip": "CakeShop\\Controllers\\KhachHangController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAlwD0AAAAAAAAA",
+              "ViewState": "AQIAAJIAAAAAAAAAAAAcwOQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T03:16:12.371Z",
+              "WhenOpened": "2024-07-01T05:16:02.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DangNhap.cshtml",
+              "DocumentMoniker": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Views\\KhachHang\\DangNhap.cshtml",
+              "RelativeDocumentMoniker": "CakeShop\\Views\\KhachHang\\DangNhap.cshtml",
+              "ToolTip": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\Views\\KhachHang\\DangNhap.cshtml",
+              "RelativeToolTip": "CakeShop\\Views\\KhachHang\\DangNhap.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAEMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-01T05:15:55.336Z",
               "EditorCaption": ""
             }
           ]

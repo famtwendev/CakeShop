@@ -1,0 +1,78 @@
+﻿<section class="vh-100 gradient-custom">
+	<div class="container py-5 h-100">
+		<div class="row d-flex justify-content-center align-items-center h-100">
+			<div class="col-12 col-md-8 col-lg-6 col-xl-5">
+				<div class="card bg-light" style="border-radius: 1rem;">
+					<!-- 2 column grid layout with text inputs for the first and last names -->
+					<form asp-action="QuenMatKhau" id="myForm" class="form needs-validation m-0" method="post">
+						<input type="hidden" name="hanhDong" value="xac-thuc">
+						<div class="card-body p-5 text-center">						
+							<div class="mb-md-5 mt-md-4">
+								<h5>Nhập mã OTP để xác thực tài khoản</h5>
+								<div class="form-outline mt-4 mb-2">
+									<span>Chúng tôi đã gửi mã xác thực đến</span> <small><%=emailMahoa%></small>
+								</div>
+								<div id="otp" class="inputs d-flex flex-row justify-content-center mt-2">
+									<input class="m-2 text-center form-control rounded" type="text" id="first"
+										   maxlength="1" name="first" />
+									<input class="m-2 text-center form-control rounded" type="text" id="second"
+										   maxlength="1" name="second" />
+									<input class="m-2 text-center form-control rounded" type="text" id="third"
+										   maxlength="1" name="third" />
+									<input class="m-2 text-center form-control rounded" type="text" id="fourth"
+										   maxlength="1" name="fourth" />
+									<input class="m-2 text-center form-control rounded" type="text" id="fifth"
+										   maxlength="1" name="fifth" />
+									<input class="m-2 text-center form-control rounded" type="text" id="sixth"
+										   maxlength="1" name="sixth" />
+								</div>
+								<span style="text-align: center; color: red"><%=baoLoi%></span>
+								<div class="mt-4">
+									<input type="submit" class="btn btn-danger px-4 validate" name="submit"
+										   id="submit" value="Xác nhận">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function (event) {
+		function OTPInput() {
+			const inputs = document.querySelectorAll('#otp > *[id]');
+			for (let i = 0; i < inputs.length; i++) {
+				inputs[i].addEventListener('keydown',
+					function (event) {
+						if (event.key === "Backspace") {
+							inputs[i].value = '';
+							if (i !== 0)
+								inputs[i - 1].focus();
+						} else {
+							if (i === inputs.length - 1
+								&& inputs[i].value !== '') {
+								return true;
+							} else if (event.keyCode > 47
+								&& event.keyCode < 58) {
+								inputs[i].value = event.key;
+								if (i !== inputs.length - 1)
+									inputs[i + 1].focus();
+								event.preventDefault();
+							} else if (event.keyCode > 64
+								&& event.keyCode < 91) {
+								inputs[i].value = String
+									.fromCharCode(event.keyCode);
+								if (i !== inputs.length - 1)
+									inputs[i + 1].focus();
+								event.preventDefault();
+							}
+						}
+					});
+			}
+		}
+		OTPInput();
+
+	});
+</script>

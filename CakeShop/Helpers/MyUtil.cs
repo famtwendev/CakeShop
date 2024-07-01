@@ -77,5 +77,23 @@ namespace CakeShop.Helpers
 
             return sb.ToString();
         }
+        public string MaskEmail(string email)
+        {
+            if (string.IsNullOrEmpty(email))
+                return email;
+
+            var atIndex = email.IndexOf('@');
+            if (atIndex <= 6)
+            {
+                return email;
+            }
+
+            var userName = email.Substring(0, atIndex);
+            var domain = email.Substring(atIndex);
+
+            var maskedUserName = userName.Substring(0, 6) + new string('*', userName.Length - 6);
+
+            return maskedUserName + domain;
+        }
     }
 }
