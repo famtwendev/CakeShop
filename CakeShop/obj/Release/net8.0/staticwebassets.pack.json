@@ -1,0 +1,1381 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\CakeShop.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CakeShop.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\.gitattributes",
+      "PackagePath": "staticwebassets\\.gitattributes"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\LICENSE",
+      "PackagePath": "staticwebassets\\Admin"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\PRO_UPGRADE.txt",
+      "PackagePath": "staticwebassets\\Admin\\PRO_UPGRADE.txt"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\README.md",
+      "PackagePath": "staticwebassets\\Admin\\README.md"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\css\\sb-admin-2.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\sb-admin-2.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\css\\sb-admin-2.min.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\sb-admin-2.min.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\gulpfile.js",
+      "PackagePath": "staticwebassets\\Admin\\gulpfile.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\img\\arrow-left-long-solid.svg",
+      "PackagePath": "staticwebassets\\Admin\\img\\arrow-left-long-solid.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\img\\chevron-left-solid.svg",
+      "PackagePath": "staticwebassets\\Admin\\img\\chevron-left-solid.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\img\\undraw_posting_photo.svg",
+      "PackagePath": "staticwebassets\\Admin\\img\\undraw_posting_photo.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\img\\undraw_profile.svg",
+      "PackagePath": "staticwebassets\\Admin\\img\\undraw_profile.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\img\\undraw_profile_1.svg",
+      "PackagePath": "staticwebassets\\Admin\\img\\undraw_profile_1.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\img\\undraw_profile_2.svg",
+      "PackagePath": "staticwebassets\\Admin\\img\\undraw_profile_2.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\img\\undraw_profile_3.svg",
+      "PackagePath": "staticwebassets\\Admin\\img\\undraw_profile_3.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\img\\undraw_rocket.svg",
+      "PackagePath": "staticwebassets\\Admin\\img\\undraw_rocket.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\js\\demo\\chart-area-demo.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\demo\\chart-area-demo.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\js\\demo\\chart-bar-demo.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\demo\\chart-bar-demo.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\js\\demo\\chart-pie-demo.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\demo\\chart-pie-demo.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\js\\demo\\datatables-demo.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\demo\\datatables-demo.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\js\\sb-admin-2.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\sb-admin-2.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\js\\sb-admin-2.min.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\sb-admin-2.min.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\_cards.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_cards.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\_charts.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_charts.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\_dropdowns.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_dropdowns.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\_error.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_error.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\_footer.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_footer.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\_global.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_global.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\_login.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_login.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\_navs.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_navs.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\_variables.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\navs\\_global.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\navs\\_global.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\navs\\_sidebar.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\navs\\_sidebar.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\navs\\_topbar.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\navs\\_topbar.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\sb-admin-2.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\sb-admin-2.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\utilities\\_animation.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\utilities\\_animation.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\utilities\\_background.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\utilities\\_background.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\utilities\\_border.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\utilities\\_border.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\utilities\\_display.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\utilities\\_display.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\utilities\\_progress.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\utilities\\_progress.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\utilities\\_rotate.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\utilities\\_rotate.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\scss\\utilities\\_text.scss",
+      "PackagePath": "staticwebassets\\Admin\\scss\\utilities\\_text.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_background-variant.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_background-variant.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_badge.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_badge.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_float.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_float.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_grid-framework.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_grid-framework.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_hover.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_hover.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_nav-divider.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_nav-divider.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_screen-reader.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_size.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_size.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_table-row.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_table-row.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_text-emphasis.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_text-emphasis.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_text-hide.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_text-hide.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\mixins\\_visibility.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\mixins\\_visibility.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_align.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_align.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_background.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_background.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_borders.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_borders.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_display.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_display.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_embed.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_embed.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_flex.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_flex.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_float.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_float.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_interactions.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_interactions.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_overflow.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_overflow.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_position.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_position.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_screenreaders.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_screenreaders.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_shadows.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_shadows.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_sizing.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_sizing.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_spacing.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_spacing.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_stretched-link.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_text.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_text.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\utilities\\_visibility.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\utilities\\_visibility.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\jquery-easing\\jquery.easing.compatibility.js",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\jquery-easing\\jquery.easing.compatibility.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\jquery-easing\\jquery.easing.js",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\jquery-easing\\jquery.easing.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Admin\\vendor\\jquery-easing\\jquery.easing.min.js",
+      "PackagePath": "staticwebassets\\Admin\\vendor\\jquery-easing\\jquery.easing.min.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\1.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\1712713360_6615ee90b4da8_11zon.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\1712713360_6615ee90b4da8_11zon.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\1712713362_6615ee921c925_11zon.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\1712713362_6615ee921c925_11zon.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\1712713366_6615ee96614ad_11zon.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\1712713366_6615ee96614ad_11zon.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\1x1-MY-MUSE-4-800x800.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\1x1-MY-MUSE-4-800x800.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\2-1.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\2-1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\3.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\Angel_Baby.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\Angel_Baby.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\Angel_Baby1.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\Angel_Baby1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\BANANACOCOMOUSSEPG_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\BANANACOCOMOUSSEPG_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\BANANACOCOMOUSSEPG_02.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\BANANACOCOMOUSSEPG_02.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\BANANACOCOMOUSSEPG_03.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\BANANACOCOMOUSSEPG_03.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\BERRYCHEESEBUN_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\BERRYCHEESEBUN_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\BERRYCHEESEBUN_02.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\BERRYCHEESEBUN_02.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\BERRYCHEESEBUN_03.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\BERRYCHEESEBUN_03.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\Beloved-Summer-1.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\Beloved-Summer-1.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\Beloved-Summer-3.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\Beloved-Summer-3.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\Beloved-Summer-4.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\Beloved-Summer-4.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\CARAMEL_SAPODILLA_02.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\CARAMEL_SAPODILLA_02.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\CHARLOTTEBD_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\CHARLOTTEBD_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\CHARLOTTEBD_03_1.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\CHARLOTTEBD_03_1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\CHARLOTTEBD_04_4.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\CHARLOTTEBD_04_4.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\CHARLOTTEPG_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\CHARLOTTEPG_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\CHARLOTTEPG_02.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\CHARLOTTEPG_02.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\CHARLOTTEPG_03.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\CHARLOTTEPG_03.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\CHEESETART_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\CHEESETART_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\CHEESETART_02.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\CHEESETART_02.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\CHEESETART_03.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\CHEESETART_03.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\CLASSICTIRA01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\CLASSICTIRA01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\CLASSICTIRA02_1.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\CLASSICTIRA02_1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\CLASSICTIRA05.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\CLASSICTIRA05.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\Cherry-1-800x1201.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\Cherry-1-800x1201.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\Cherry-Slice-1-800x1200.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\Cherry-Slice-1-800x1200.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\Cherry-Slice-800x1198.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\Cherry-Slice-800x1198.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\Cherry-focus-1-800x1200.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\Cherry-focus-1-800x1200.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\EGGTART_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\EGGTART_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\EGGTART_02.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\EGGTART_02.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\EGG_TART_3.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\EGG_TART_3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\FRENCHMILKBUN_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\FRENCHMILKBUN_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\FRENCHMILKBUN_02.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\FRENCHMILKBUN_02.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\FRENCHMILKBUN_03.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\FRENCHMILKBUN_03.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\Flan-ghim-800x1132.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\Flan-ghim-800x1132.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\HAZELNUTCHOCOCHOU_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\HAZELNUTCHOCOCHOU_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\HAZELNUTCHOCOCHOU_02.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\HAZELNUTCHOCOCHOU_02.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\HAZELNUTCHOCOCHOU_05.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\HAZELNUTCHOCOCHOU_05.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\MANGOPASSIONFRUITTIRA_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\MANGOPASSIONFRUITTIRA_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\MANGOPASSIONFRUITTIRA_03.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\MANGOPASSIONFRUITTIRA_03.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\MANGOPASSIONFRUITTIRA_05.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\MANGOPASSIONFRUITTIRA_05.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\MATCHATIRA01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\MATCHATIRA01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\MATCHATIRA02.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\MATCHATIRA02.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\MATCHATIRA05.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\MATCHATIRA05.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\MY-MUSE-1-1.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\MY-MUSE-1-1.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\MY-MUSE-4.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\MY-MUSE-4.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\OPLA1.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\OPLA1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\OPLA2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\OPLA2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\OPLA3.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\OPLA3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\STRAWBERRYMATCHALATTEBD_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\STRAWBERRYMATCHALATTEBD_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\STRAWBERRYMATCHALATTEBD_03.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\STRAWBERRYMATCHALATTEBD_03.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\STRAWBERRYMATCHALATTEBD_04.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\STRAWBERRYMATCHALATTEBD_04.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\STRAWBERRYMATCHALATTE_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\STRAWBERRYMATCHALATTE_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\STRAWBERRYMATCHALATTE_02.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\STRAWBERRYMATCHALATTE_02.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\STRAWBERRYMATCHALATTE_03.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\STRAWBERRYMATCHALATTE_03.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\TAI5791-800x1200.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\TAI5791-800x1200.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\TAI5896-800x1200.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\TAI5896-800x1200.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\TAI5909-800x1200.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\TAI5909-800x1200.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\TAI5954-800x1200.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\TAI5954-800x1200.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\TIRAMISU1.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\TIRAMISU1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\TIRAMISU2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\TIRAMISU2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\TONKA_VANILLA_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\TONKA_VANILLA_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\TONKA_VANILLA_03.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\TONKA_VANILLA_03.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\TRUFFLESALTEDDUCKEGG_01.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\TRUFFLESALTEDDUCKEGG_01.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\TRUFFLESALTEDDUCKEGG_02.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\TRUFFLESALTEDDUCKEGG_02.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\TRUFFLESALTEDDUCKEGG_03.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\TRUFFLESALTEDDUCKEGG_03.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\ThanhTra-2-800x1200.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\ThanhTra-2-800x1200.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\ThanhTra-slice-1-800x1196.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\ThanhTra-slice-1-800x1196.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\ThanhTra-topdown-800x1200.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\ThanhTra-topdown-800x1200.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\ban-mai-1.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\ban-mai-1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\ban-mai-2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\ban-mai-2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banh-kem-dau.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banh-kem-dau.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banh-kem-dau1.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banh-kem-dau1.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banh-kem-dau2.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banh-kem-dau2.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banh-mi-xuc-xich.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banh-mi-xuc-xich.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banh-mi-xuc-xich1.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banh-mi-xuc-xich1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banh-mi-xuc-xich2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banh-mi-xuc-xich2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banh-sung-bo-1.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banh-sung-bo-1.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banh-sung-bo-2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banh-sung-bo-2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banh-sung-bo-hanh-nhan-1.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banh-sung-bo-hanh-nhan-1.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banh-sung-bo-hanh-nhan-2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banh-sung-bo-hanh-nhan-2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banh-sung-bo-trung-muoi-1.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banh-sung-bo-trung-muoi-1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banh-sung-bo-trung-muoi-2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banh-sung-bo-trung-muoi-2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banh-sung-bo-trung-muoi-3.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banh-sung-bo-trung-muoi-3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banhmihoacuc.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banhmihoacuc.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banhmihoacuc1.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banhmihoacuc1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\banhmihoacuc2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banhmihoacuc2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\bo-hoa-cuc-tana-little-tana.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\bo-hoa-cuc-tana-little-tana.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\bo-hoa-cuc-tana-little-tana2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\bo-hoa-cuc-tana-little-tana2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\bohoaniemvui.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\bohoaniemvui.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\bohoaniemvui2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\bohoaniemvui2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\bohoaniemvui3.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\bohoaniemvui3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\bohoaniemvui4.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\bohoaniemvui4.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\bohoaniemvui5.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\bohoaniemvui5.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\croissant-chocolate_1.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\croissant-chocolate_1.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\croissant-chocolate_2.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\croissant-chocolate_2.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\cuchoa.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\cuchoa.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\cuchoa2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\cuchoa2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\cuchoa3.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\cuchoa3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\giothoatinhkhoi.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\giothoatinhkhoi.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\giothoatinhkhoi2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\giothoatinhkhoi2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\giothoatinhkhoi3.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\giothoatinhkhoi3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\hoa-chuc-mung-1.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\hoa-chuc-mung-1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\hoa-chuc-mung-2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\hoa-chuc-mung-2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\hoa-chuc-mung-3.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\hoa-chuc-mung-3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\hoa-va-banh-sinh-nhat.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\hoa-va-banh-sinh-nhat.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\hoahonggai.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\hoahonggai.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\hoahonggai1.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\hoahonggai1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\hoahonggai2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\hoahonggai2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\hoaoaihuong.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\hoaoaihuong.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\hoaoaihuong2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\hoaoaihuong2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\hoaoaihuong3.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\hoaoaihuong3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\hoatranquy.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\hoatranquy.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\hoatranquy2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\hoatranquy2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\hoatranquy3.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\hoatranquy3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\ke-hoa-chuc-mung2-1.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\ke-hoa-chuc-mung2-1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\ke-hoa-chuc-mung2-2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\ke-hoa-chuc-mung2-2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\ke-hoa-chuc-mung2-3.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\ke-hoa-chuc-mung2-3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\khong-logo-2x3_1.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\khong-logo-2x3_1.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\khong-logo-2x3_2.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\khong-logo-2x3_2.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\khong-logo-2x3_5.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\khong-logo-2x3_5.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\khong-logo-2x3_8.png",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\khong-logo-2x3_8.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\mau-don-1.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\mau-don-1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\mau-don-2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\mau-don-2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\mau-don-3.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\mau-don-3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\vani-kemtuoi-socola.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\vani-kemtuoi-socola.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\vani-kemtuoi-socola2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\vani-kemtuoi-socola2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\KhachHang\\448310383_122146347398234860_6540341551642699489_n.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\448310383_122146347398234860_6540341551642699489_n.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\KhachHang\\54ffde11-227d-466d-a8da-8573ab264c13.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\54ffde11-227d-466d-a8da-8573ab264c13.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\KhachHang\\5b36b1de-1ec5-4f2f-8b15-a99cc264d802.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\5b36b1de-1ec5-4f2f-8b15-a99cc264d802.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\KhachHang\\6fae73a7-2ee5-49b4-b9ff-bc7c3860fac2.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\6fae73a7-2ee5-49b4-b9ff-bc7c3860fac2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\KhachHang\\cc718479-7c53-414e-9212-2fd558554fe4.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\cc718479-7c53-414e-9212-2fd558554fe4.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\KhachHang\\user.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\user.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\compilerconfig.json",
+      "PackagePath": "staticwebassets\\compilerconfig.json"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\animate.css",
+      "PackagePath": "staticwebassets\\css\\animate.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\bootstrap\\_media.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\_media.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\bootstrap\\mixins\\_border-radius.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mixins\\_border-radius.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\bootstrap\\mixins\\_reset-text.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mixins\\_reset-text.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\bootstrap\\mixins\\_screen-reader.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mixins\\_screen-reader.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\bootstrap\\mixins\\_text-hide.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mixins\\_text-hide.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\bootstrap\\mixins\\_visibility.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\mixins\\_visibility.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\bootstrap\\utilities\\_stretched-link.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\utilities\\_stretched-link.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\classy-nav.min.css",
+      "PackagePath": "staticwebassets\\css\\classy-nav.min.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\core-style.css",
+      "PackagePath": "staticwebassets\\css\\core-style.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\core-style.css.map",
+      "PackagePath": "staticwebassets\\css\\core-style.css.map"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\jquery-ui.min.css",
+      "PackagePath": "staticwebassets\\css\\jquery-ui.min.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\css\\nice-select.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\css\\owl.carousel.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\css\\stylelogin.css",
+      "PackagePath": "staticwebassets\\css\\stylelogin.css"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\fonts\\classy.eot",
+      "PackagePath": "staticwebassets\\fonts\\classy.eot"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\fonts\\classy.svg",
+      "PackagePath": "staticwebassets\\fonts\\classy.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\fonts\\classy.ttf",
+      "PackagePath": "staticwebassets\\fonts\\classy.ttf"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\fonts\\classy.woff",
+      "PackagePath": "staticwebassets\\fonts\\classy.woff"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\fonts\\unlock-solid.svg",
+      "PackagePath": "staticwebassets\\fonts\\unlock-solid.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\area_cart.png",
+      "PackagePath": "staticwebassets\\img\\bg-img\\area_cart.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\bakeryblog.png",
+      "PackagePath": "staticwebassets\\img\\bg-img\\bakeryblog.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\bg-1.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\bg-1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\bg-2.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\bg-2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\bg-3.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\bg-3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\bg-4.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\bg-4.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\bg-5.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\bg-5.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\bg-6.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\bg-6.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\bg-8.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\bg-8.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\bglogin.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\bglogin.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\blog3.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\blog3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\blog4.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\blog4.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\blog5.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\blog5.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\blog6.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\blog6.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\blognav.png",
+      "PackagePath": "staticwebassets\\img\\bg-img\\blognav.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\breadcumb.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\breadcumb.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\dangnhap1.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\dangnhap1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\nav2.png",
+      "PackagePath": "staticwebassets\\img\\bg-img\\nav2.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\rp2.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\rp2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\rp4.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\rp4.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\arrow-down.svg",
+      "PackagePath": "staticwebassets\\img\\core-img\\arrow-down.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\arrow-left.svg",
+      "PackagePath": "staticwebassets\\img\\core-img\\arrow-left.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\arrow-right.svg",
+      "PackagePath": "staticwebassets\\img\\core-img\\arrow-right.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\arrow-up.svg",
+      "PackagePath": "staticwebassets\\img\\core-img\\arrow-up.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\bag.svg",
+      "PackagePath": "staticwebassets\\img\\core-img\\bag.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\brand1.png",
+      "PackagePath": "staticwebassets\\img\\core-img\\brand1.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\brand2.png",
+      "PackagePath": "staticwebassets\\img\\core-img\\brand2.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\brand3.png",
+      "PackagePath": "staticwebassets\\img\\core-img\\brand3.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\brand4.png",
+      "PackagePath": "staticwebassets\\img\\core-img\\brand4.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\brand5.png",
+      "PackagePath": "staticwebassets\\img\\core-img\\brand5.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\brand6.png",
+      "PackagePath": "staticwebassets\\img\\core-img\\brand6.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\cancel.svg",
+      "PackagePath": "staticwebassets\\img\\core-img\\cancel.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\favicon.ico",
+      "PackagePath": "staticwebassets\\img\\core-img\\favicon.ico"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\heart-fill.svg",
+      "PackagePath": "staticwebassets\\img\\core-img\\heart-fill.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\heart.svg",
+      "PackagePath": "staticwebassets\\img\\core-img\\heart.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\core-img\\logo.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\logo2.png",
+      "PackagePath": "staticwebassets\\img\\core-img\\logo2.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\long-arrow-left.svg",
+      "PackagePath": "staticwebassets\\img\\core-img\\long-arrow-left.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\long-arrow-right.svg",
+      "PackagePath": "staticwebassets\\img\\core-img\\long-arrow-right.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\pin.png",
+      "PackagePath": "staticwebassets\\img\\core-img\\pin.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\search.svg",
+      "PackagePath": "staticwebassets\\img\\core-img\\search.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\user.svg",
+      "PackagePath": "staticwebassets\\img\\core-img\\user.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\view.svg",
+      "PackagePath": "staticwebassets\\img\\core-img\\view.svg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\product-img\\product-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-img\\product-1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\product-img\\product-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product-img\\product-2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\product-img\\product-3.jpg",
+      "PackagePath": "staticwebassets\\img\\product-img\\product-3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\product-img\\product-4.jpg",
+      "PackagePath": "staticwebassets\\img\\product-img\\product-4.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\product-img\\product-5.jpg",
+      "PackagePath": "staticwebassets\\img\\product-img\\product-5.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\product-img\\product-6.jpg",
+      "PackagePath": "staticwebassets\\img\\product-img\\product-6.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\product-img\\product-7.jpg",
+      "PackagePath": "staticwebassets\\img\\product-img\\product-7.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\product-img\\product-8.jpg",
+      "PackagePath": "staticwebassets\\img\\product-img\\product-8.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\product-img\\product-9.jpg",
+      "PackagePath": "staticwebassets\\img\\product-img\\product-9.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\product-img\\product-big-1.jpg",
+      "PackagePath": "staticwebassets\\img\\product-img\\product-big-1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\product-img\\product-big-2.jpg",
+      "PackagePath": "staticwebassets\\img\\product-img\\product-big-2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\product-img\\product-big-3.jpg",
+      "PackagePath": "staticwebassets\\img\\product-img\\product-big-3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\js\\active.js",
+      "PackagePath": "staticwebassets\\js\\active.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\js\\classy-nav.min.js",
+      "PackagePath": "staticwebassets\\js\\classy-nav.min.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\js\\login.js",
+      "PackagePath": "staticwebassets\\js\\login.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\js\\map-active.js",
+      "PackagePath": "staticwebassets\\js\\map-active.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\js\\plugins.js",
+      "PackagePath": "staticwebassets\\js\\plugins.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\js\\popper.js",
+      "PackagePath": "staticwebassets\\js\\popper.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.min.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\js\\sidebars.js",
+      "PackagePath": "staticwebassets\\js\\sidebars.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\style.css",
+      "PackagePath": "staticwebassets\\style.css"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.CakeShop.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.CakeShop.props",
+      "PackagePath": "build\\CakeShop.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CakeShop.props",
+      "PackagePath": "buildMultiTargeting\\CakeShop.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.CakeShop.props",
+      "PackagePath": "buildTransitive\\CakeShop.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

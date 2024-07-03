@@ -1,0 +1,87 @@
+﻿@model CakeShop.ModelsView.ForgotPassword.AuthOTP
+@{
+    ViewData["Title"] = "Xác thực OTP";
+}
+<div class="container py-5">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card bg-light shadow border border-gray rounded-5" >
+                <form id="myForm" class="form needs-validation m-0" asp-action="XacThucOTP" asp-controller="KhachHang"
+                      method="post">                
+                    <div class="card-body text-center">
+                        <div class="form-outline">
+                            <div class="row justify-content-center mb-4">
+                                <i class="bi bi-check-circle display-1 text-secondary"></i>
+                                <input type="hidden" asp-for="@Model.email" class="form-control" value="@ViewBag.Email" readonly />
+                            </div>
+                        </div>
+                        <div class="mb-md-5 mt-md-4">
+                            <h5>Nhập mã OTP để xác thực tài khoản</h5>
+                            <div class="text-danger" asp-validation-summary="All"></div>
+                            <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2">
+                                <input class="m-2 text-center form-control rounded" type="text" id="first" asp-for="@Model.first"
+                                       maxlength="1" name="first" />
+                                <input class="m-2 text-center form-control rounded" type="text" id="second" asp-for="@Model.second"
+                                       maxlength="1" name="second" />
+                                <input class="m-2 text-center form-control rounded" type="text" id="third" asp-for="@Model.third"
+                                       maxlength="1" name="third" />
+                                <input class="m-2 text-center form-control rounded" type="text" id="fourth" asp-for="@Model.fourth"
+                                       maxlength="1" name="fourth" />
+                                <input class="m-2 text-center form-control rounded" type="text" id="fifth" asp-for="@Model.fifth"
+                                       maxlength="1" name="fifth" />
+                                <input class="m-2 text-center form-control rounded" type="text" id="sixth" asp-for="@Model.sixth"
+                                       maxlength="1" name="sixth" />
+                            </div>
+                            
+                            <div class="mt-4">
+                                <input type="hidden" name="email" value="@ViewBag.Email" />
+                                <button type="submit" class="btn btn-danger px-4 validate" name="submit"
+                                       id="submit">Xác nhận</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function (event) {
+            function OTPInput() {
+                const inputs = document.querySelectorAll('#otp > *[id]');
+                for (let i = 0; i < inputs.length; i++) {
+                    inputs[i].addEventListener('keydown',
+                        function (event) {
+                            if (event.key === "Backspace") {
+                                inputs[i].value = '';
+                                if (i !== 0)
+                                    inputs[i - 1].focus();
+                            } else {
+                                if (i === inputs.length - 1
+                                    && inputs[i].value !== '') {
+                                    return true;
+                                } else if (event.keyCode > 47
+                                    && event.keyCode < 58) {
+                                    inputs[i].value = event.key;
+                                    if (i !== inputs.length - 1)
+                                        inputs[i + 1].focus();
+                                    event.preventDefault();
+                                } else if (event.keyCode > 64
+                                    && event.keyCode < 91) {
+                                    inputs[i].value = String
+                                        .fromCharCode(event.keyCode);
+                                    if (i !== inputs.length - 1)
+                                        inputs[i + 1].focus();
+                                    event.preventDefault();
+                                }
+                            }
+                        });
+                }
+            }
+            OTPInput();
+
+        });
+    </script>
+}

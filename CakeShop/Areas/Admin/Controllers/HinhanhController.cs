@@ -116,7 +116,6 @@ namespace CakeShop.Areas.Admin.Controllers
                         hinhanhSp.HinhAnhPhu = Path.GetFileName(HinhAnhPhu.FileName);
                     }
                     _context.Entry(hinhanhSp).State = EntityState.Modified;
-                    _context.SaveChanges();
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)

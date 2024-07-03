@@ -2,11 +2,17 @@
 using CakeShop.Data;
 using CakeShop.Helpers;
 using CakeShop.ModelsView;
+using CakeShop.ModelsView.ForgotPassword;
+using CakeShop.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
+using NuGet.Common;
 using System.Security.Claims;
 
 namespace CakeShop.Controllers
@@ -36,6 +42,12 @@ namespace CakeShop.Controllers
             {
                 try
                 {
+                    var existingKhachHang = db.KhachHangs.FirstOrDefault(kh => kh.Email == model.Email);
+                    if (existingKhachHang != null)
+                    {
+                        ModelState.AddModelError("Email", "Email đã được sử dụng bởi một tài khoản khác.");
+                        return View(model); // Return the view with validation errors
+                    }
                     var khachHang = _mapper.Map<KhachHang>(model);
                     khachHang.RandomKey = MyUtil.GenerateRamdomKey();
                     khachHang.MatKhau = model.MatKhau.ToMd5Hash(khachHang.RandomKey);
@@ -78,7 +90,7 @@ namespace CakeShop.Controllers
             ViewBag.ReturnUrl = ReturnUrl;
             if (ModelState.IsValid)
             {
-   /*             var khachHang = db.KhachHangs.SingleOrDefault(kh => kh.MaKh == model.UserName);*/
+                /*             var khachHang = db.KhachHangs.SingleOrDefault(kh => kh.MaKh == model.UserName);*/
                 var khachHang = db.KhachHangs.SingleOrDefault(kh => kh.MaKh == model.UserName || kh.Email == model.UserName);
                 if (khachHang == null)
                 {
@@ -133,7 +145,7 @@ namespace CakeShop.Controllers
         #endregion
 
         [Authorize]
-        public IActionResult Profile()
+        public async Task<IActionResult> Profile()
         {
             var customerId = User.FindFirst("CustomerID")?.Value;
 
@@ -219,8 +231,81 @@ namespace CakeShop.Controllers
             // Nếu ModelState không hợp lệ thì hiển thị lại form với thông báo lỗi
             return Redirect("/");
         }
-        #endregion
+		#endregion
 
-    }
 
+		#region QuenMatKHau
+		[HttpGet]        
+		public async Task<IActionResult> QuenMatKhau()
+		{
+			return View();
+		}
+		[HttpPost]
+		public async Task<IActionResult> QuenMatKhau(QuenMatKhau model)
+        {
+            if (ModelState.IsValid)
+            {
+				var khachHang = db.KhachHangs.SingleOrDefault(kh => kh.Email == model.Email);
+                if (khachHang == null)
+                {
+                    ModelState.AddModelError("loi", "Email không tồn tại !");
+					return View(model);
+				}
+                khachHang.RandomKey = MyUtil.getSoNgauNhien().ToString();
+                // Đánh dấu là đã thay đổi
+                db.Entry(khachHang).State = EntityState.Modified;
+                await db.SaveChangesAsync();
+                string htmlBody;
+				htmlBody = "<h3>QUÝ KHÁCH VUI LÒNG XÁC NHẬN TÀI KHOẢN:</h3></br>";
+				htmlBody += $"<b><h4>Mã OTP là: {khachHang.RandomKey} </h4></b></br>";
+				htmlBody += "<p>Quý khách vui lòng không phản hồi lại email này! Trân trọng kính chào!</P>";
+				GmailService.sendGmail("nptuyen121314@gmail.com", "CAKE SHOP", khachHang.Email, "XÁC THỰC ĐỔI MẬT KHẨU", htmlBody);
+				/*return RedirectToAction("XacThucOTP", "KhachHang", new { email = model.Email });*/
+				TempData["Email"] = model.Email;
+				return RedirectToAction("XacThucOTP", "KhachHang");
+			}
+            return View(model);
+        }
+		[HttpGet]
+		public IActionResult XacThucOTP()
+		{
+			if (TempData["Email"] != null)
+			{
+				ViewBag.Email = TempData["Email"].ToString();
+			}
+			return View();
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> XacThucOTP(AuthOTP model)
+		{
+			if (ModelState.IsValid)
+			{
+				var khachHang = db.KhachHangs.SingleOrDefault(kh => kh.Email == model.email && kh.RandomKey == model.Total);
+				if (khachHang == null)
+				{
+					ModelState.AddModelError("loi", "Mã OTP không hợp lệ hoặc đã hết hạn!");
+					ViewBag.Email = model.email;
+					return View(model);
+				}
+                string matkhau = MyUtil.GeneratePassword();
+
+				khachHang.MatKhau = matkhau.ToMd5Hash(khachHang.RandomKey);
+				khachHang.HieuLuc = true; // xử lý khi dùng Mail để active
+				khachHang.VaiTro = 0;
+				db.Entry(khachHang).State = EntityState.Modified;
+				await db.SaveChangesAsync();
+                string htmlBody;
+				htmlBody = "<h3>CẤP MẬT KHẨU MỚI CHO TÀI KHOẢN:</h3></br>";
+				htmlBody += $"<b><h4>Mật khẩu mới là: {matkhau} </h4></b></br>";
+				htmlBody += $"<b><p>Sau khi đăng nhập bằng mật khẩu mới. Vui lòng đổi lại mật khẩu phù hợp với cá nhân!</p></b></br>";
+				htmlBody += "<p>Quý khách vui lòng không phản hồi lại email này! Trân trọng kính chào!</P>";
+				GmailService.sendGmail("nptuyen121314@gmail.com", "CAKE SHOP", khachHang.Email, "CẤP MẬT KHẨU CHO TÀI KHOẢN", htmlBody);
+				return RedirectToAction("Index", "Home");
+			}
+			ViewBag.Email = model.email;
+			return View(model);
+		}
+		#endregion
+	}
 }
