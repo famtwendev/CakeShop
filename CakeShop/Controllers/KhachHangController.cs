@@ -144,6 +144,7 @@ namespace CakeShop.Controllers
         }
         #endregion
 
+        #region Profile
         [Authorize]
         public async Task<IActionResult> Profile()
         {
@@ -170,6 +171,7 @@ namespace CakeShop.Controllers
 
             return View(viewModel);
         }
+        #endregion
 
         [Authorize]
         public async Task<IActionResult> DangXuat()
@@ -182,9 +184,9 @@ namespace CakeShop.Controllers
         #region ThayDoiThongin
         [HttpPost]
         [Authorize]
-        public IActionResult ThayDoiThongTin(ThayDoiThongTinVM model, IFormFile Hinh)
+        public async Task<IActionResult> ThayDoiThongTin(ThayDoiThongTinVM model, IFormFile Hinh)
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 try
                 {
@@ -213,7 +215,7 @@ namespace CakeShop.Controllers
 
                     // Lưu thay đổi vào cơ sở dữ liệu
                     db.Update(khachHang);
-                    db.SaveChanges();
+                    await db.SaveChangesAsync();
 
                     // Chuyển hướng về trang profile hoặc trang chủ
                     /*return RedirectToAction("Profile", "KhachHangController");*/ // Thay "TenController" bằng tên Controller thực tế
@@ -231,81 +233,137 @@ namespace CakeShop.Controllers
             // Nếu ModelState không hợp lệ thì hiển thị lại form với thông báo lỗi
             return Redirect("/");
         }
-		#endregion
+        #endregion
 
 
-		#region QuenMatKHau
-		[HttpGet]        
-		public async Task<IActionResult> QuenMatKhau()
-		{
-			return View();
-		}
-		[HttpPost]
-		public async Task<IActionResult> QuenMatKhau(QuenMatKhau model)
+        #region QuenMatKHau
+        [HttpGet]
+        public async Task<IActionResult> QuenMatKhau()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> QuenMatKhau(QuenMatKhau model)
         {
             if (ModelState.IsValid)
             {
-				var khachHang = db.KhachHangs.SingleOrDefault(kh => kh.Email == model.Email);
+                var khachHang = db.KhachHangs.SingleOrDefault(kh => kh.Email == model.Email);
                 if (khachHang == null)
                 {
                     ModelState.AddModelError("loi", "Email không tồn tại !");
-					return View(model);
-				}
+                    return View(model);
+                }
                 khachHang.RandomKey = MyUtil.getSoNgauNhien().ToString();
                 // Đánh dấu là đã thay đổi
                 db.Entry(khachHang).State = EntityState.Modified;
                 await db.SaveChangesAsync();
                 string htmlBody;
-				htmlBody = "<h3>QUÝ KHÁCH VUI LÒNG XÁC NHẬN TÀI KHOẢN:</h3></br>";
-				htmlBody += $"<b><h4>Mã OTP là: {khachHang.RandomKey} </h4></b></br>";
-				htmlBody += "<p>Quý khách vui lòng không phản hồi lại email này! Trân trọng kính chào!</P>";
-				GmailService.sendGmail("nptuyen121314@gmail.com", "CAKE SHOP", khachHang.Email, "XÁC THỰC ĐỔI MẬT KHẨU", htmlBody);
-				/*return RedirectToAction("XacThucOTP", "KhachHang", new { email = model.Email });*/
-				TempData["Email"] = model.Email;
-				return RedirectToAction("XacThucOTP", "KhachHang");
-			}
+                htmlBody = "<h3>QUÝ KHÁCH VUI LÒNG XÁC NHẬN TÀI KHOẢN:</h3></br>";
+                htmlBody += $"<b><h4>Mã OTP là: {khachHang.RandomKey} </h4></b></br>";
+                htmlBody += "<p>Quý khách vui lòng không phản hồi lại email này! Trân trọng kính chào!</P>";
+                GmailService.sendGmail("nptuyen121314@gmail.com", "CAKE SHOP", khachHang.Email, "XÁC THỰC ĐỔI MẬT KHẨU", htmlBody);
+                /*return RedirectToAction("XacThucOTP", "KhachHang", new { email = model.Email });*/
+                TempData["Email"] = model.Email;
+                return RedirectToAction("XacThucOTP", "KhachHang");
+            }
             return View(model);
         }
-		[HttpGet]
-		public IActionResult XacThucOTP()
-		{
-			if (TempData["Email"] != null)
-			{
-				ViewBag.Email = TempData["Email"].ToString();
-			}
-			return View();
-		}
+        [HttpGet]
+        public IActionResult XacThucOTP()
+        {
+            if (TempData["Email"] != null)
+            {
+                ViewBag.Email = TempData["Email"].ToString();
+            }
+            return View();
+        }
 
-		[HttpPost]
-		public async Task<IActionResult> XacThucOTP(AuthOTP model)
-		{
-			if (ModelState.IsValid)
-			{
-				var khachHang = db.KhachHangs.SingleOrDefault(kh => kh.Email == model.email && kh.RandomKey == model.Total);
-				if (khachHang == null)
-				{
-					ModelState.AddModelError("loi", "Mã OTP không hợp lệ hoặc đã hết hạn!");
-					ViewBag.Email = model.email;
-					return View(model);
-				}
+        [HttpPost]
+        public async Task<IActionResult> XacThucOTP(AuthOTP model)
+        {
+            if (ModelState.IsValid)
+            {
+                var khachHang = db.KhachHangs.SingleOrDefault(kh => kh.Email == model.email && kh.RandomKey == model.Total);
+                if (khachHang == null)
+                {
+                    ModelState.AddModelError("loi", "Mã OTP không hợp lệ hoặc đã hết hạn!");
+                    ViewBag.Email = model.email;
+                    return View(model);
+                }
                 string matkhau = MyUtil.GeneratePassword();
 
-				khachHang.MatKhau = matkhau.ToMd5Hash(khachHang.RandomKey);
-				khachHang.HieuLuc = true; // xử lý khi dùng Mail để active
-				khachHang.VaiTro = 0;
-				db.Entry(khachHang).State = EntityState.Modified;
-				await db.SaveChangesAsync();
+                khachHang.MatKhau = matkhau.ToMd5Hash(khachHang.RandomKey);
+                khachHang.HieuLuc = true; // xử lý khi dùng Mail để active
+                khachHang.VaiTro = 0;
+                db.Entry(khachHang).State = EntityState.Modified;
+                await db.SaveChangesAsync();
                 string htmlBody;
-				htmlBody = "<h3>CẤP MẬT KHẨU MỚI CHO TÀI KHOẢN:</h3></br>";
-				htmlBody += $"<b><h4>Mật khẩu mới là: {matkhau} </h4></b></br>";
-				htmlBody += $"<b><p>Sau khi đăng nhập bằng mật khẩu mới. Vui lòng đổi lại mật khẩu phù hợp với cá nhân!</p></b></br>";
-				htmlBody += "<p>Quý khách vui lòng không phản hồi lại email này! Trân trọng kính chào!</P>";
-				GmailService.sendGmail("nptuyen121314@gmail.com", "CAKE SHOP", khachHang.Email, "CẤP MẬT KHẨU CHO TÀI KHOẢN", htmlBody);
-				return RedirectToAction("Index", "Home");
-			}
-			ViewBag.Email = model.email;
-			return View(model);
-		}
-		#endregion
-	}
+                htmlBody = "<h3>CẤP MẬT KHẨU MỚI CHO TÀI KHOẢN:</h3></br>";
+                htmlBody += $"<b><h4>Mật khẩu mới là: {matkhau} </h4></b></br>";
+                htmlBody += $"<b><p>Sau khi đăng nhập bằng mật khẩu mới. Vui lòng đổi lại mật khẩu phù hợp với cá nhân!</p></b></br>";
+                htmlBody += "<p>Quý khách vui lòng không phản hồi lại email này! Trân trọng kính chào!</P>";
+                GmailService.sendGmail("nptuyen121314@gmail.com", "CAKE SHOP", khachHang.Email, "CẤP MẬT KHẨU CHO TÀI KHOẢN", htmlBody);
+                TempData["Message"] = "Chúng tôi đã gửi mật khẩu mới. Vui lòng kiểm tra email của bạn.";
+                return Redirect("/ThongBao");
+            }
+            ViewBag.Email = model.email;
+            return View(model);
+        }
+        #endregion
+
+
+        #region DoiMatKhau
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> DoiMatKhau()
+        {
+            return View();
+        }
+
+        [HttpPost, ActionName("DoiMatKhau")]
+        [Authorize]
+        public async Task<IActionResult> DoiMatKhauConfirm(DoiMatKhau model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    // Lấy thông tin khách hàng từ database
+                    var customerId = User.FindFirst("CustomerID")?.Value; // Lấy Id của khách hàng từ User Claims
+
+                    var khachHang = db.KhachHangs.SingleOrDefault(kh => kh.MaKh == customerId);
+
+                    if (khachHang == null)
+                    {
+                        return NotFound();
+                    }
+                    if (model.matKhauHienTai.ToMd5Hash(khachHang.RandomKey) != khachHang.MatKhau)
+                    {
+                        ModelState.AddModelError("loi", "Mật khẩu hiện tại không đúng");
+                        return View(model);
+                    }
+                    if(model.matKhauMoi != model.matKhauMoiNhapLai)
+                    {
+                        ModelState.AddModelError("loi", "Mật khẩu mới nhập lại không khớp");
+                        return View(model);
+                    }
+                    khachHang.RandomKey = MyUtil.GenerateRamdomKey();
+                    khachHang.MatKhau = model.matKhauMoi.ToMd5Hash(khachHang.RandomKey);
+                    khachHang.HieuLuc = true; // xử lý khi dùng Mail để active
+                    khachHang.VaiTro = 0;
+                    db.Entry(khachHang).State = EntityState.Modified;
+                    await db.SaveChangesAsync();
+                    TempData["Message"] = "Quý khách đã đổi mật khẩu thành công!";
+                    return Redirect("/ThongBao");
+                }
+                catch (Exception ex)
+                {
+                    var mess = $"{ex.Message} shh";
+                    ModelState.AddModelError("", "Đã xảy ra lỗi khi cập nhật thông tin.");
+                }
+            }
+            return View(model);
+        }
+        #endregion
+    }
 }

@@ -29,6 +29,10 @@ namespace CakeShop.Controllers
 
 		public IActionResult AddToCart(int id, int quantity = 1)
 		{
+			if (quantity <= 0)
+			{
+				quantity = 1;
+            }
 			var gioHang = Cart;
 			var item = gioHang.SingleOrDefault(p => p.MaHh == id);
 			if (item == null)
