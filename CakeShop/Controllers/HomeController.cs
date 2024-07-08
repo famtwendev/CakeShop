@@ -23,6 +23,17 @@ namespace CakeShop.Controllers
             return View();
         }
 
+
+        public IActionResult Quality()
+        {
+            return View();
+        }
+        public IActionResult Guide()
+        {
+            return View();
+        }
+
+
         public IActionResult Contact()
         {
             return View();

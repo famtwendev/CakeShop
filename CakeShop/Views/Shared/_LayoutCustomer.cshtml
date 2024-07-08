@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/core-style.css" />
     <link rel="stylesheet" href="~/css/classy-nav.min.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     @RenderSection("Styles", required: false)
 </head>
 
@@ -51,11 +52,11 @@
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
-                                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                                <li><a asp-controller="Home" asp-action="Index">Trang Chủ</a></li>
                                 <li>
-                                    <a asp-controller="HangHoa" asp-action="Index">Shop</a>
+                                    <a asp-controller="HangHoa" asp-action="Index">Sản Phẩm</a>
                                 </li>
-                                <li><a asp-controller="Home" asp-action="Blog">Blog</a></li>
+                                <li><a asp-controller="Home" asp-action="Blog">Giới thiệu</a></li>
                                 <li><a asp-controller="Home" asp-action="Contact">Liên hệ</a></li>
                             </ul>
                         </div>
@@ -71,7 +72,7 @@
                             <input type="search"
                                    name="query"
                                    id="searchText"
-                                   placeholder="Type for search" />
+                                   placeholder="Nhập tìm kiếm" />
                             <button id="searchButton">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                             </button>
@@ -93,7 +94,7 @@
                                     <img src="~/img/core-img/user.svg" alt="" />
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="userMenu">
-                                    <a class="dropdown-item" asp-controller="KhachHang" asp-action="Profile">Profile</a>
+                                    <a class="dropdown-item" asp-controller="KhachHang" asp-action="Profile">Thông tin</a>
                                     <a class="dropdown-item" asp-controller="Cart" asp-action="HistoryBill">Đơn Hàng</a>
                                     <a class="dropdown-item" asp-controller="KhachHang" asp-action="DoiMatKhau">Đổi mật khẩu</a>
                                     <a class="dropdown-item" asp-controller="KhachHang" asp-action="DangXuat">Đăng xuất</a>

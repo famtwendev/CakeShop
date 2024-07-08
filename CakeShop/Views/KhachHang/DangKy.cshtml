@@ -97,7 +97,8 @@
                                        asp-for="@Model.Hinh"
                                        name="Hinh"
                                        class="file-upload"
-                                       required />
+                                       required
+                                       accept=".png, .jpg, .jpeg" />
                                 <span asp-validation-for="@Model.Hinh" class="text-danger"></span>
                             </div>
                             <div class="col-md-12 my-3">

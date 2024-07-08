@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 using NuGet.Common;
+using Owl.reCAPTCHA.v2;
 using System.Security.Claims;
 
 namespace CakeShop.Controllers
@@ -21,10 +22,12 @@ namespace CakeShop.Controllers
     {
         private readonly CakeshopContext db;
         private readonly IMapper _mapper;
-        public KhachHangController(CakeshopContext context, IMapper mapper)
+        private readonly IreCAPTCHASiteVerifyV2 _siteVerify;
+        public KhachHangController(CakeshopContext context, IMapper mapper, IreCAPTCHASiteVerifyV2 siteVerify)
         {
             db = context;
             _mapper = mapper;
+            _siteVerify = siteVerify;
         }
 
         #region Register
@@ -56,6 +59,28 @@ namespace CakeShop.Controllers
 
                     if (Hinh != null && Hinh.Length > 0)
                     {
+                        // Danh sách các đuôi tệp hợp lệ
+                        var permittedExtensions = new[] { ".png", ".jpg", ".jpeg" };
+
+                        // Lấy đuôi tệp
+                        var ext = Path.GetExtension(Hinh.FileName).ToLowerInvariant();
+
+                        // Kiểm tra đuôi tệp
+                        if (string.IsNullOrEmpty(ext) || !permittedExtensions.Contains(ext))
+                        {
+                            ModelState.AddModelError("Hinh", "Chỉ cho phép tệp hình ảnh có đuôi .png, .jpg, .jpeg.");
+                            return View(model);
+                        }
+
+                        // Kiểm tra kiểu MIME
+                        var mimeType = Hinh.ContentType.ToLower();
+                        if (!mimeType.StartsWith("image/"))
+                        {
+                            ModelState.AddModelError("Hinh", "Tệp không phải là hình ảnh.");
+                            return View(model);
+                        }
+
+                        // Nếu tệp hợp lệ, lưu tệp
                         khachHang.Hinh = MyUtil.UploadHinh(Hinh, "KhachHang");
                     }
 
@@ -66,6 +91,7 @@ namespace CakeShop.Controllers
                 catch (Exception ex)
                 {
                     var mess = $"{ex.Message} shh";
+                    ModelState.AddModelError(string.Empty, "Có lỗi xảy ra trong quá trình xử lý. Vui lòng thử lại.");
                 }
             }
             return View();
@@ -88,6 +114,22 @@ namespace CakeShop.Controllers
         public async Task<IActionResult> DangNhap(LoginVM model, string? ReturnUrl)
         {
             ViewBag.ReturnUrl = ReturnUrl;
+            if (string.IsNullOrEmpty(model.Captcha))
+            {
+                ModelState.AddModelError("loi", "Không nhập Captcha.");
+                return View(model);
+            }
+            var response = await _siteVerify.Verify(new Owl.reCAPTCHA.reCAPTCHASiteVerifyRequest
+            {
+                Response = model.Captcha,
+                RemoteIp = HttpContext.Connection.RemoteIpAddress.ToString(),
+            });
+
+            if(!response.Success)
+            {
+                ModelState.AddModelError("loi", "Captcha không đúng!.");
+                return View(model);
+            }
             if (ModelState.IsValid)
             {
                 /*             var khachHang = db.KhachHangs.SingleOrDefault(kh => kh.MaKh == model.UserName);*/
@@ -140,7 +182,7 @@ namespace CakeShop.Controllers
                     }
                 }
             }
-            return View();
+            return View(model);
         }
         #endregion
 
@@ -184,7 +226,7 @@ namespace CakeShop.Controllers
         #region ThayDoiThongin
         [HttpPost]
         [Authorize]
-        public async Task<IActionResult> ThayDoiThongTin(ThayDoiThongTinVM model, IFormFile Hinh)
+        public async Task<IActionResult> ThayDoiThongTin(ThayDoiThongTinVM model, IFormFile? Hinh)
         {
             if (ModelState.IsValid)
             {
@@ -208,8 +250,23 @@ namespace CakeShop.Controllers
                     khachHang.DienThoai = model.DienThoai;
                     khachHang.Email = model.Email;
 
+                    // Kiểm tra và xử lý tệp hình ảnh nếu có
                     if (Hinh != null && Hinh.Length > 0)
                     {
+                        // Danh sách các đuôi tệp hợp lệ
+                        var permittedExtensions = new[] { ".png", ".jpg", ".jpeg" };
+
+                        // Lấy đuôi tệp của Hinh
+                        var ext = Path.GetExtension(Hinh.FileName).ToLowerInvariant();
+
+                        // Kiểm tra đuôi tệp
+                        if (string.IsNullOrEmpty(ext) || !permittedExtensions.Contains(ext))
+                        {
+                            ModelState.AddModelError("Hinh", "Chỉ cho phép tệp hình ảnh có đuôi .png, .jpg, .jpeg.");
+                            return RedirectToAction(nameof(Profile)); // Trả về view với thông báo lỗi
+                        }
+
+                        // Lưu tệp hình vào thư mục và lấy tên tệp đã lưu
                         khachHang.Hinh = MyUtil.UploadHinh(Hinh, "KhachHang");
                     }
 
@@ -231,7 +288,7 @@ namespace CakeShop.Controllers
             }
 
             // Nếu ModelState không hợp lệ thì hiển thị lại form với thông báo lỗi
-            return Redirect("/");
+            return RedirectToAction(nameof(Profile));
         }
         #endregion
 

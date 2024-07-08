@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GYzZGf7ac/R4N9MdOsmbggbrkIlJzH2K37VhOlt0oH6kLK5cFKc+v7JM0jmemrvpAhv8TfxwDZ2bIC0YclOmrw==",
+  "dgSpecHash": "5TWYNO3JGtFN0L3Po72RERhLnc8QDriQ667BqpkFAPwwiNoH9w5q4FWTbXGUDvb427iyatNm0U0kbeAxm8SvgQ==",
   "success": true,
   "projectFilePath": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\CakeShop.csproj",
   "expectedPackageFiles": [
@@ -129,6 +129,7 @@
     "C:\\Users\\phamt\\.nuget\\packages\\nuget.projectmodel\\6.9.1\\nuget.projectmodel.6.9.1.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\nuget.protocol\\6.9.1\\nuget.protocol.6.9.1.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\nuget.versioning\\6.9.1\\nuget.versioning.6.9.1.nupkg.sha512",
+    "C:\\Users\\phamt\\.nuget\\packages\\owl.recaptcha\\8.0.0\\owl.recaptcha.8.0.0.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\system.codedom\\5.0.0\\system.codedom.5.0.0.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\system.collections.immutable\\7.0.0\\system.collections.immutable.7.0.0.nupkg.sha512",
     "C:\\Users\\phamt\\.nuget\\packages\\system.composition\\7.0.0\\system.composition.7.0.0.nupkg.sha512",

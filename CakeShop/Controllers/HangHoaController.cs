@@ -15,7 +15,7 @@ namespace EcommerceWeb.Controllers
         {
             db = context;
         }
-
+        
 
         public IActionResult Index(int? loai, int? page)
         {
@@ -103,7 +103,7 @@ namespace EcommerceWeb.Controllers
         {
             var data = db.HangHoas
                 .Include(p => p.MaLoaiNavigation)
-                .Include(p => p.HinhanhSps) // Include the related HinhanhSps
+                .Include(p => p.HinhanhSps) // Include the related HinhanhSps // 
                 .SingleOrDefault(p => p.MaHh == id);
             if (data == null)
             {

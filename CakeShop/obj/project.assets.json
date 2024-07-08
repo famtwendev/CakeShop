@@ -2106,6 +2106,18 @@
           "lib/netstandard2.0/NuGet.Versioning.dll": {}
         }
       },
+      "Owl.reCAPTCHA/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Owl.reCAPTCHA.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Owl.reCAPTCHA.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "System.CodeDom/5.0.0": {
         "type": "package",
         "compile": {
@@ -6682,6 +6694,18 @@
         "nuget.versioning.nuspec"
       ]
     },
+    "Owl.reCAPTCHA/8.0.0": {
+      "sha512": "de0sQ6e6izKQroNhksqdmMk9yAjIycECR6t2tZ36G7lyR/u7dYFF51feP/N+poiOqT4UcIQRTw7X1TfTcmOyuQ==",
+      "type": "package",
+      "path": "owl.recaptcha/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net8.0/Owl.reCAPTCHA.dll",
+        "owl.recaptcha.8.0.0.nupkg.sha512",
+        "owl.recaptcha.nuspec"
+      ]
+    },
     "System.CodeDom/5.0.0": {
       "sha512": "JPJArwA1kdj8qDAkY2XGjSWoYnqiM7q/3yRNkt6n28Mnn95MuEGkZXUbPBf7qc3IjwrGY5ttQon7yqHZyQJmOQ==",
       "type": "package",
@@ -8111,6 +8135,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.6",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.2",
+      "Owl.reCAPTCHA >= 8.0.0",
       "X.PagedList >= 9.1.2",
       "X.PagedList.Mvc.Core >= 9.1.2"
     ]
@@ -8190,6 +8215,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[8.0.2, )"
+          },
+          "Owl.reCAPTCHA": {
+            "target": "Package",
+            "version": "[8.0.0, )"
           },
           "X.PagedList": {
             "target": "Package",

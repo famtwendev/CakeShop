@@ -8,5 +8,7 @@ https://cdnjs.com/libraries/jqueryui/1.12.1
 https://cdnjs.com/libraries/OwlCarousel2/2.2.1
 https://cdnjs.com/libraries/jquery/2.2.4
 https://cdnjs.com/libraries/font-awesome/4.7.0
-
- 
+Use this site key in the HTML code your site serves to users.
+6LeyNwsqAAAAAOUd8nzWwDKPaBJgXbE-myPpNrzX
+Use this secret key for communication between your site and reCAPTCH
+6LeyNwsqAAAAALA8QbnO10FrD4iQ9Q_bCWwVb5Wg

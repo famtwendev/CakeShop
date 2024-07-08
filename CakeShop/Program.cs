@@ -3,6 +3,7 @@ using CakeShop.Helpers;
 using CakeShop.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using Owl.reCAPTCHA;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,20 +40,28 @@ builder.Services.AddAuthentication(options =>
 {
     options.LoginPath = "/KhachHang/DangNhap";
     options.AccessDeniedPath = "/AccessDenied";
-    options.ExpireTimeSpan = TimeSpan.FromDays(1);  // Thiết lập thời gian hết hạn là 10 ngày
+    options.ExpireTimeSpan = TimeSpan.FromDays(10);  // Thiết lập thời gian hết hạn là 10 ngày
     options.SlidingExpiration = true;  // Thiết lập Sliding Expiration nếu cần;
 })
 .AddCookie("AdminCookie", options =>
 {
     options.LoginPath = "/Admin/Login";
     options.AccessDeniedPath = "/Admin/AccessDenied";
-    options.ExpireTimeSpan = TimeSpan.FromDays(1);  // Thiết lập thời gian hết hạn là 10 ngày
+    options.ExpireTimeSpan = TimeSpan.FromDays(10);  // Thiết lập thời gian hết hạn là 10 ngày
     options.SlidingExpiration = true;  // Thiết lập Sliding Expiration nếu cần
 });
 
 
 
 builder.Services.AddSingleton<IVnPayService, VnPayService>();
+
+// Configure reCaptcha
+builder.Services.AddreCAPTCHAV2(x =>
+{
+    x.SiteKey = "6LeyNwsqAAAAAOUd8nzWwDKPaBJgXbE-myPpNrzX";
+    x.SiteSecret = "6LeyNwsqAAAAALA8QbnO10FrD4iQ9Q_bCWwVb5Wg";
+});
+
 
 var app = builder.Build();
 
@@ -92,6 +101,7 @@ app.UseEndpoints(endpoints =>
         defaults: new { area = "Admin", controller = "Admin", action = "Index" }
     );
 */
+
 });
 #pragma warning restore ASP0014 // Suggest using top level route registrations
 app.Run();

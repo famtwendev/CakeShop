@@ -71,7 +71,30 @@ namespace CakeShop.Areas.Admin.Controllers
             {
                 if (HinhAnhPhu != null && HinhAnhPhu.Length > 0)
                 {
-                    /*                    string temp = MyUtil.UploadHinh(HinhAnhPhu, "HangHoa");*/
+                    // Danh sách các đuôi tệp hợp lệ
+                    var permittedExtensions = new[] { ".png", ".jpg", ".jpeg" };
+
+                    // Lấy đuôi tệp
+                    var ext = Path.GetExtension(HinhAnhPhu.FileName).ToLowerInvariant();
+
+                    // Kiểm tra đuôi tệp
+                    if (string.IsNullOrEmpty(ext) || !permittedExtensions.Contains(ext))
+                    {
+                        ModelState.AddModelError("HinhAnhPhu", "Chỉ cho phép tệp hình ảnh có đuôi .png, .jpg, .jpeg.");
+                        ViewData["MaHh"] = new SelectList(_context.HangHoas, "MaHh", "MaHhTenHh", hinhanhSp.MaHh);
+                        return View(hinhanhSp);
+                    }
+
+                    // Kiểm tra kiểu MIME
+                    var mimeType = HinhAnhPhu.ContentType.ToLower();
+                    if (!mimeType.StartsWith("image/"))
+                    {
+                        ModelState.AddModelError("HinhAnhPhu", "Tệp không phải là hình ảnh.");
+                        ViewData["MaHh"] = new SelectList(_context.HangHoas, "MaHh", "MaHhTenHh", hinhanhSp.MaHh);
+                        return View(hinhanhSp);
+                    }
+
+                    // Nếu tệp hợp lệ, lưu tệp
                     hinhanhSp.HinhAnhPhu = Path.GetFileName(HinhAnhPhu.FileName);
                 }
                 _context.Add(hinhanhSp);
@@ -112,7 +135,30 @@ namespace CakeShop.Areas.Admin.Controllers
                 {
                     if (HinhAnhPhu != null && HinhAnhPhu.Length > 0)
                     {
-                        /*                        string temp = MyUtil.UploadHinh(HinhAnhPhu, "HangHoa");*/
+                        // Danh sách các đuôi tệp hợp lệ
+                        var permittedExtensions = new[] { ".png", ".jpg", ".jpeg" };
+
+                        // Lấy đuôi tệp
+                        var ext = Path.GetExtension(HinhAnhPhu.FileName).ToLowerInvariant();
+
+                        // Kiểm tra đuôi tệp
+                        if (string.IsNullOrEmpty(ext) || !permittedExtensions.Contains(ext))
+                        {
+                            ModelState.AddModelError("HinhAnhPhu", "Chỉ cho phép tệp hình ảnh có đuôi .png, .jpg, .jpeg.");
+                            ViewData["MaHh"] = new SelectList(_context.HangHoas, "MaHh", "MaHhTenHh", hinhanhSp.MaHh);
+                            return View(hinhanhSp);
+                        }
+
+                        // Kiểm tra kiểu MIME
+                        var mimeType = HinhAnhPhu.ContentType.ToLower();
+                        if (!mimeType.StartsWith("image/"))
+                        {
+                            ModelState.AddModelError("HinhAnhPhu", "Tệp không phải là hình ảnh.");
+                            ViewData["MaHh"] = new SelectList(_context.HangHoas, "MaHh", "MaHhTenHh", hinhanhSp.MaHh);
+                            return View(hinhanhSp);
+                        }
+
+                        // Nếu tệp hợp lệ, lưu tệp
                         hinhanhSp.HinhAnhPhu = Path.GetFileName(HinhAnhPhu.FileName);
                     }
                     _context.Entry(hinhanhSp).State = EntityState.Modified;

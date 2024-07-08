@@ -282,6 +282,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Views/Home/Guide.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHdWlkZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -292,6 +296,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Views/Home/Quality.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRdWFsaXR5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/FileSave/LapTrinhWeb_ASP.NET-MVC-Core/TH/CakeShop/CakeShop/Views/Home/ThongBao.cshtml]

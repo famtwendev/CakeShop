@@ -1,6 +1,6 @@
 ﻿@model CakeShop.ModelsView.ChiTietHangHoaVM
 @{
-    ViewData["Title"] = "Detail";
+    ViewData["Title"] = @Model.TenHH;
 }
 <!-- Single Product Start -->
 <div class="single_product_details_area d-flex container-fluid pt-5 mt-5">
@@ -12,17 +12,24 @@
                         <div class="product_thumbnail_slides owl-carousel">
                             @if (Model.HinhanhSps == null || !Model.HinhanhSps.Any())
                             {
-                                <img src="~/Hinh/HangHoa/@Model.Hinh" alt="@Model.TenHH" />
+                                <img src="~/Hinh/HangHoa/@Model.Hinh" alt="@Model.TenHH">
+                                <img src="~/Hinh/HangHoa/@Model.Hinh" alt="@Model.TenHH">
+                                <img src="~/Hinh/HangHoa/@Model.Hinh" alt="@Model.TenHH">
                             }
                             else
                             {
+                                var count = Model.HinhanhSps.Count;
+                                if (count == 1)
+                                {
+                                    <img src="~/Hinh/HangHoa/@Model.Hinh" alt="@Model.TenHH">
+                                    <img src="~/Hinh/HangHoa/@Model.Hinh" alt="@Model.TenHH">
+                                    <img src="~/Hinh/HangHoa/@Model.Hinh" alt="@Model.TenHH">
+                                }
                                 @foreach (var hinhanh in Model.HinhanhSps)
                                 {
-                                    <img src="~/Hinh/HangHoa/@hinhanh.HinhAnhPhu" alt="@Model.TenHH" />
+                                    <img src="~/Hinh/HangHoa/@hinhanh.HinhAnhPhu" alt="@Model.TenHH">
                                 }
                             }
-                            @*                             <img src="img/product-img/product-big-2.jpg" alt="" />
-                            <img src="img/product-img/product-big-3.jpg" alt="" /> *@
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -57,7 +64,7 @@
                                 <div class="input-group quantity mb-5 d-flex  align-items-center" style="width: 100px">
                                     <div class="input-group-btn">
                                         <button class="btn btn-sm btn-minus rounded-circle bg-light border" type="button">
-                                            <i class="fa fa-minus" ></i>
+                                            <i class="fa fa-minus"></i>
                                         </button>
                                     </div>
                                     <input type="text"
@@ -345,7 +352,7 @@
                                     <i class="fa fa-star "></i>
                                     <i class="fa fa-star text-secondary"></i>
                                 </div>
-                               
+
                             </div>
                         </div>
                         <div class="d-flex justify-content-center my-4">
@@ -360,10 +367,10 @@
                                  class="img-fluid w-100 rounded"
                                  alt="" />
                             <div class="position-absolute" style="top: 50%; right: 10px">
-@*                                 <h3 class="text-secondary fw-bold">
-                                    Cake <br />
-                                    Shop <br />
-                                    ASP.NET
+                                @*                                 <h3 class="text-secondary fw-bold">
+                                Cake <br />
+                                Shop <br />
+                                ASP.NET
                                 </h3> *@
                             </div>
                         </div>
@@ -381,7 +388,7 @@
 <!-- Single Product End -->
 @section Scripts {
     <script>
-     // Product Quantity
+        // Product Quantity
         $('.quantity button').on('click', function () {
             var button = $(this);
             var oldValue = button.parent().parent().find('input').val();
