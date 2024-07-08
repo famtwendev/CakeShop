@@ -969,6 +969,10 @@
       "PackagePath": "staticwebassets\\Hinh\\HangHoa\\nen-sinh-sinh-nhat.jpg"
     },
     {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\nenso.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\nenso.jpg"
+    },
+    {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\nonhinhthu.jpg",
       "PackagePath": "staticwebassets\\Hinh\\HangHoa\\nonhinhthu.jpg"
     },

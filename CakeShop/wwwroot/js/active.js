@@ -40,7 +40,7 @@
             margin: 0,
             loop: true,
             nav: true,
-            navText: ["<img src='../img/core-img/long-arrow-left.svg' alt=''>", "<img src='../img/core-img/long-arrow-right.svg' alt=''>"],
+            navText: ["<i class='fa fa-2x fa-chevron-left'>", "<i class='fa fa-2x fa-chevron-right'>"],
             dots: false,
             autoplay: true,
             autoplayTimeout: 5000,
