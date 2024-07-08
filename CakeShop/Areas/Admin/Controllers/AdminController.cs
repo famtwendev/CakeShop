@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Owl.reCAPTCHA.v2;
 using System.Diagnostics;
 using System.Security.Claims;
 
@@ -20,10 +21,12 @@ namespace CakeShop.Areas.Admin.Controllers
         // Login pass:admin4dm!n
         private readonly CakeshopContext db;
         private readonly IMapper _mapper;
-        public AdminController(CakeshopContext context, IMapper mapper)
+        private readonly IreCAPTCHASiteVerifyV2 _siteVerify;
+        public AdminController(CakeshopContext context, IMapper mapper, IreCAPTCHASiteVerifyV2 siteVerify)
         {
             db = context;
             _mapper = mapper;
+            _siteVerify = siteVerify;
         }
 
         [Route("")]
@@ -50,6 +53,22 @@ namespace CakeShop.Areas.Admin.Controllers
         [Route("Login")]
         public async Task<IActionResult> Login(AdminLoginVM model)
         {
+            if (string.IsNullOrEmpty(model.Captcha))
+            {
+                ModelState.AddModelError("loi", "Vui lòng xác thực Captcha.");
+                return View(model);
+            }
+            var response = await _siteVerify.Verify(new Owl.reCAPTCHA.reCAPTCHASiteVerifyRequest
+            {
+                Response = model.Captcha,
+                RemoteIp = HttpContext.Connection.RemoteIpAddress.ToString(),
+            });
+
+            if (!response.Success)
+            {
+                ModelState.AddModelError("loi", "Captcha không đúng!.");
+                return View(model);
+            }
             if (ModelState.IsValid)
             {
                 var nhanVien = db.NhanViens.SingleOrDefault(nv => nv.MaNv == model.UserName);
@@ -98,7 +117,7 @@ namespace CakeShop.Areas.Admin.Controllers
                     }
                 }
             }
-            return View();
+            return View(model);
         }
         #endregion
 

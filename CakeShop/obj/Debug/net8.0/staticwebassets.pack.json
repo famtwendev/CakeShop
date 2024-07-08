@@ -825,10 +825,6 @@
       "PackagePath": "staticwebassets\\Hinh\\HangHoa\\bohoaniemvui5.jpg"
     },
     {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\bomuong9.jpg",
-      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\bomuong9.jpg"
-    },
-    {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\croissant-chocolate_1.png",
       "PackagePath": "staticwebassets\\Hinh\\HangHoa\\croissant-chocolate_1.png"
     },
@@ -963,14 +959,6 @@
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\mau-don-3.jpg",
       "PackagePath": "staticwebassets\\Hinh\\HangHoa\\mau-don-3.jpg"
-    },
-    {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\nen-sinh-sinh-nhat.jpg",
-      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\nen-sinh-sinh-nhat.jpg"
-    },
-    {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\nenso.jpg",
-      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\nenso.jpg"
     },
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\nonhinhthu.jpg",

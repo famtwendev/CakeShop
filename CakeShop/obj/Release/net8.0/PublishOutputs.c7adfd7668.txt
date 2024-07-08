@@ -64,6 +64,7 @@ D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Release\net8.0
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Release\net8.0\PubTmp\Out\NuGet.ProjectModel.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Release\net8.0\PubTmp\Out\NuGet.Protocol.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Release\net8.0\PubTmp\Out\NuGet.Versioning.dll
+D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Release\net8.0\PubTmp\Out\Owl.reCAPTCHA.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Release\net8.0\PubTmp\Out\System.CodeDom.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Release\net8.0\PubTmp\Out\System.Composition.AttributedModel.dll
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Release\net8.0\PubTmp\Out\System.Composition.Convention.dll

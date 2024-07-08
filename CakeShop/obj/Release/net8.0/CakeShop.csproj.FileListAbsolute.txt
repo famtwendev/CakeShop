@@ -260,3 +260,4 @@ D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Release\net8.0
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Release\net8.0\CakeShop.pdb
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Release\net8.0\CakeShop.genruntimeconfig.cache
 D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\obj\Release\net8.0\ref\CakeShop.dll
+D:\FileSave\LapTrinhWeb_ASP.NET-MVC-Core\TH\CakeShop\CakeShop\bin\Release\net8.0\Owl.reCAPTCHA.dll

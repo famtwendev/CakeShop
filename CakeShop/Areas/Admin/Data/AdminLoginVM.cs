@@ -14,5 +14,7 @@ namespace CakeShop.Areas.Admin.Data
         [Required(ErrorMessage = "Chưa nhập mật khẩu!")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+        [Required]
+        public string Captcha { get; set; }
     }
 }

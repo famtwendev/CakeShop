@@ -793,6 +793,10 @@
       "PackagePath": "staticwebassets\\Hinh\\HangHoa\\banhmihoacuc2.jpg"
     },
     {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\binhxittuyet.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\binhxittuyet.jpg"
+    },
+    {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\bo-hoa-cuc-tana-little-tana.jpg",
       "PackagePath": "staticwebassets\\Hinh\\HangHoa\\bo-hoa-cuc-tana-little-tana.jpg"
     },
@@ -957,6 +961,22 @@
       "PackagePath": "staticwebassets\\Hinh\\HangHoa\\mau-don-3.jpg"
     },
     {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\nonhinhthu.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\nonhinhthu.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\nonsinhnhatlon.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\nonsinhnhatlon.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\phaobongnho.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\phaobongnho.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\phaohoadang.jpg",
+      "PackagePath": "staticwebassets\\Hinh\\HangHoa\\phaohoadang.jpg"
+    },
+    {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\HangHoa\\vani-kemtuoi-socola.jpg",
       "PackagePath": "staticwebassets\\Hinh\\HangHoa\\vani-kemtuoi-socola.jpg"
     },
@@ -969,24 +989,12 @@
       "PackagePath": "staticwebassets\\Hinh\\KhachHang\\448310383_122146347398234860_6540341551642699489_n.jpg"
     },
     {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\KhachHang\\54ffde11-227d-466d-a8da-8573ab264c13.jpg",
-      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\54ffde11-227d-466d-a8da-8573ab264c13.jpg"
-    },
-    {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\KhachHang\\5b36b1de-1ec5-4f2f-8b15-a99cc264d802.jpg",
-      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\5b36b1de-1ec5-4f2f-8b15-a99cc264d802.jpg"
-    },
-    {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\KhachHang\\6fae73a7-2ee5-49b4-b9ff-bc7c3860fac2.jpg",
       "PackagePath": "staticwebassets\\Hinh\\KhachHang\\6fae73a7-2ee5-49b4-b9ff-bc7c3860fac2.jpg"
     },
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\KhachHang\\cc718479-7c53-414e-9212-2fd558554fe4.jpg",
       "PackagePath": "staticwebassets\\Hinh\\KhachHang\\cc718479-7c53-414e-9212-2fd558554fe4.jpg"
-    },
-    {
-      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\Hinh\\KhachHang\\user.jpg",
-      "PackagePath": "staticwebassets\\Hinh\\KhachHang\\user.jpg"
     },
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\compilerconfig.json",
@@ -1173,8 +1181,40 @@
       "PackagePath": "staticwebassets\\img\\bg-img\\dangnhap1.jpg"
     },
     {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\hd1.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\hd1.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\hd2.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\hd2.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\hd3.jpg",
+      "PackagePath": "staticwebassets\\img\\bg-img\\hd3.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\km1.png",
+      "PackagePath": "staticwebassets\\img\\bg-img\\km1.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\km2.png",
+      "PackagePath": "staticwebassets\\img\\bg-img\\km2.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\km3.png",
+      "PackagePath": "staticwebassets\\img\\bg-img\\km3.png"
+    },
+    {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\nav2.png",
       "PackagePath": "staticwebassets\\img\\bg-img\\nav2.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\privacy.png",
+      "PackagePath": "staticwebassets\\img\\bg-img\\privacy.png"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\quality.png",
+      "PackagePath": "staticwebassets\\img\\bg-img\\quality.png"
     },
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\rp2.jpg",
@@ -1183,6 +1223,10 @@
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\rp4.jpg",
       "PackagePath": "staticwebassets\\img\\bg-img\\rp4.jpg"
+    },
+    {
+      "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\bg-img\\sizecake.png",
+      "PackagePath": "staticwebassets\\img\\bg-img\\sizecake.png"
     },
     {
       "Id": "D:\\FileSave\\LapTrinhWeb_ASP.NET-MVC-Core\\TH\\CakeShop\\CakeShop\\wwwroot\\img\\core-img\\arrow-down.svg",
