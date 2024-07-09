@@ -13,7 +13,8 @@ namespace CakeShop.ModelsView
         [Required(ErrorMessage = "Chưa nhập mật khẩu!")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+
         [Required(ErrorMessage = " ")]
-        public string Captcha {  get; set; } 
+        public string Captcha { get; set; }
     }
 }

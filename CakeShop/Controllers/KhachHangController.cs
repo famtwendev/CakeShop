@@ -37,7 +37,6 @@ namespace CakeShop.Controllers
         {
             return View();
         }
-
         [HttpPost]
         public IActionResult DangKy(RegisterVM model, IFormFile Hinh)
         {
@@ -125,7 +124,7 @@ namespace CakeShop.Controllers
                 RemoteIp = HttpContext.Connection.RemoteIpAddress.ToString(),
             });
 
-            if(!response.Success)
+            if (!response.Success)
             {
                 ModelState.AddModelError("loi", "Captcha không đúng!.");
                 return View(model);
@@ -152,6 +151,8 @@ namespace CakeShop.Controllers
                         }
                         else
                         {
+                         
+                            // Đăng nhập thành công và thiết lập cookie cho Customer
                             var claims = new List<Claim> {
                                 new Claim(ClaimTypes.Email, khachHang.Email),
                                 new Claim(ClaimTypes.Name, khachHang.HoTen),
@@ -169,6 +170,9 @@ namespace CakeShop.Controllers
                             var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
                             await HttpContext.SignOutAsync("AdminCookie");
                             await HttpContext.SignInAsync("CustomerCookie", claimsPrincipal);
+
+                            // Gọi hàm JavaScript để reset Captcha
+                            ViewBag.ResetCaptcha = true;
 
                             if (Url.IsLocalUrl(ReturnUrl))
                             {

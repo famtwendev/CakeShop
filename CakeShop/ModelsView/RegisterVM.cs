@@ -41,5 +41,6 @@ namespace CakeShop.ModelsView
 
         [Display(Name = "Hình ảnh đại diện")]
         public string? Hinh { get; set; }
+
     }
 }

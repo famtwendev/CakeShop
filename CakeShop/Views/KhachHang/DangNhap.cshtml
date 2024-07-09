@@ -17,8 +17,8 @@
                         <h4>Đăng nhập</h4>
                     </div>
                     <form asp-action="DangNhap" asp-route-returnurl="@ViewBag.ReturnUrl">
-                        <input type="hidden" asp-for="Captcha"/>
                         <div class="text-danger" asp-validation-summary="All"></div>
+                        <input type="hidden" asp-for="Captcha" />
                         <div class="row">
 
                             <div class="col-md-12 mb-3">
@@ -51,13 +51,12 @@
                             <div class="col-md-6 mb-3 d-flex justify-content-center">
                                 <a asp-controller="KhachHang" asp-action="QuenMatKhau">Quên mật khẩu?</a>
                             </div>
-                            <div class="col-md-12 my-3  d-flex justify-content-center">
+                            <div class="col-md-12 my-3 d-flex justify-content-center">
                                 <div class="g-recaptcha" id="recaptcha"></div>
                             </div>
                             <div class="col-md-12 my-3">
                                 <button type="submit" class=" btn essence-btn w-100">Đăng Nhập</button>
                             </div>
-
                             <div class="col-md-12 text-center">
                                 <p>Chưa có tài khoản? <a asp-controller="KhachHang" asp-action="DangKy">Đăng ký</a></p>
                             </div>
@@ -85,5 +84,10 @@
             });
         };
 
+        // Hàm reset Captcha khi cần thiết (ví dụ: sau khi đăng nhập thành công)
+        function resetCaptcha() {
+            grecaptcha.reset();
+            $('#Captcha').val('');
+        }
     </script>
 }

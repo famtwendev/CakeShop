@@ -78,6 +78,9 @@
                 }
             });
         };
-
+        function resetCaptcha() {
+            grecaptcha.reset();
+            $('#Captcha').val('');
+        }
     </script>
 }

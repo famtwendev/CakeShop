@@ -120,7 +120,7 @@ namespace CakeShop.Controllers
         }
         [Authorize]
         [HttpPost]
-        public IActionResult Checkout(CheckoutVM model, string payment)
+        public async Task<IActionResult> Checkout(CheckoutVM model, string payment)
         {
             if (ModelState.IsValid)
             {
@@ -160,8 +160,8 @@ namespace CakeShop.Controllers
                 db.Database.BeginTransaction();
                 try
                 {
-                    db.Add(hoadon);
-                    db.SaveChanges();
+                    await db.AddAsync(hoadon);
+                    await db.SaveChangesAsync();
 
                     var cthds = new List<ChiTietHd>();
                     foreach (var item in Cart)
@@ -175,10 +175,10 @@ namespace CakeShop.Controllers
                             GiamGia = item.GiamGia,// item.GiamGia,
                         });
                     }
-                    db.AddRange(cthds);
-                    db.SaveChanges();
+                    await db.AddRangeAsync(cthds);
+                    await db.SaveChangesAsync();
 
-                    db.Database.CommitTransaction();
+                     db.Database.CommitTransaction();
                     HttpContext.Session.Set<List<CartItem>>(MySetting.CART_KEY, new List<CartItem>());
 
                     // Soạn Mail cho khach Hang
@@ -212,7 +212,7 @@ namespace CakeShop.Controllers
                 }
                 catch (Exception ex)
                 {
-                    db.Database.RollbackTransaction();
+                     db.Database.RollbackTransaction();
                 }
             }
             return View(Cart);

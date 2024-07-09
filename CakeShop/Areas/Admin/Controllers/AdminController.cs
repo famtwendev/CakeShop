@@ -94,22 +94,18 @@ namespace CakeShop.Areas.Admin.Controllers
                             ModelState.AddModelError("loi", "Tài khoản đã hết hiệu lực!");
                         }
                         else
-                        {   // Sign out from customer authentication scheme if logged in
+                        {
+                            // Sign out from customer authentication scheme if logged in
                             var claims = new List<Claim> {
                             new Claim(ClaimTypes.Name, nhanVien.HoTen),
                             new Claim(MySetting.CLAIM_ADMINID, nhanVien.MaNv),
                             new Claim(ClaimTypes.Role, SD.Role_Admin),
                             };
-                            /*
-                                                        var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                                                        var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
-
-                                                        await HttpContext.SignInAsync(claimsPrincipal);*/
-
-                            var claimsIdentity = new ClaimsIdentity(claims, "AdminCookie");
+                              var claimsIdentity = new ClaimsIdentity(claims, "AdminCookie");
                             var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
                             await HttpContext.SignOutAsync("CustomerCookie");
                             await HttpContext.SignInAsync("AdminCookie", claimsPrincipal);
+                            ViewBag.ResetCaptcha = true;
 
                             return RedirectToAction("Index", "Admin", new { area = "Admin" });
                             /*return RedirectToAction("/Admin/Admin/Index");*/
