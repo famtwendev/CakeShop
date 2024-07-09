@@ -115,28 +115,27 @@ namespace CakeShop.Areas.Admin.Controllers
             if (id == null)
             {
                 TempData["Message"] = "Không thể xóa hóa đơn này!";
+                return Redirect("/Admin/HangHoa/NotFound");
             }
-            var hoaDon = _context.HoaDons.FirstOrDefaultAsync(m => m.MaHd == id);
+            var hoaDon = await _context.HoaDons.FirstOrDefaultAsync(m => m.MaHd == id);
             if (hoaDon == null)
             {
                 TempData["Message"] = "Không tồn tại hóa đơn này!";
+                return Redirect("/Admin/HangHoa/NotFound");
             }
-            else
+
+            var chiTietHoaDon = _context.ChiTietHds.Where(x => x.MaHd.Equals(id)).ToList();
+            if (chiTietHoaDon.Any())
             {
-                var chiTietHoaDon = _context.ChiTietHds.Where(x => x.MaHd.Equals(id)).ToList();
-                if (chiTietHoaDon.Any())
+                foreach (var ha in chiTietHoaDon)
                 {
-                    foreach (var ha in chiTietHoaDon)
-                    {
-                        _context.ChiTietHds.Remove(ha);
-                    }
-                    _context.SaveChanges();
+                    _context.ChiTietHds.Remove(ha);
                 }
-                _context.HoaDons.Remove(_context.HoaDons.Find(id));
-                _context.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
             }
-            return Redirect("/Admin/HangHoa/NotFound");
+            _context.HoaDons.Remove(_context.HoaDons.Find(id));
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
         private bool HoaDonExists(int id)
