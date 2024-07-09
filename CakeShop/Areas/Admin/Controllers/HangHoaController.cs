@@ -177,38 +177,35 @@ namespace CakeShop.Areas.Admin.Controllers
             if (id == null)
             {
                 TempData["Message"] = "Không thể xóa sản phẩm này!";
+                return NotFound();
             }
-            var sanPham = _context.HangHoas.FirstOrDefaultAsync(m => m.MaHh == id);
+            var sanPham = await _context.HangHoas.FirstOrDefaultAsync(m => m.MaHh == id);
             if (sanPham == null)
             {
                 TempData["Message"] = "Không tồn tại sản phẩm này!";
+                return NotFound();
             }
-            else
+
+            var hinhanhPhu = _context.HinhanhSps.Where(x => x.MaHh.Equals(id)).ToList();
+            if (hinhanhPhu.Any())
             {
-                var hinhanhPhu = _context.HinhanhSps.Where(x => x.MaHh.Equals(id)).ToList();
-                if (hinhanhPhu.Any())
+                foreach (var ha in hinhanhPhu)
                 {
-                    foreach (var ha in hinhanhPhu)
-                    {
-                        if (!string.IsNullOrEmpty(ha.HinhAnhPhu))
-                        {
-/*                            MyUtil.DeleteHinh(ha.HinhAnhPhu, "HinhAnhSp");*/
-                            _context.HinhanhSps.Remove(ha);
-                        }
-                    }
-                    await _context.SaveChangesAsync();
+
+                    /*                            MyUtil.DeleteHinh(ha.HinhAnhPhu, "HinhAnhSp");*/
+                    _context.HinhanhSps.Remove(ha);
                 }
-                /*MyUtil.DeleteHinh(_context.HangHoas.Find(id).Hinh.ToString(), "HangHoa");*/
-                _context.Remove(_context.HangHoas.Find(id));
-                _context.SaveChanges();
-                return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
             }
-            return NotFound();
+            /*MyUtil.DeleteHinh(_context.HangHoas.Find(id).Hinh.ToString(), "HangHoa");*/
+            _context.HangHoas.Remove(sanPham);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult PhanTicHSale()
         {
-           return View();
+            return View();
         }
 
 
