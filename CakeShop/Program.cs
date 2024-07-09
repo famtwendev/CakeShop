@@ -51,9 +51,9 @@ builder.Services.AddAuthentication(options =>
     options.SlidingExpiration = true;  // Thiết lập Sliding Expiration nếu cần
 });
 
-
-
-builder.Services.AddSingleton<IVnPayService, VnPayService>();
+// Configure VNPAY
+builder.Services.AddScoped<IVnPayService, VnPayService>();
+/*builder.Services.AddSingleton<IVnPayService, VnPayService>();*/
 
 // Configure reCaptcha
 builder.Services.AddreCAPTCHAV2(x =>

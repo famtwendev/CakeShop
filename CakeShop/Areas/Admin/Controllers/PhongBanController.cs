@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using CakeShop.Data;
 using CakeShop.Helpers;
 using Microsoft.AspNetCore.Authorization;
+using CakeShop.ModelsView;
 
 namespace CakeShop.Areas.Admin.Controllers
 {
@@ -62,7 +63,8 @@ namespace CakeShop.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(phongBan);
+                _context.PhongBans.Add(phongBan);
+                // Save changes to the database
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -96,7 +98,8 @@ namespace CakeShop.Areas.Admin.Controllers
             {
                 try
                 {
-                    _context.Update(phongBan);
+                    _context.Entry(phongBan).State = EntityState.Modified;
+/*                    _context.Update(phongBan);*/
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -117,10 +120,23 @@ namespace CakeShop.Areas.Admin.Controllers
 
 
         // POST: Admin/PhongBan/Delete/5
-        [HttpPost]
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
+            {
+                TempData["Message"] = "Không thể xóa sản phẩm này!";
+            }
+
+            var phongban = await _context.PhongBans.FirstOrDefaultAsync(m => m.MaPb == id);
+            if (phongban != null)
+            {
+                _context.PhongBans.Remove(phongban);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            TempData["Message"] = "Không thể xóa sản phẩm này!";
+            return Redirect("/Admin/HangHoa/NotFound");
+            /*if (id == null)
             {
                 TempData["Message"] = "Không thể xóa phòng ban này!";
             }
@@ -132,7 +148,7 @@ namespace CakeShop.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             TempData["Message"] = "Không thể xóa phòng ban này!";
-            return Redirect("/Admin/HangHoa/NotFound");
+            return Redirect("/Admin/HangHoa/NotFound");*/
         }
 
         private bool PhongBanExists(string id)
