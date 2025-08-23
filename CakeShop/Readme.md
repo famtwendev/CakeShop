@@ -1,6 +1,4 @@
-docker-compose up --build
-
-
+file `docker-compose up --build`
 
 ==================== Wrap product ======================
 ```Dockerfile
