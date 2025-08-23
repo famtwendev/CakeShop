@@ -69,12 +69,15 @@ docker push famtwen/cakeshop:0.1
 
 
 ### =============== Install Docker on Ubuntu ====================
+```bash
 sudo apt update
 sudo apt install -y docker.io
 sudo systemctl enable docker
 sudo systemctl start docker
-
+```
 ### ==============   SQLSERVER 2022   ===========================
+**Tạo cointainer**
+```bash
 sudo docker run -d \
  --name sqlserver  
  --restart unless-stopped \
@@ -82,8 +85,9 @@ sudo docker run -d \
  -e "SA_PASSWORD=Admin@123" \
  -p 1433:1433 \
  -d mcr.microsoft.com/mssql/server:2022-latest
-
-
+```
+**Hoặc thêm volume**
+```
 docker run -d \
   --name sqlserver \
   --restart unless-stopped \
@@ -92,6 +96,7 @@ docker run -d \
   -p 1433:1433 \
   -v sqlserver_data:/var/opt/mssql \
   mcr.microsoft.com/mssql/server:2022-latest
+```
 ### ====================  CAKESHOP  =============================
 ### Pull Image:
 ```
@@ -104,30 +109,31 @@ docker run -d \
   -p 5125:5125 \
   --restart unless-stopped \
   -e HOSTNAME="ftshop.click" \
-  -e "ConnectionStrings__CakeShop=Server=13.213.226.221,1433;Database=CAKESHOP;User Id=sa;Password=Admin@123;TrustServerCertificate=True;" \
+  -e "ConnectionStrings__CakeShop=Server=<IP_SQL>,1433;Database=CAKESHOP;User Id=sa;Password=Admin@123;TrustServerCertificate=True;" \
   -e "ASPNETCORE_ENVIRONMENT=Development" \
   -e "ASPNETCORE_URLS=http://0.0.0.0:5125" \
-  -e "reCAPTCHA__SiteKey=6Lf3n6srAAAAAGL7BggS5ceMuP5K9zyhe6BGJURr" \
-  -e "reCAPTCHA__SiteSecret=6Lf3n6srAAAAALHLpB9yD73YmvUlGHMCgi70xcqj" \
+  -e "reCAPTCHA__SiteKey=<SITE_KEY>" \
+  -e "reCAPTCHA__SiteSecret=<SECRET_KEY>" \
   --name cakeshop \
   famtwen/cakeshop:0.1
 ```
-**hoặc:**
-```
-docker run -d -p 5125:5125 -e HOSTNAME="kinhdocacanh.shop" -e "ConnectionStrings__CakeShop=Server=13.213.226.221,1433;Database=CAKESHOP;User Id=sa;Password=Admin@123;TrustServerCertificate=True;" -e "ASPNETCORE_ENVIRONMENT=Production" -e "ASPNETCORE_URLS=http://0.0.0.0:5125" -e "reCAPTCHA__SiteKey=6Lf3n6srAAAAAGL7BggS5ceMuP5K9zyhe6BGJURr" -e "reCAPTCHA__SiteSecret=6Lf3n6srAAAAALHLpB9yD73YmvUlGHMCgi70xcqj" --name cakeshop famtwen/cakeshop:0.1
+**hoặc**
 ```
 docker run -d \
   -p 5125:5125 \
-  -e "ConnectionStrings__CakeShop=Server=13.213.226.221,1433;Database=CAKESHOP;User Id=sa;Password=Admin@123;TrustServerCertificate=True;" \
+  -e "ConnectionStrings__CakeShop=Server=<IP_SQL>,1433;Database=CAKESHOP;User Id=sa;Password=Admin@123;TrustServerCertificate=True;" \
   -e "ASPNETCORE_ENVIRONMENT=Production" \
   -e "ASPNETCORE_URLS=http://0.0.0.0:5125" \
-  -e "reCAPTCHA__SiteKey=6Lf3n6srAAAAAGL7BggS5ceMuP5K9zyhe6BGJURr" \
-  -e "reCAPTCHA__SiteSecret=6Lf3n6srAAAAALHLpB9yD73YmvUlGHMCgi70xcqj" \
+  -e "reCAPTCHA__SiteKey=<SITE_KEY>" \
+  -e "reCAPTCHA__SiteSecret=<SECRET_KEY>" \
   --name cakeshop \
   famtwen/cakeshop:0.1
+```
 
+**Kiểm tra captcha**
+```
 docker exec -it cakeshop printenv | grep reCAPTCHA
-
+```
 ### Check docker container:
 ```
 sudo docker ps
