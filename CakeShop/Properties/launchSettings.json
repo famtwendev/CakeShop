@@ -1,0 +1,45 @@
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "HOSTNAME": "${HOSTNAME:-localhost}"  // Mặc định là localhost nếu không có giá trị
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://$(HOSTNAME):5124"  // Dùng biến HOSTNAME
+    },
+    "https": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "HOSTNAME": "${HOSTNAME:-localhost}"  // Tương tự với https
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://$(HOSTNAME):7226;http://$(HOSTNAME):5124"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "environmentVariables": {
+        "ASPNETCORE_HTTPS_PORTS": "5125",
+        "ASPNETCORE_HTTP_PORTS": "5124",
+        "HOSTNAME": "${HOSTNAME:-localhost}"  // Sử dụng HOSTNAME trong môi trường Docker
+      },
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://$(HOSTNAME):10913",
+      "sslPort": 44382
+    }
+  }
+}

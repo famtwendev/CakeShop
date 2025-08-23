@@ -1,0 +1,46 @@
+﻿@model CakeShop.Data.PhanCong
+
+@{
+    ViewData["Title"] = "Chỉnh sửa phân công";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Chỉnh sửa phân công</h1>
+</hr>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MaPc" />
+            <div class="form-group">
+                <label asp-for="MaNv" class="control-label"></label>
+                <select asp-for="MaNv" class="form-control" asp-items="ViewBag.MaNv"></select>
+                <span asp-validation-for="MaNv" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaPb" class="control-label"></label>
+                <select asp-for="MaPb" class="form-control" asp-items="ViewBag.MaPb"></select>
+                <span asp-validation-for="MaPb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NgayPc" class="control-label"></label>
+                <input type="datetime-local" asp-for="NgayPc" name="NgayPc" class="form-control" />
+                <span asp-validation-for="NgayPc" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" asp-for="HieuLuc" name="HieuLuc"/> @Html.DisplayNameFor(model => model.HieuLuc)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

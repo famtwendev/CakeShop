@@ -1,0 +1,25 @@
+﻿@model IEnumerable<CakeShop.ModelsView.HangHoaVM>
+@{
+   ViewData["Title"] = "Sản phẩm";
+   Layout = "_DanhSachHangHoa";
+}
+<!-- Single Page Header start -->
+@section BreadCum
+{
+    <div class="breadcumb_area bg-img"
+         style="background-image: url(img/bg-img/breadcumb.jpg)">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="page-title text-center">
+                        <h2>CAKES</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<!-- Cake shop Start-->
+@await Html.PartialAsync("ProductItem", Model)
+<!-- Cake Shop End-->

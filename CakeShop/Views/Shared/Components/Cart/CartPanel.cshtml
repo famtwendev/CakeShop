@@ -1,0 +1,11 @@
+﻿@model CakeShop.ModelsView.CartModel
+@{
+    ViewData["Title"] = "CartPanel";
+}
+
+<a asp-controller="Cart" asp-action="Index">
+    <img src="~/img/core-img/bag.svg" alt="" />
+    <span>@Model.Quantity</span>
+</a>
+
+

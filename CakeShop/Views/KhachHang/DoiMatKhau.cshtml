@@ -1,0 +1,75 @@
+﻿@model CakeShop.ModelsView.DoiMatKhau
+@{
+    ViewData["Title"] = "Quên Mật Khẩu";
+}
+<div class="container py-5 h-100">
+    <div class="col col-xl-12">
+        <form id="frmcheckmail" asp-action="DoiMatKhau" asp-controller="KhachHang" method="post">
+            <div class="d-flex justify-content-center align-items-center p-5 text-center">
+                <div class="col-12 col-md-8 col-lg-8 col-xl-10">
+                    <!-- Input Email -->
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-xl-6">
+                            <div class="border border-gray rounded-5 shadow p-5">
+                                <i class="bi bi-check-circle display-3 text-secondary"></i>
+                                <ul class="mt-3 m-0 p-0">
+                                    <li class="pb-4" style="list-style: none">
+                                        <div class="form-outline">
+                                            <div class="mb-2">
+                                                <input asp-for="@Model.matKhauHienTai" type="password" class="form-control" id="matKhauHienTai" placeholder="Mật khẩu hiện tại">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="pb-4" style="list-style: none">
+                                        <div class="form-outline">
+                                            <div class="mb-2">
+                                                <input type="password" asp-for="@Model.matKhauMoi" id="matKhauMoi" name="matKhauMoi"
+                                                       class="form-control" required="required"
+                                                       onkeyup="kiemTraNewPassword()" placeholder="Mật khẩu mới" />
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="pb-4" style="list-style: none">
+                                        <div class="form-outline">
+                                            <div class="mb-2">
+                                                <input asp-for="@Model.matKhauMoiNhapLai" type="password" id="matKhauMoiNhapLai" name="matKhauMoiNhapLai"
+                                                       class="form-control" required="required"
+                                                       onkeyup="kiemTraNewPassword()" placeholder="Nhập lại mật khẩu mới" />
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <div class="text-danger mb-3" id="msger" asp-validation-summary="All"></div>
+                                </ul>
+                                <ul class="m-0 p-0">
+                                    <li class="text-end" style="list-style: none">
+                                        <a class="btn btn-danger" asp-action="Index" asp-controller="Home">Hủy</a>
+                                        <button type="submit" class="btn btn-primary">
+                                            Lưu
+                                            mật khẩu
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        function kiemTraNewPassword() {
+            var matKhauMoi = document.getElementById("matKhauMoi").value;
+            var matKhauMoiNhapLai = document.getElementById("matKhauMoiNhapLai").value;
+
+            if (matKhauMoi != matKhauMoiNhapLai) {
+                document.getElementById("msger").textContent = "  Mật khẩu không khớp!";
+                return false;
+            } else {
+                document.getElementById("msger").textContent = "";
+                return true;
+            }
+        }
+    </script>
+}

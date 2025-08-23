@@ -1,0 +1,109 @@
+﻿@model CakeShop.Areas.Admin.Models.ChiTietHangHoa
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<!-- Page Heading -->
+<h1 class="h3 mb-4 text-gray-800">Thông tin sản phẩm</h1>
+
+<div class="row">
+    <div class="col-lg-6">
+        <!-- Circle Buttons -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Thông tin sản phẩm</h6>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-4">
+                        Tên hàng hóa
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Model.TenHh
+                    </dd>
+                    <dt class="col-sm-4">
+                        Tên loại alias
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Model.TenAlias
+                    </dd>
+                    <dt class="col-sm-4">
+                        Kích thước
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Model.MoTaDonVi
+                    </dd>
+                    <dt class="col-sm-4">
+                        Đớn giá
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Model.DonGia
+                    </dd>
+                    <dt class="col-sm-4">
+                        Hình ảnh chính
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Model.Hinh
+                    </dd>
+                    <dt class="col-sm-4">
+                        Ngày sản xuất
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Model.NgaySx
+                    </dd>
+                    <dt class="col-sm-4">
+                        Giảm giá
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Model.GiamGia
+                    </dd>
+                    <dt class="col-sm-4">
+                        Lượt xem
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Model.SoLanXem
+                    </dd>
+                    <dt class="col-sm-4">
+                        Mô tả
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Model.MoTa
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 mb-2">
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Hình ảnh sản phẩm</h6>
+            </div>
+            @if (Model.HinhanhSps == null || !Model.HinhanhSps.Any())
+            {
+                <img src="~/Hinh/HangHoa/@Model.Hinh" alt="@Model.TenHh" />
+            }
+            else
+            {
+                <div class="row d-flex align-items-center justify-content-center">
+                    @foreach (var hinhanh in Model.HinhanhSps)
+                    {
+                        <div class="col-12 col-md-6 mt-4">
+                            <div class="container-fluid">
+                                <img src="~/Hinh/HangHoa/@hinhanh.HinhAnhPhu" alt="@Model.TenHh" style="width:auto ;height: 27rem" />
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.MaHh" class="btn btn-warning">Chỉnh sửa</a> |
+    <a asp-action="Index" class="btn btn-info">Back to List</a>
+</div>
+<!--20rem-->

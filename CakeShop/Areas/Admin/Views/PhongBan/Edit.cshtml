@@ -1,0 +1,40 @@
+﻿@model CakeShop.Data.PhongBan
+
+@{
+    ViewData["Title"] = "Chỉnh sửa phòng ban";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Chỉnh sửa phòng ban</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="MaPb" />
+            <div class="form-group">
+                <label asp-for="MaPb" class="control-label"></label>
+                <input asp-for="MaPb" readonly class="form-control" />
+                <span asp-validation-for="MaPb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenPb" class="control-label"></label>
+                <input asp-for="TenPb" class="form-control" />
+                <span asp-validation-for="TenPb" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThongTin" class="control-label"></label>
+                <input asp-for="ThongTin" class="form-control" />
+                <span asp-validation-for="ThongTin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

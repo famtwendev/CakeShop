@@ -1,0 +1,134 @@
+﻿@using X.PagedList
+@model IPagedList<CakeShop.Data.HoaDon>
+
+@{
+    ViewData["Title"] = "Danh sách hóa đơn";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Danh sách hóa đơn</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Mã hóa đơn
+            </th>
+            <th>
+                Mã khách hàng
+            </th>
+            <th>
+                Họ và tên
+            </th>
+            <th>
+                Số điện thoại
+            </th>
+            <th>
+                Địa chỉ
+            </th>
+            <th>
+                Ngày đặt
+            </th>
+            <th>
+                Ngày giao
+            </th>
+            <th>
+                Cách thanh toán
+            </th>
+            <th>
+                Cách vận chuyển
+            </th>
+            <th>
+                Phí vận chuyển
+            </th>
+            <th>
+                Ghi chú
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+            string @cls = "table-success";
+        }
+        @foreach (var item in Model)
+        {
+            i = i + 1;
+            cls = "table-success";
+            if (i % 2 == 0)
+            {
+                cls = "table-info";
+            }
+            <tr class="@cls">
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaHd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaKhNavigation.MaKh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HoTen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DienThoai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayDat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayGiao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CachThanhToan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CachVanChuyen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhiVanChuyen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GhiChu)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MaHd">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.MaHd">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MaHd">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="container d-flex justify-content-center align-content-center">
+    <div class="row">
+        <nav aria-label="navigation">
+            <ul class="pagination mt-50 mb-70">
+                @if (Model.HasPreviousPage)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber - 1 })">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    </li>
+                }
+                @for (int a = 1; a <= Model.PageCount; a++)
+                {
+                    <li class="page-item @(Model.PageNumber == a ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("Index", new { page = a })">@a</a>
+                    </li>
+                }
+                @if (Model.HasNextPage)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber + 1 })">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+</div>

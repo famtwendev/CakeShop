@@ -1,0 +1,168 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>333208d1-7a67-49ba-a63b-1fd79894ab7d</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\**" />
+    <Compile Remove="wwwroot\Admin\vendor\bootstrap\js\**" />
+    <Compile Remove="wwwroot\Admin\vendor\chart.js\**" />
+    <Compile Remove="wwwroot\Admin\vendor\datatables\**" />
+    <Compile Remove="wwwroot\Admin\vendor\fontawesome-free\**" />
+    <Compile Remove="wwwroot\Admin\vendor\jquery\**" />
+    <Compile Remove="wwwroot\Customer\**" />
+    <Content Remove="Pages\**" />
+    <Content Remove="wwwroot\Admin\vendor\bootstrap\js\**" />
+    <Content Remove="wwwroot\Admin\vendor\chart.js\**" />
+    <Content Remove="wwwroot\Admin\vendor\datatables\**" />
+    <Content Remove="wwwroot\Admin\vendor\fontawesome-free\**" />
+    <Content Remove="wwwroot\Admin\vendor\jquery\**" />
+    <Content Remove="wwwroot\Customer\**" />
+    <EmbeddedResource Remove="Pages\**" />
+    <EmbeddedResource Remove="wwwroot\Admin\vendor\bootstrap\js\**" />
+    <EmbeddedResource Remove="wwwroot\Admin\vendor\chart.js\**" />
+    <EmbeddedResource Remove="wwwroot\Admin\vendor\datatables\**" />
+    <EmbeddedResource Remove="wwwroot\Admin\vendor\fontawesome-free\**" />
+    <EmbeddedResource Remove="wwwroot\Admin\vendor\jquery\**" />
+    <EmbeddedResource Remove="wwwroot\Customer\**" />
+    <None Remove="Pages\**" />
+    <None Remove="wwwroot\Admin\vendor\bootstrap\js\**" />
+    <None Remove="wwwroot\Admin\vendor\chart.js\**" />
+    <None Remove="wwwroot\Admin\vendor\datatables\**" />
+    <None Remove="wwwroot\Admin\vendor\fontawesome-free\**" />
+    <None Remove="wwwroot\Admin\vendor\jquery\**" />
+    <None Remove="wwwroot\Customer\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="MailKit" Version="4.7.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+    <PackageReference Include="Owl.reCAPTCHA" Version="8.0.0" />
+    <PackageReference Include="X.PagedList" Version="9.1.2" />
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="9.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="wwwroot\Hinh\KhachHang\" />
+    <Folder Include="wwwroot\lib\jquery-validation-unobtrusive\" />
+    <Folder Include="wwwroot\lib\jquery-validation\" />
+    <Folder Include="wwwroot\lib\jquery-validation\dist\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Admin\css\sb-admin-2.css" />
+    <None Include="wwwroot\Admin\css\sb-admin-2.min.css" />
+    <None Include="wwwroot\Admin\gulpfile.js" />
+    <None Include="wwwroot\Admin\img\undraw_posting_photo.svg" />
+    <None Include="wwwroot\Admin\img\undraw_profile.svg" />
+    <None Include="wwwroot\Admin\img\undraw_profile_1.svg" />
+    <None Include="wwwroot\Admin\img\undraw_profile_2.svg" />
+    <None Include="wwwroot\Admin\img\undraw_profile_3.svg" />
+    <None Include="wwwroot\Admin\img\undraw_rocket.svg" />
+    <None Include="wwwroot\Admin\js\demo\chart-area-demo.js" />
+    <None Include="wwwroot\Admin\js\demo\chart-bar-demo.js" />
+    <None Include="wwwroot\Admin\js\demo\chart-pie-demo.js" />
+    <None Include="wwwroot\Admin\js\demo\datatables-demo.js" />
+    <None Include="wwwroot\Admin\js\sb-admin-2.js" />
+    <None Include="wwwroot\Admin\js\sb-admin-2.min.js" />
+    <None Include="wwwroot\Admin\LICENSE" />
+    <None Include="wwwroot\Admin\PRO_UPGRADE.txt" />
+    <None Include="wwwroot\Admin\README.md" />
+    <None Include="wwwroot\Admin\scss\navs\_global.scss" />
+    <None Include="wwwroot\Admin\scss\navs\_sidebar.scss" />
+    <None Include="wwwroot\Admin\scss\navs\_topbar.scss" />
+    <None Include="wwwroot\Admin\scss\sb-admin-2.scss" />
+    <None Include="wwwroot\Admin\scss\utilities\_animation.scss" />
+    <None Include="wwwroot\Admin\scss\utilities\_background.scss" />
+    <None Include="wwwroot\Admin\scss\utilities\_border.scss" />
+    <None Include="wwwroot\Admin\scss\utilities\_display.scss" />
+    <None Include="wwwroot\Admin\scss\utilities\_progress.scss" />
+    <None Include="wwwroot\Admin\scss\utilities\_rotate.scss" />
+    <None Include="wwwroot\Admin\scss\utilities\_text.scss" />
+    <None Include="wwwroot\Admin\scss\_buttons.scss" />
+    <None Include="wwwroot\Admin\scss\_cards.scss" />
+    <None Include="wwwroot\Admin\scss\_charts.scss" />
+    <None Include="wwwroot\Admin\scss\_dropdowns.scss" />
+    <None Include="wwwroot\Admin\scss\_error.scss" />
+    <None Include="wwwroot\Admin\scss\_footer.scss" />
+    <None Include="wwwroot\Admin\scss\_global.scss" />
+    <None Include="wwwroot\Admin\scss\_login.scss" />
+    <None Include="wwwroot\Admin\scss\_mixins.scss" />
+    <None Include="wwwroot\Admin\scss\_navs.scss" />
+    <None Include="wwwroot\Admin\scss\_utilities.scss" />
+    <None Include="wwwroot\Admin\scss\_variables.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_alert.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_background-variant.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_badge.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_border-radius.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_box-shadow.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_breakpoints.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_buttons.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_caret.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_clearfix.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_deprecate.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_float.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_forms.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_gradients.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_grid-framework.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_grid.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_hover.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_image.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_list-group.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_lists.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_nav-divider.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_pagination.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_reset-text.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_resize.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_screen-reader.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_size.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_table-row.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_text-emphasis.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_text-hide.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_text-truncate.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_transition.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\mixins\_visibility.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_align.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_background.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_borders.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_clearfix.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_display.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_embed.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_flex.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_float.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_interactions.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_overflow.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_position.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_screenreaders.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_shadows.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_sizing.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_spacing.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_stretched-link.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_text.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\utilities\_visibility.scss" />
+    <None Include="wwwroot\Admin\vendor\bootstrap\scss\vendor\_rfs.scss" />
+    <None Include="wwwroot\Admin\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <None Include="wwwroot\Admin\vendor\jquery-easing\jquery.easing.js" />
+    <None Include="wwwroot\Admin\vendor\jquery-easing\jquery.easing.min.js" />
+    <None Include="wwwroot\css\bootstrap\.DS_Store" />
+    <None Include="wwwroot\css\bootstrap\mixins\.DS_Store" />
+    <None Include="wwwroot\js\site.js" />
+  </ItemGroup>
+
+</Project>

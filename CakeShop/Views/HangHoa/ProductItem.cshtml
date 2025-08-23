@@ -1,0 +1,60 @@
+﻿@model IEnumerable<CakeShop.ModelsView.HangHoaVM>
+
+<!-- Single Product -->
+@foreach (var item in Model.OrderBy(x => Guid.NewGuid()))
+{
+    <div class="col-12 col-sm-6 col-lg-4">
+        <div class="single-product-wrapper border-0 shadow">
+            <!-- Product Image -->
+            <div class="product-img">
+                <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHh">
+                    <img src="~/Hinh/HangHoa/@item.Hinh" style="height: 18rem" />
+                </a>
+                <!-- Product Badge -->
+                @if (item.Giamgia != 0)
+                {
+                    <div class="product-badge offer-badge">
+                        <span>
+                            - @(Math.Round(item.Giamgia / item.DonGia * 100) + "%")
+                        </span>
+                    </div>
+                }
+                @* <!-- Favourite -->
+            <div class="product-favourite">
+            <a href="#" class="favme fa fa-heart"></a>
+            </div> *@
+            </div>
+
+            <!-- Product Description -->
+            <div class="product-description mx-3 mb-2">
+                <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHh">
+                    <span>@item.TenLoai</span>
+                    <h6 style="height: 45px">@item.TenHH</h6>
+                </a>
+                @if (item.Giamgia != 0)
+                {
+                    <h6 class="product-price mb-4">
+                        @((item.DonGia - item.Giamgia).ToString("#,##0")) VNĐ
+                        <span class="old-price" style="font-size: 14px">
+                            ~ <strike>@item.DonGia.ToString("#,##0") VNĐ</strike>
+                        </span>
+                    </h6>
+                }
+                else
+                {
+                    <h6 class="product-price mb-4">
+                        @item.DonGia.ToString("#,##0") VNĐ
+                    </h6>
+                }
+
+                <!-- Hover Content -->
+                <div class="hover-content">
+                    <!-- Add to Cart -->
+                    <div class="add-to-cart-btn">
+                        <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@item.MaHh" class="btn essence-btn">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

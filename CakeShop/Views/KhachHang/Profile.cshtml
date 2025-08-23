@@ -1,0 +1,139 @@
+﻿@model CakeShop.ModelsView.ThayDoiThongTinVM;
+@{
+    ViewData["Title"] = "Profile";
+}
+
+@* <h1>Profile</h1> *@
+<div class="checkout_area section-padding-80">
+    <div class="container">
+        <h2 class="text-center">Welcome @Context.User.Identity.Name</h2>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="checkout_details_area mt-50 clearfix">
+                    <div class="cart-page-heading mb-30">
+                        <h4>Thông tin cá nhân</h4>
+                    </div>
+                    <form action="ThayDoiThongTin" method="post" enctype="multipart/form-data">
+                        <div class="text-danger mb-3" asp-validation-summary="ModelOnly"></div>
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <label asp-for="@Model.MaKh"></label>
+                                <input type="text"
+                                       asp-for="@Model.MaKh"
+                                       class="form-control"
+                                       value="@Model.MaKh"
+                                       />
+                                <span asp-validation-for="@Model.MaKh" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="@Model.HoTen"></label>
+                                <input type="text"
+                                       asp-for="@Model.HoTen"
+                                       name="HoTen"
+                                       class="form-control"
+                                       value="@Model.HoTen"
+                                       required />
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="@Model.GioiTinh">Giới tính:</label><br>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="GioiTinh" id="nam" value="true" @(Model.GioiTinh ? "checked" : "")>
+                                    <label class="form-check-label" for="nam">Nam</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="GioiTinh" id="nu" value="false" @(!Model.GioiTinh ? "checked" : "")>
+                                    <label class="form-check-label" for="nu">Nữ</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="@Model.NgaySinh">Ngày sinh:</label>
+                                <input type="date"
+                                       asp-for="@Model.NgaySinh"
+                                       name="NgaySinh"
+                                       class="form-control"
+                                       value="@Model.NgaySinh.ToString("yyyy-MM-dd")"
+                                       required />
+                                <span asp-validation-for="@Model.NgaySinh" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="@Model.DiaChi"></label>
+                                <input type="text"
+                                       asp-for="@Model.DiaChi"
+                                       name="DiaChi"
+                                       class="form-control"
+                                       value="@Model.DiaChi"
+                                       required />
+                                <span asp-validation-for="@Model.DiaChi" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="@Model.DienThoai"></label>
+                                <input type="text"
+                                       asp-for="@Model.DienThoai"
+                                       name="DienThoai"
+                                       class="form-control"
+                                       value="@Model.DienThoai"
+                                       required />
+                                <span asp-validation-for="@Model.DienThoai" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label asp-for="@Model.Email"></label>
+                                <input type="email"
+                                       asp-for="@Model.Email"
+                                       name="Email"
+                                       class="form-control"
+                                       value="@Model.Email"
+                                       required />
+                                <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label asp-for="@Model.Hinh"></label>
+                                <input type="file"
+                                       asp-for="@Model.Hinh"
+                                       name="Hinh"
+                                       class="file-upload"
+                                       accept=".png, .jpg, .jpeg"  />
+                                <span asp-validation-for="@Model.Hinh" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 my-3">
+                                <button type="submit" class="btn essence-btn w-100">Cập nhật thông tin</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-5 ml-lg-auto mt-50 d-flex justify-content-center align-items-center">
+                <div class="order-details-confirmation">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-avatar">
+                                <img class="avatar-img" src="~/Hinh/KhachHang/@Model.Hinh" alt="Avatar" accept="image/*">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+
+            var readURL = function (input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('.avatar-img').attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+            $(".file-upload").on('change', function () {
+                readURL(this);
+            });
+        });
+    </script>
+}

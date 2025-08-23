@@ -1,0 +1,94 @@
+﻿@model CakeShop.Data.KhachHang
+
+@{
+    ViewData["Title"] = "Chi tiết khách hàng";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="row">
+    <div class="col-lg-6">
+        <!-- Circle Buttons -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Thông tin khách hàng</h6>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.HoTen)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.HoTen)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.GioiTinh)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.GioiTinh)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.NgaySinh)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.NgaySinh)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.DiaChi)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.DiaChi)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.MatKhau)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.MatKhau)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.DienThoai)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.DienThoai)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Email)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Email)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.Hinh)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.Hinh)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.HieuLuc)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.HieuLuc)
+                    </dd>
+                    <dt class="col-sm-4">
+                        @Html.DisplayNameFor(model => model.VaiTro)
+                    </dt>
+                    <dd class="col-sm-8">
+                        @Html.DisplayFor(model => model.VaiTro)
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6 mb-2">
+
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Hình ảnh sản phẩm</h6>
+                <img src="~/Hinh/HangHoa/@Model.Hinh" alt="@Model.HoTen" style="width:auto ;height: 27rem" />
+            </div>
+        </div>
+    </div>
+</div>
+    <a asp-action="Edit" asp-route-id="@Model.MaKh" class="btn btn-warning">Chỉnh sửa</a> |
+<a asp-action="Index" class="btn btn-info">Back to List</a>
+</div>

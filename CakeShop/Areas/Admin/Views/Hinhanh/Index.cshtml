@@ -1,0 +1,84 @@
+﻿@model IPagedList<CakeShop.Data.HinhanhSp>
+>
+@using X.PagedList
+@{
+    ViewData["Title"] = "Danh sách";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Danh sách hình ảnh phụ</h1>
+
+<p class="text-right">
+    <a asp-action="Create" class="btn btn-primary">Thêm hình ảnh mới</a>
+</p>
+<table class="table">
+    <thead class="table-warning">
+        <tr>
+            <th>
+                Hình ảnh phụ
+            </th>
+            <th>
+                Mã hàng hóa
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+            string @cls = "table-success";
+        }
+        @foreach (var item in Model)
+        {
+            i = i + 1;
+            cls = "table-success";
+            if (i % 2 == 0)
+            {
+                cls = "table-info";
+            }
+            <tr class="@cls">
+                <td>
+                    @Html.DisplayFor(modelItem => item.HinhAnhPhu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaHhNavigation.MaHh)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="container d-flex justify-content-center align-content-center">
+    <div class="row">
+        <nav aria-label="navigation">
+            <ul class="pagination mt-50 mb-70">
+                @if (Model.HasPreviousPage)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber - 1 })">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                    </li>
+                }
+                @for (int a = 1; a <= Model.PageCount; a++)
+                {
+                    <li class="page-item @(Model.PageNumber == a ? "active" : "")">
+                        <a class="page-link" href="@Url.Action("Index", new { page = a })">@a</a>
+                    </li>
+                }
+                @if (Model.HasNextPage)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber + 1 })">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </nav>
+    </div>
+</div>

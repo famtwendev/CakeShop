@@ -1,0 +1,92 @@
+﻿@model CakeShop.ModelsView.LoginVM
+@{
+    ViewData["Title"] = "Đăng nhập";
+}
+
+<div class="checkout_area section-padding-80">
+    <div class="container">
+        <div class="row border-1 shadow">
+
+            <div class="col-12 col-md-6 ml-lg-auto d-flex justify-content-center align-items-center mb-30">
+                <img class="picture-img" src="~/img/bg-img/dangnhap1.jpg" alt="Avatar" accept="image/*">
+            </div>
+
+            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                <div class="checkout_details_area clearfix">
+                    <div class="cart-page-heading mb-30">
+                        <h4>Đăng nhập</h4>
+                    </div>
+                    <form asp-action="DangNhap" asp-route-returnurl="@ViewBag.ReturnUrl">
+                        <div class="text-danger" asp-validation-summary="All"></div>
+                        <input type="hidden" asp-for="Captcha" />
+                        <div class="row">
+
+                            <div class="col-md-12 mb-3">
+                                <label asp-for="@Model.UserName"></label><span class="text-primary"> * </span>
+                                <input type="text"
+                                       asp-for="@Model.UserName"
+                                       class="form-control"
+                                       value=""
+                                       required />
+                                <span asp-validation-for="@Model.UserName" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label asp-for="@Model.Password"></label><span class="text-primary"> * </span>
+                                <input type="password"
+                                       asp-for="@Model.Password"
+                                       class="form-control"
+                                       id="password-field"
+                                       value=""
+                                       required />
+                                <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6 mb-4 d-flex justify-content-center">
+                                <div class="form-check">
+                                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                                    <label class="form-check-label" for="form2Example3">
+                                        Ghi nhớ
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3 d-flex justify-content-center">
+                                <a asp-controller="KhachHang" asp-action="QuenMatKhau">Quên mật khẩu?</a>
+                            </div>
+                            <div class="col-md-12 my-3 d-flex justify-content-center">
+                                <div class="g-recaptcha" id="recaptcha"></div>
+                            </div>
+                            <div class="col-md-12 my-3">
+                                <button type="submit" class=" btn essence-btn w-100">Đăng Nhập</button>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <p>Chưa có tài khoản? <a asp-controller="KhachHang" asp-action="DangKy">Đăng ký</a></p>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            async defer>
+    </script>
+    <script>
+        var onloadCallback = function () {
+            grecaptcha.render('recaptcha', {
+                'sitekey': '@ViewBag.SiteKey',  // <-- lấy từ appsettings.json
+                'callback': function (response) {
+                    console.log(response);
+                    $('#Captcha').val(response);
+                }
+            });
+        };
+
+        function resetCaptcha() {
+            grecaptcha.reset();
+            $('#Captcha').val('');
+        }
+    </script>
+}

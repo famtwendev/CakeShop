@@ -1,0 +1,66 @@
+﻿@model IEnumerable<CakeShop.Data.PhanCong>
+
+@{
+    ViewData["Title"] = "Danh sách phân công";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Danh sách phân công</h1>
+
+<p class="text-right">
+    <a asp-action="Create" class="btn btn-info">Create New</a>
+</p>
+<table class="table">
+    <thead class="table-warning">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaNv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaPb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NgayPc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HieuLuc)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+            string @cls = "table-success";
+        }
+
+        @foreach (var item in Model)
+        {
+            i = i + 1;
+            cls = "table-success";
+            if (i % 2 == 0)
+            {
+                cls = "table-info";
+            }
+            <tr class="@cls">
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaNv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaPb)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayPc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HieuLuc)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MaPc" class="btn btn-warning">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.MaPc" class="btn btn-info">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MaPc" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

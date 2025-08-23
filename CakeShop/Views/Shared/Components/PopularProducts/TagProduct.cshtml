@@ -1,0 +1,78 @@
+﻿@model IEnumerable<CakeShop.ModelsView.ChiTietHangHoaVM>
+@{
+    ViewData["Title"] = "TagProduct";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="popular-products-slides owl-carousel">
+                @foreach (var item in Model)
+                {
+                    <!-- Single Product -->
+                    <div class="single-product-wrapper">
+                        <!-- Product Image -->
+                        <div class="product-img">
+                            @if (item.HinhanhSps != null && item.HinhanhSps.Count() > 1)
+                            {
+                                var firstImage = item.HinhanhSps.FirstOrDefault();
+                                if (firstImage != null)
+                                {
+                                    <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHh">
+                                        <img src="~/Hinh/HangHoa/@firstImage.HinhAnhPhu" alt="@item.TenHH" style="height: 15rem" />
+                                    </a>
+                                }
+                                <!-- Hover Thumb -->
+                                var secondImage = item.HinhanhSps.ElementAtOrDefault(1);
+                                if (secondImage != null)
+                                {
+                                    <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHh">
+                                        <img class="hover-img" src="~/Hinh/HangHoa/@secondImage.HinhAnhPhu" alt="@item.TenHH" style="height: 15rem" />
+                                    </a>
+                                }
+                            }
+                            <!--
+                                <img class="hover-img"
+                                 src="img/product-img/product-2.jpg"
+                                 alt="" />
+                            -->
+                            <!-- Favourite -->
+                            <div class="product-favourite">
+                                <a href="#" class="favme fa fa-heart"></a>
+                            </div>
+                        </div>
+                        <!-- Product Description -->
+                        <div class="product-description">
+                            <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHh">
+                                <span>@item.TenLoai</span>
+                                <h6 style="height: 45px">@item.TenHH</h6>
+                            </a>
+
+                            @if (item.GiamGia != 0)
+                            {
+                                <h6 class="product-price mb-2">
+                                    @((item.DonGia - item.GiamGia).ToString("#,##0")) VNĐ
+                                    <span class="old-price" style="font-size: 14px">
+                                        ~ <strike>@item.DonGia.ToString("#,##0") VNĐ</strike>
+                                    </span>
+                                </h6>
+                            }
+                            else
+                            {
+                                <h6 class="product-price mb-2">@item.DonGia.ToString("#,##0") VNĐ</h6>
+                            }
+
+                            <!-- Hover Content -->
+                            <div class="hover-content">
+                                <!-- Add to Cart -->
+                                <div class="add-to-cart-btn">
+                                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@item.MaHh" class="btn essence-btn">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div> 

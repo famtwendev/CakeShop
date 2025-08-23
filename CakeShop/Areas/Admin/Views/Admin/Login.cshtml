@@ -1,0 +1,86 @@
+﻿@model CakeShop.Areas.Admin.Data.AdminLoginVM
+@using Microsoft.AspNetCore.Mvc;
+@{
+    ViewData["Title"] = "Đăng Nhập";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAccount.cshtml";
+}
+<div class="row justify-content-center align-items-center">
+    <div class="col-md-6 text-center mb-md-5">
+        <h2 class="heading-section"><b>ĐĂNG NHẬP QUẢN TRỊ HỆ THỐNG</b></h2>
+    </div>
+</div>
+<div class="row justify-content-center mb-md-5">
+    <div class="col-md-6 col-lg-4">
+        <div class="login-wrap p-0">
+            <h6 class="mb-4 text-center" style="font-family: Arial">Vui lòng nhập username và password</h6>
+            <form id="admin" method="post" class="signin-form">
+                <input type="hidden" asp-for="Captcha" />
+                <b><div class="text-warning" asp-validation-summary="All"></div></b>
+                <div class="form-group">
+                    <input type="text"
+                           class="form-control"
+                           asp-for="@Model.UserName"
+                           placeholder="UserName"
+                           required />
+                    <span asp-validation-for="@Model.UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="@Model.Password"
+                           type="password"
+                           id="password-field"
+                           class="form-control"
+                           placeholder="Password"
+                           required />
+                    <span toggle="#password-field"
+                          class="fa fa-fw fa-eye field-icon toggle-password"></span>
+
+                    <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit"
+                            class="form-control btn btn-primary submit px-3">
+                        Đăng nhập
+                    </button>
+                </div>
+                <div class="form-group d-md-flex">
+                    <div class="w-50">
+                        <label class="checkbox-wrap checkbox-primary">
+                            Ghi nhớ
+                            <input type="checkbox" checked />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="w-50 text-md-right">
+                        <a href="#" style="color: #fff">Quên mật khẩu?</a>
+                    </div>
+                </div>
+                <div class="form-group d-flex justify-content-center">
+                    <div class="g-recaptcha" id="recaptcha"></div>
+                </div>
+            </form>
+            <p class="w-100 text-center"><b>&mdash; TRỞ VỀ TRANG CHỦ &mdash;</b></p>
+            <a asp-action="Index" asp-controller="Home" class="form-control btn btn-success submit px-3"><i class="fa fa-2x fa-long-arrow-left"></i></a>
+        </div>
+    </div>
+</div>
+</div>
+@section Scripts {
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            async defer>
+    </script>
+    <script>
+        var onloadCallback = function () {
+            grecaptcha.render('recaptcha', {
+                'sitekey': '@ViewBag.SiteKey',
+                'callback': function (response) {
+                    console.log(response);
+                    $('#Captcha').val(response);
+                }
+            });
+        };
+        function resetCaptcha() {
+            grecaptcha.reset();
+            $('#Captcha').val('');
+        }
+    </script>
+}

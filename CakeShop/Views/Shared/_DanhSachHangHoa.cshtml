@@ -1,0 +1,149 @@
+﻿@using X.PagedList
+@model IPagedList<CakeShop.ModelsView.HangHoaVM>
+@{
+    Layout = "_LayoutCustomer";
+}
+
+<!-- Single Page Header start -->
+@RenderSection("BreadCum", required: false)
+<!-- Single Page Header End -->
+<!-- ##### Shop Grid Area Start ##### -->
+<section class="shop_grid_area section-padding-80">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="shop_sidebar_area">
+                    <!-- ##### Single Widget ##### -->
+                    <div class="widget catagory mb-50">
+                        <!-- Widget Title -->
+                        @await Component.InvokeAsync("MenuLoai")
+                    </div>
+
+                    <!-- ##### Single Widget ##### -->
+                    <div class="widget price mb-50">
+                        <!-- Widget Title -->
+                        <h6 class="widget-title mb-30">Filter by</h6>
+                        <!-- Widget Title 2 -->
+                        @*<p class="widget-title2 mb-30">Price</p>
+
+                         <div class="widget-desc">
+                            <div class="slider-range">
+                                <div data-min="1000"
+                                     data-max="3000000"
+                                     data-unit="VNĐ"
+                                     class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"
+                                     data-value-min="1000"
+                                     data-value-max="3000000"
+                                     data-label-result="Range:">
+                                    <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
+                                    <span class="ui-slider-handle ui-state-default ui-corner-all"
+                                          tabindex="0"></span>
+                                    <span class="ui-slider-handle ui-state-default ui-corner-all"
+                                          tabindex="0"></span>
+                                </div>
+                                <div class="range-price">Range: 1,000 VNĐ - 3,000,000 VNĐ</div>
+                            </div>
+                        </div> *@
+                    </div>
+
+                    <!-- ##### Single Widget ##### -->
+                    <div class="widget color mb-50">
+                        <!-- Widget Title 2 -->
+                        <p class="widget-title2 mb-30">Color</p>
+                        <div class="widget-desc">
+                            <ul class="d-flex">
+                                <li><a href="#" class="color1"></a></li>
+                                <li><a href="#" class="color2"></a></li>
+                                <li><a href="#" class="color3"></a></li>
+                                <li><a href="#" class="color4"></a></li>
+                                <li><a href="#" class="color5"></a></li>
+                                <li><a href="#" class="color6"></a></li>
+                                <li><a href="#" class="color7"></a></li>
+                                <li><a href="#" class="color8"></a></li>
+                                <li><a href="#" class="color9"></a></li>
+                                <li><a href="#" class="color10"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ##### Single Widget ##### -->
+                    <div class="widget brands mb-50">
+                        <!-- Widget Title 2 -->
+                        <p class="widget-title2 mb-30">Brands</p>
+                        <div class="widget-desc">
+                            <ul>
+                                <li><a href="#">Asos</a></li>
+                                <li><a href="#">Mango</a></li>
+                                <li><a href="#">River Island</a></li>
+                                <li><a href="#">Topshop</a></li>
+                                <li><a href="#">Zara</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8 col-lg-9">
+                <div class="shop_grid_product_area">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="product-topbar d-flex align-items-center justify-content-between">
+                                <!-- Total Products -->
+                                <div class="total-products">
+                                    <p>Có <span>@Model.Count()</span>  sản phẩm.</p>
+                                </div>
+                                <!-- Sorting -->
+                              @*   <div class="product-sorting d-flex">
+                                    <p>Sort by:</p>
+                                    <select name="select" id="sortByselect" ">
+                                        <option value="increase">Highest Rated</option>
+                                        <option value="decrease">Newest</option>
+                                    </select>
+                                </div> *@
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- Single Product -->
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Pagination List Start ##### -->
+
+    <div class="container d-flex justify-content-center align-content-center">
+        <div class="row">
+            <nav aria-label="navigation">
+                <ul class="pagination mt-50 mb-70">
+                    @if (Model.HasPreviousPage)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" href="@Url.Action("Index", new { loai = ViewBag.Loai, page = Model.PageNumber - 1 })">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        </li>
+                    }
+                    @for (int i = 1; i <= Model.PageCount; i++)
+                    {
+                        <li class="page-item @(Model.PageNumber == i ? "active" : "")">
+                            <a class="page-link" href="@Url.Action("Index", new { loai = ViewBag.Loai, page = i })">@i</a>
+                        </li>
+                    }
+                    @if (Model.HasNextPage)
+                    {
+                        <li class="page-item">
+                            <a class="page-link" href="@Url.Action("Index", new { loai = ViewBag.Loai, page = Model.PageNumber + 1 })">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- ##### Pagination List End ##### -->
+</section>
+

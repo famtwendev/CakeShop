@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CakeShop.Data.PhongBan>
+
+@{
+    ViewData["Title"] = "Danh sách phòng ban";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Danh sách các phòng ban</h1>
+<p class="text-right">
+    <a asp-action="Create" class="btn btn-info">Thêm mới phòng ban</a>
+</p>
+<table class="table">
+    <thead class="table-warning">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaPb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenPb)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThongTin)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+            string @cls = "table-success";
+        }
+
+        @foreach (var item in Model)
+        {
+            i = i + 1;
+            cls = "table-success";
+            if (i % 2 == 0)
+            {
+                cls = "table-info";
+            }
+            <tr class="@cls">
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaPb)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenPb)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ThongTin)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MaPb" class="btn btn-warning">Cập nhật</a> |
+                    <a asp-action="Details" asp-route-id="@item.MaPb" class="btn btn-info">Chi tiết</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MaPb" class="btn btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

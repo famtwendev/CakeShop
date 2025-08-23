@@ -1,0 +1,429 @@
+﻿@model CakeShop.ModelsView.ChiTietHangHoaVM
+@{
+    ViewData["Title"] = @Model.TenHH;
+}
+<!-- Single Product Start -->
+<div class="single_product_details_area d-flex container-fluid pt-5 mt-5">
+    <div class="container py-5">
+        <div class="row g-4 mb-5">
+            <div class="col-lg-8 col-xl-9">
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <div class="product_thumbnail_slides owl-carousel">
+                            @if (Model.HinhanhSps == null || !Model.HinhanhSps.Any())
+                            {
+                                <img src="~/Hinh/HangHoa/@Model.Hinh" alt="@Model.TenHH">
+                                <img src="~/Hinh/HangHoa/@Model.Hinh" alt="@Model.TenHH">
+                                <img src="~/Hinh/HangHoa/@Model.Hinh" alt="@Model.TenHH">
+                            }
+                            else
+                            {
+                                var count = Model.HinhanhSps.Count;
+                                if (count == 1)
+                                {
+                                    <img src="~/Hinh/HangHoa/@Model.Hinh" alt="@Model.TenHH">
+                                    <img src="~/Hinh/HangHoa/@Model.Hinh" alt="@Model.TenHH">
+                                    <img src="~/Hinh/HangHoa/@Model.Hinh" alt="@Model.TenHH">
+                                }
+                                @foreach (var hinhanh in Model.HinhanhSps)
+                                {
+                                    <img src="~/Hinh/HangHoa/@hinhanh.HinhAnhPhu" alt="@Model.TenHH">
+                                }
+                            }
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <a asp-action="Index" asp-controller="HangHoa" asp-route-id="@Model.MaHh">
+                            <h4 class="fw-bold mb-3" style="color: black">@Model.TenHH</h4>
+                        </a>
+                        <p class="mb-3">Loại: @Model.TenLoai</p>
+                        @if (Model.GiamGia != 0)
+                        {
+                            <h5 class="fw-bold mb-3">
+                                @((Model.DonGia - Model.GiamGia).ToString("#,##0")) VNĐ
+                            </h5>
+                        }
+                        else
+                        {
+                            <h5 class="fw-bold mb-3">
+                                @(Model.DonGia.ToString("#,##0")) VNĐ
+                            </h5>
+                        }
+                        <div class="d-flex mb-4">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <b class="mt-2">Kích thước: @Model.MoTaNgan</b>
+                        <!-- Cart & Favourite Box -->
+                        <div class="cart-fav-box mt-2">
+                            <form asp-action="AddToCart" asp-controller="Cart" asp-route-id="@Model.MaHh" class="cart-form clearfix">
+                                <div class="input-group-btn mb-3"><b>Số lượng</b></div>
+                                <div class="input-group quantity mb-5 d-flex  align-items-center" style="width: 100px">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-minus rounded-circle bg-light border" type="button">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
+                                    <input type="text"
+                                           class="form-control form-control-sm text-center border-0"
+                                           value="1"
+                                           name="quantity" />
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-plus rounded-circle bg-light border" type="button">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="cart-fav-box d-flex align-items-center">
+                                    <!-- Cart -->
+                                    <button type="submit"
+                                            class="btn essence-btn">
+                                        Add to cart
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <nav>
+                            <div class="nav nav-tabs mb-3">
+                                <button class="nav-link active border-white border-bottom-0"
+                                        type="button"
+                                        role="tab"
+                                        id="nav-about-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#nav-about"
+                                        aria-controls="nav-about"
+                                        aria-selected="true">
+                                    Thông tin sản phẩm
+                                </button>
+                                <button class="nav-link border-white border-bottom-0"
+                                        type="button"
+                                        role="tab"
+                                        id="nav-mission-tab"
+                                        data-bs-toggle="tab"
+                                        data-bs-target="#nav-mission"
+                                        aria-controls="nav-mission"
+                                        aria-selected="false">
+                                    Đánh giá sản phẩm
+                                </button>
+                            </div>
+                        </nav>
+                        <div class="tab-content mb-5">
+                            <div class="tab-pane active"
+                                 id="nav-about"
+                                 role="tabpanel"
+                                 aria-labelledby="nav-about-tab">
+                                <h4 class="mb-30">Chi tiết sản phẩm</h4>
+                                <div class="d-flex" style="font-size:18px">
+                                    <div class="row g-4">
+                                        <div class="col-lg-3">Danh Mục</div>
+                                        <div class="col-lg-9"><a asp-action="Index" asp-controller="Home" style="font-size:16px">Essence</a>  >  <a asp-action="Index" asp-controller="HangHoa" asp-route-loai="@Model.MaLoai" style="font-size:16px">@Model.TenLoai</a>  >  <a asp-action="Detail" style="font-size:16px" asp-controller="HangHoa" asp-route-id="@Model.MaHh">@Model.TenHH</a></div>
+                                        <div class="col-lg-3">Số lượng hàng khuyến mãi</div>
+                                        <div class="col-lg-9">2000</div>
+                                        <div class="col-lg-3">Số sản phẩm còn lại</div>
+                                        <div class="col-lg-9">@Model.SoLuongTon</div>
+                                        <div class="col-lg-3">Nhà sản xuất</div>
+                                        <div class="col-lg-9">Essence</div>
+                                        <div class="col-lg-3">Gửi từ</div>
+                                        <div class="col-lg-9">Hồ Chí Minh</div>
+                                    </div>
+                                </div>
+                                <h4 class="mb-30 mt-30">Mô tả sản phẩm</h4>
+                                <p>
+                                    @Model.ChiTiet
+                                </p>
+                            </div>
+                            <div class="tab-pane"
+                                 id="nav-mission"
+                                 role="tabpanel"
+                                 aria-labelledby="nav-mission-tab">
+                                <div class="d-flex">
+                                    <img src="~/img/bg-img/bg-4.jpg"
+                                         class="img-fluid rounded-circle p-3"
+                                         style="width: 100px; height: 100px"
+                                         alt="" />
+                                    <div class="">
+                                        <p class="mb-2" style="font-size: 14px">
+                                            Ngày 3, Tháng 7, 2024
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <h5>Đạt G</h5>
+                                            <div class="d-flex mb-3">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <p class="text-dark">
+                                            Sản phẩm mang chất lượng rất tốt, giá cả phải chăng, mua hàng nhanh chóng tiện lợi, giá rẻ hơn chỗ khác, nên mua tại cửa hàng này nha mọi người. Tôi ủng hộ shop 5 sao.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <img src="~/img/bg-img/bg-4.jpg"
+                                         class="img-fluid rounded-circle p-3"
+                                         style="width: 100px; height: 100px"
+                                         alt="" />
+                                    <div class="">
+                                        <p class="mb-2" style="font-size: 14px">
+                                            Ngày 11, Tháng 7, 2024
+                                        </p>
+                                        <div class="d-flex justify-content-between">
+                                            <h5>Trịnh Trần Phương Tuấn</h5>
+                                            <div class="d-flex mb-3">
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star"></i>
+                                                <i class="fa fa-star text-secondary"></i>
+                                            </div>
+                                        </div>
+                                        <p class="text-dark">
+                                            Giao hàng nhanh, thân thiện, đúng sản phẩm và đóng gói cẩn thận. Săn sale nên giá rất rẻ mọi người có thể tham khảo để mua ạ.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="d-flex">
+                                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSetmDhHXC19J5MOBNffNZEKbWu5DDM8GeUKRd4gXOZKik0DHw/formResponse">
+                                        <h4 class="fw-bold">Bình luận sản phẩm</h4>
+                                        <div class="row g-4">
+                                            <input type="hidden" name="entry.121323801" value="@Model.MaHh" />
+                                            <input type="hidden" name="entry.360688166" value="@Model.TenHH" />
+                                            <input type="hidden" name="entry.465407570" value="@Model.MaLoai" />
+                                            <input type="hidden" name="entry.673726232" value="@Model.TenLoai" />
+                                            <div class="col-lg-6">
+                                                <div class="border-bottom rounded">
+                                                    <input type="text"
+                                                           class="form-control border-0 me-4"
+                                                           placeholder="Họ và tên *"
+                                                           name="entry.1587661143"
+                                                           required />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="border-bottom rounded">
+                                                    <input type="email"
+                                                           class="form-control border-0"
+                                                           placeholder="Email *"
+                                                           name="entry.1102263804"
+                                                           required />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="border-bottom rounded my-4">
+                                                    <textarea name="entry.1938964773"
+                                                              id=""
+                                                              class="form-control border-0"
+                                                              cols="30"
+                                                              rows="8"
+                                                              placeholder="Nội dung mô tả *"
+                                                              spellcheck="false"
+                                                              required></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="d-flex justify-content-between py-3 mb-5">
+                                                    <div class="d-flex align-items-between justify-content-center">
+                                                        <h6 class="mr-4">Đánh giá:</h6>
+                                                        <div class="form-check mx-2">
+                                                            <input class="form-check-input" type="radio" name="entry.1033518597" id="5" value="5">
+                                                            <label class="form-check-label" for="5">
+                                                                5  <i class="fa fa-star"></i>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mx-2">
+                                                            <input class="form-check-input" type="radio" name="entry.1033518597" id="4" value="4" checked>
+                                                            <label class="form-check-label" for="4">
+                                                                4  <i class="fa fa-star"></i>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mx-2">
+                                                            <input class="form-check-input" type="radio" name="entry.1033518597" value="3" checked>
+                                                            <label class="form-check-label" for="3">
+                                                                3  <i class="fa fa-star"></i>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mx-2">
+                                                            <input class="form-check-input" type="radio" name="entry.1033518597" id="2" value="2" checked>
+                                                            <label class="form-check-label" for="2">
+                                                                2  <i class="fa fa-star"></i>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mx-2">
+                                                            <input class="form-check-input" type="radio" name="entry.1033518597" id="1" value="1" checked>
+                                                            <label class="form-check-label" for="1">
+                                                                1  <i class="fa fa-star"></i>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <button type="submit" style="height: 60px"
+                                                            class="btn border border-secondary text-primary rounded-pill px-4 py-3">
+                                                        Post Comment
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-xl-3">
+                <div class="row g-4 fruite">
+                    <div class="col-lg-12">
+                        @await Html.PartialAsync("_TimKiemPanel")
+                        <div class="mb-2"></div>
+                        @await Component.InvokeAsync("MenuLoai")
+                    </div>
+                    <div class="col-lg-12">
+                        <h4 class="mb-4">Featured products</h4>
+                        <div class="d-flex align-items-center justify-content-start mb-2">
+                            <div class="rounded" style="width: 100px; height: 100px">
+                                <img src="~/img/bg-img/bg-1.jpg"
+                                     class="img-fluid rounded"
+                                     alt="Image" />
+                            </div>
+                            <div class="mx-2">
+                                <h6 class="mb-2">Bánh sinh nhật</h6>
+                                <div class="d-flex mb-2">
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star text-secondary"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start mb-2">
+                            <div class="rounded" style="width: 100px; height: 100px">
+                                <img src="~/img/bg-img/bg-2.jpg"
+                                     class="~/img-fluid rounded"
+                                     alt="Image" />
+                            </div>
+                            <div class="mx-2">
+                                <h6 class="mb-2">Bánh ngọt</h6>
+                                <div class="d-flex mb-2">
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star text-secondary"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start mb-2">
+                            <div class="rounded" style="width: 100px; height: 100px">
+                                <img src="~/img/bg-img/bg-3.jpg"
+                                     class="img-fluid rounded"
+                                     alt="Image" />
+                            </div>
+                            <div class="mx-2">
+                                <h6 class="mb-2">Bánh pháp</h6>
+                                <div class="d-flex mb-2">
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star text-secondary"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start mb-2">
+                            <div class="rounded" style="width: 100px; height: 100px">
+                                <img src="~/img/bg-img/bg-4.jpg"
+                                     class="img-fluid rounded"
+                                     alt="Image" />
+                            </div>
+                            <div class="mx-2">
+                                <h6 class="mb-2">Bánh kem anime</h6>
+                                <div class="d-flex mb-2">
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star text-secondary"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start mb-2">
+                            <div class="rounded" style="width: 100px; height: 100px">
+                                <img src="~/img/bg-img/bg-5.jpg"
+                                     class="img-fluid rounded"
+                                     alt="Image" />
+                            </div>
+                            <div class="mx-2">
+                                <h6 class="mb-2">Bánh mặn</h6>
+                                <div class="d-flex mb-2">
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star text-secondary"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-start mb-2">
+                            <div class="rounded" style="width: 100px; height: 100px">
+                                <img src="~/img/bg-img/bg-6.jpg"
+                                     class="img-fluid rounded"
+                                     alt="Image" />
+                            </div>
+                            <div class="mx-2">
+                                <h6 class="mb-2">Bánh kem kỷ niệm</h6>
+                                <div class="d-flex mb-2">
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star "></i>
+                                    <i class="fa fa-star text-secondary"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center my-4">
+                            <a asp-action="Index" asp-controller="HangHoa" class="btn border border-secondary px-4 py-3 rounded-pill text-primary w-100" style="height:60px">
+                                Vew More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="fw-bold mb-2">Related products</h1>
+        @await Component.InvokeAsync("PopularProducts")
+    </div>
+</div>
+<!-- Single Product End -->
+@section Scripts {
+    <script>
+        // Product Quantity
+        $('.quantity button').on('click', function () {
+            var button = $(this);
+            var oldValue = button.parent().parent().find('input').val();
+            if (button.hasClass('btn-plus')) {
+                var newVal = parseFloat(oldValue) + 1;
+            } else {
+                if (oldValue > 1) {
+                    var newVal = parseFloat(oldValue) - 1;
+                } else {
+                    newVal = 1;
+                }
+            }
+            button.parent().parent().find('input').val(newVal);
+        });
+        $('.quantity input').on('input change', function () {
+            var value = $(this).val();
+            if (value <= 0) {
+                $(this).val(1);
+            }
+        });
+    </script>
+}
